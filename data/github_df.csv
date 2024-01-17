@@ -1999,8 +1999,7 @@ To run the CNN and test on the snake dataset, run python run.py test
 
 We were able to replicate the ThunderHill race track using the Unity 3D game engine and integrated Unity with the track and robot into the LGSVL simulator. Once the integration was complete we were able to see our robot with the Thunderhill Track as our map in the simulator. We were then able to virtualize the functions of the IMU, odometry and lidar sensors and RGB-D cameras to better visualize what our robot perceives in the simulation. Finally we were able to fully visualize what our robot sees with the virtual sensors using Autoware Rviz which displays the location and point cloud map of the vehicle and its surroundings.
 ",,
-34,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_15,,,
-35,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_14,"DSC 180B Autonomous Vehicle Team 1 [Organization
+34,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_14,"DSC 180B Autonomous Vehicle Team 1 [Organization
 Repository](https://github.com/UCSDAutonomousVehicles2021Team1) to
 serve as a collection of all the repositories built for this project.
 
@@ -2013,7 +2012,7 @@ serve as a collection of all the repositories built for this project.
 
 
 ",,
-36,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_13,"# Data Visualizations and Interface For Autonomous Robots
+35,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_13,"# Data Visualizations and Interface For Autonomous Robots
 
 This project aims to create data visualizations and an interactive interface for autonomous robots. The intent and design of visualizations created for this project were catered towards optimizing racing performance on the [Thunderhill track](https://www.thunderhill.com/). Visualizations include birdseye view of optimal path on mapped track, live camera feed, lidar readings, IMU data (position and orientation) visualized, battery status display, and various other visualizations to show the health and status of the vehicle. The interface that displays all of these various tools and visualizations are meant to be interactive and communicate with the Autonomous Robot via Rosbridge, which not only allow users to control the Gazebo Robot action by simple interface interaction like clicking button or inputing text, but also monitor the realtime situation of the robot navigating in map. The visualizations will be primarily illustrated through Python, ROS, Gazebo, RViz, and other robotics software. After analyzing the performance of A* algorithm versus the performance of RRT* algorithm, it is determined that RRT* performs better. Ultimately, RRT* algorithms is the primary navigation algorithm used and illustrated in this project.
 
@@ -2045,7 +2044,7 @@ Contributed by implementing the UCSD simulated track inside the Gazebo simulator
 <b>Jia Shi</b> <br />
 Contributed to the research of visualization and interface. Developed an interactive interface with roslibjs and webridge to connect ROS with web page. Worked with teammate to integrate interface with Gazebo robot to allow controlling. Also created visualization demo with ROS bag data from other teams. Helped teammates with the coding and helped with the setup and completion of github repo.
 ",,
-37,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_12,"# DSC 180 Autonomous Systems
+36,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_12,"# DSC 180 Autonomous Systems
 
 Neghena Faizyar, Garrett Gibo, Shiyin Liang
 
@@ -2126,7 +2125,7 @@ cleaning the raw GPS test data such that it could be used.
 plot the line the GPS reports it has traveled and uploads it into the vis 
 folder of our repository. 
 ",,
-38,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_11,"# Autonomous Vehicles Capstone: Odometry and IMU 
+37,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_11,"# Autonomous Vehicles Capstone: Odometry and IMU 
 
 
 We are Team 4 in the Autonomous Vehicles Data Science Capstone Project. Our project revolves around the IMU, Odometry efforts while we collectively work to build a 1/5 scale racing autonomous vehicle. 
@@ -2169,10 +2168,10 @@ In the resources folder:
 ROS package we developed to aid in the integration of the OLA Artemis IMU to ROS. It allows the orientation quaternion readings derived from the IMU to be easily converted into Euler angles and Yaw heading. This is to improve the debugging process within ROS and helps to easily visualize the Yaw heading. This package can be run in parallel as a complement to the main ROS package used to interface with the OLA Artemis IMU and can easily integrate with the rest of your current ROS system in place as a separate node. Overall, this is to aid in the development process within ROS when deriving Yaw Heading from the OLA Artemis IMU. 
 
 ",,
-39,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_55,"# Webpage Link
+38,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_55,"# Webpage Link
 [https://yikaihao.github.io/DSC180_Webpage/](https://yikaihao.github.io/DSC180_Webpage/)
 ",,
-40,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_58,"# DSC180B-Project
+39,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_58,"# DSC180B-Project
 The data we have are grabbed from the /teams directory: malware and popular-apps.
 
 The purpose is to perform search on each software folder to find its smali files
@@ -2194,7 +2193,7 @@ Targets including 'feature', 'model', 'analysis', 'test'
 ### Project Webpage
 https://kamui-jiao.github.io/DSC180B-Page/
 ",,
-41,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_57,"# hindroid_replication
+40,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_57,"# hindroid_replication
 ## HinDroid: An Intelligent Android Malware Detection System. Based on Structured Heterogeneous Information Network.
 # Malware Detection Using API Relationships + Hindroid
 # HOW TO RUN 
@@ -2251,7 +2250,7 @@ App-press.com. 2020. What Is An API And SDK? - App Press. [online] Available at:
 “5 Examples of APIs We Use in Our Everyday Lives: Nordic APIs |.” Nordic APIs, 10 Dec. 2019, nordicapis.com/5-examples-of-apis-we-use-in-our-everyday-lives/. 
 Shifu Hou, Yanfang Ye ∗ , Yangqiu Song, and Melih Abdulhayoglu. 2017. HinDroid: An Intelligent Android Malware Detection System Based on Structured Heterogeneous Information Network. In Proceedings of KDD’17, August 13-17, 2017, Halifax, NS, Canada, , 9 pages. DOI: 10.1145/3097983.3098026
 ",,
-42,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_56,"# Malware Detecting using Control Flow Graphs
+41,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_56,"# Malware Detecting using Control Flow Graphs
 By [Edwin Huang](https://www.linkedin.com/in/edwin-huang-671a77100/), [Sabrina Ho](https://www.linkedin.com/in/sabrinaho7/)
 
 [Link to Webpage](https://iamsabhoho.github.io/dsc180b-malware/)
@@ -2598,7 +2597,7 @@ We would like to express our gratitude to our mentors for our Capstone project: 
 [10] Learning Embeddings of Directed Networks with Text-Associated Nodes—with Application in Software Package Dependency Networks, https://arxiv.org/pdf/1809.02270.pdf
 
 ",,
-43,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_59,"![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rcgonzal/m2v-adversarial-hindroid)
+42,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_59,"![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rcgonzal/m2v-adversarial-hindroid)
 
 # m2vDroid: Perturbation-resilient metapath-based Android Malware Detection
 An extension of the [HinDroid malware detection system](https://www.cse.ust.hk/~yqsong/papers/2017-KDD-HINDROID.pdf), but using [metapath2vec](https://ericdongyx.github.io/metapath2vec/m2v.html) to encode apps in the Heterogeneous Information Network. We then hope to make the model resilient to adversarial ML like Android HIV. See our [blog post](https://rcgonzalez9061.github.io/m2v-adversarial-hindroid/) for more details on our methods.
@@ -2640,7 +2639,7 @@ The `analysis` flag will generate analysis on our data and any necessary plots, 
 ```
 
 ",,
-44,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_38,"### Background
+43,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_38,"### Background
 
 The purpose of phrase mining is to extract high-quality phrases from a large amount of text corpus. It identifies the phrases instead of an unigram word, which provides a much more understanding of the text.  In this study, we apply AutoPhrase method into two different datasets and compare the decreasing quality ranked list of phrase ranked list in multi-words and single word. Our datasets are from the abstract of Scientific papers in English with the English knowledge base from Wikipedia. Through this project, we will be able to understand the advantages of the AutoPhrase method and how to implement Autophrase in two datasets by identifying different outcomes it produces. 
 
@@ -2739,7 +2738,7 @@ Anant Gandhi: participated in another repo
 
 
 ",,
-45,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_42,"# Analyzing Movies Using Phrase Mining
+44,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_42,"# Analyzing Movies Using Phrase Mining
 
 https://a04-capstone-group-02.github.io/movie-analysis-webpage/
 
@@ -2863,7 +2862,7 @@ The configuration file for this target is `clustering.json`, which contains the 
 - Huilai Miao
 - Yuxuan Fan
 ",,
-46,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_41,"# AutoPhrase for Financial Documents Interpretation 
+45,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_41,"# AutoPhrase for Financial Documents Interpretation 
 
 Our main targets are data preparation, feature encoding, eda (optional), train, report (optional), and test. Users can configure parameters for these targets in the ./config files.
 
@@ -2931,7 +2930,7 @@ Test target will run the whole project with only test data
 * [Project Website](https://shy218.github.io/dsc180-project/)
 * [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase)
 ",,
-47,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_40,"# DSC180B-NER-Project
+46,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_40,"# DSC180B-NER-Project
 This project focuses on the task of document classification using a BBC News Dataset and a 20 News Group Dataset. We implemented various feature based classification models and compared the results. We have analysed the advantages and shortcomings of each method.
 
 ## Webpage
@@ -2977,7 +2976,7 @@ For the 20 News Group dataset, the SVM+ALL(TF-IDF) classifer also outperformed t
 
 
 ",,
-48,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_39,"# AutoLibrary - A Personal Digital Library to Find Related Works via Text Analyzer
+47,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_39,"# AutoLibrary - A Personal Digital Library to Find Related Works via Text Analyzer
 - Website: https://yichunren.pythonanywhere.com/autolibrary/
 - DSC180B - Capstone Project (Winter 2021)
 - Section A04 Group03: Yichun Ren, Jiayi Fan, Bingqi Zhou
@@ -3042,7 +3041,7 @@ Since AutoLibary does not have access right to your local documents, if you woul
 - Jiayi Fan: Data, Result Analysis, Website Development
 - Bingqi Zhou: Dataset, Webscrap, Experiments
 ",,
-49,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_37,"# Restaurant Recommender System
+48,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_37,"# Restaurant Recommender System
 There are multiple factors that go into a rating: wait time, service, quality of food, cleanliness, or even atmosphere - for example, a restaurant could have positive sentiment towards the food but negative sentiment towards the service. In order to solve this problem, our aim is to include such sentiments that can be found in the review text and turn that into data which can be used to further improve business recommendations to users.
 
 This repository is a recommender system with a primary focus on the text reviews analysis through TF-IDF (term frequency-inverse document frequency) and targeted sentiment analysis with AutoPhrase to attach sentiments to aspects of a restaurant. In building the recommender system, we learned that review texts can hold the same importance as the numerical statistics because they contain key phrases that characterize how they felt about the review. The ultimate goal is designing a website for deploying our recommender system and showing its functionality.
@@ -3132,7 +3131,7 @@ The default running file is run.py and can be simply run through the command lin
 * Vincent Le created the dockerfile and developed the website (not in main branch).
 * Shenghan Liu developed TF-IDF/clean/data tag, user AutoPhrase EDA, and the restaurant query on the website.
 ",,
-50,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_48,"# ForumRec
+49,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_48,"# ForumRec
 
 ## Introduction
 This repository is for the ForumRec project, a recommendation system, that recommends users questions they are adept to answer on the [Super User](superuser.com) forum of [StackExchange](https://stackexchange.com). The website can be reached at [jackzlin.com](jackzlin.com) and the repository for the website can be reached at [ForumRecWeb](https://github.com/okminz/ForumRecWeb).
@@ -3243,7 +3242,7 @@ Jasraj Johl: Created the ETL process, worked with the Super User API, created th
 
 Jack Lin: 
 ",,
-51,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_47,"
+50,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_47,"
 
 # OnSight: Outdoor Rock Climbing Recommendations
 
@@ -3313,7 +3312,7 @@ Be aware that all these parameters do is simulate a user using the website. Each
 |difficulty_range|{""boulder"": [int, int], ""route: [int, int]}|{""boulder"": [0, 3], ""route"": [11, 16]}|The ""Boulder"", ""V_-V_"", ""Route"", and ""5.\_-5.\_"" form elements on the website. Due to the way data is cleaned, bouldering V grades and route 5. grades are converted to integers starting at 0 on different scales. You can find the scales defined in code. The two default difficulty ranges correspond to V0-V3 and 5.8-5.10d. Note that if the user does not want boulders or routes, the corresponding difficulty range will be [-1, -1]|
 
 ",,
-52,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_46,"# DSC180b-Capstone
+51,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_46,"# DSC180b-Capstone
 
 Project repository for Recommender Systems group 3
 
@@ -3368,7 +3367,7 @@ Instead of caching an auth_token for a specific user, we want to just directly l
 straightforward procedure, the problem is that we inevitably have to authenticate regardless of if we have our user data predownloaded or not. Spotify has another authentication flow that would better suit itself to this situation, and we will be looking into that in the future.
 
 ",,
-53,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_45,"## Asnapp
+52,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_45,"## Asnapp
 
 Asnapp is a workout video recommender web application. 
 
@@ -3440,7 +3439,7 @@ b) To run locally, install requiremnents.txt into a virtualenv. Make sure you ha
   - Note: this assumes that there is a file `config/db_config.json`, which has database host, user, password, and name information.
   - And a file `config/flask_keys.json` which has a Flask secret key
 ",,
-54,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_43,"# Recipe-Recommendation
+53,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_43,"# Recipe-Recommendation
 
 ## Introduction
 This repository contains the code and models needed to create a recommender system for recipe recommendations. Included in the repository are a few simple baselines as well as the final model utilized by our recommender system for recipe recommendation. The data for this project was pulled from Kaggle (https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions) and (https://www.kaggle.com/kaggle/recipe-ingredients-dataset/home).
@@ -3508,7 +3507,7 @@ Where the targets above will all be run one after another, but on small test dat
 
 To ensure the code runs properly, it must have the same folders and files locations. etl.py must be inside src and data folders, and data must be in the data folder. mostPop.py, must be in the src and baselines folders.
 ",,
-55,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_44,"# Makeup Recommender
+54,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_44,"# Makeup Recommender
 
 This project is a recommender that will provide a one-stop shop experience where a user will get recommended an array of products to create an entire makeup look based on similar products that the user enjoys, products that similar users have purchased, as well as products that are personalized to the user including skin type, skin tone, allergies, and budget. Our project aims to utilize collaborative filtering recommendations along with content-based filtering to ensure user satisfaction and success when creating their desired look.
 
@@ -3600,7 +3599,7 @@ https://github.com/jjone36/Cosmetic
 * Filter recommendations
 * Finalize website
 ",,
-56,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_71,"# Opioid-Use Prevalance Analysis Project 
+55,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_71,"# Opioid-Use Prevalance Analysis Project 
 ```
 ### 
 * Author: Flory Huang
@@ -3627,7 +3626,7 @@ Target explaination
     2: analysis: use similar matching to extract drug terms and perform emotion analysis and store result into output csv files. 
 
 ",,
-57,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_63,"# DSC180B-Capstone-Project
+56,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_63,"# DSC180B-Capstone-Project
 - dataset available for download at https://www.kaggle.com/crawford/gene-expression
   - #Make sure to unzip files into 'data/raw' folder#
 - get data: in the command line enter `Rscript run-data.R data`
@@ -3647,7 +3646,7 @@ Acknowledgements
 
   - T.R. Golub, D.K. Slonim, P. Tamayo, C. Huard, M. Gaasenbeek, J.P. Mesirov, H. Coller, M. Loh, J.R. Downing, M.A. Caligiuri, C.D. Bloomfield, and E.S. Lander
 ",,
-58,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_77,"# DSC180B_A07
+57,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_77,"# DSC180B_A07
 
 This repository contains the completed codes for this project that focuses on multiple testing. The src folder contains the main python scripts, with all the functions inside, and the data folder, where all the datasets are held. 
 
@@ -3667,7 +3666,7 @@ All the work and code are produced after our group discussion.
 ```
 
 ",,
-59,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_29,"
+58,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_29,"
 
 # Using Epidemiology Model To Predict Case Numbers for COVID-19
 
@@ -3694,7 +3693,7 @@ Project is created with:
 It will return the beta (infection rate), and D (infection duration) for the entire United States.
 It will also return a prediction for counties in Southern California on 1/22/2021 based on case counts on 1/21/2021 (previous day)
 ",,
-60,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_22,"# Political Analysis on Senatorial Twitter Account Using Machine Learning
+59,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_22,"# Political Analysis on Senatorial Twitter Account Using Machine Learning
  
 ### Project Description
 The modern American political landscape often seems void of bipartisanship. Nowhere is this stark divide between red and blue more evident than in the halls of the US Capitol, where the Senate and House of Representatives convene to carry out the duties of the legislative branch. While us average Americans rarely watch the daily proceedings of the Senate or House, Twitter has given us a unique window into the debates and discourse that shape our democracy. In fact, the 116th Congress, which served from January 3, 2019 to January 3, 2021 broke records by tweeting a total of 2.3 million tweets! As such, it is clear that Twitter is quickly becoming a digital public forum for American politicians. This surplus of tweets from the 116th Congress enables us to analyze the Twitter (following-follower) relationships between politicians on and across the two sides of the aisle. This project’s main inquiry is into whether there is a tangible difference in the way that Democrat members of Congress speak and interact on social media in comparison to Republican members of Congress. If there are such differences, this project will leverage them to train a suitable ML model on this data for node classification. That is to say, this project aims to determine a Senator’s political affiliation based off of a) their Twitter relationships to other Senators b) their speech patterns, and c) other mine-able features on Twitter. In order to truly utilize the complex implicit relationships hidden in the Twitter graph, we can use models such as Graph Convolutional Networks, which apply the concept of “convolutions” from CNNs to a graph network-oriented framework, and GraphSage model.
@@ -3734,7 +3733,7 @@ Please view our website [here](https://anuragpamuru.github.io/dsc-180b-capstone-
 ### Contributers: 
 Yimei Zhao, Anurag Pamuru, Yueting Wu
 ",,
-61,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_20,"# GNN-on-3d-points
+60,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_20,"# GNN-on-3d-points
 
 ### Abstract:
    This research focuses on 3D shape classification. Our goal is to predict the category of shapes consisting of 3D data points. We aim to implement Graph Neural Network models and compare the performances with PointNet, a popular architecture for 3d points cloud classification tasks. Not only will we compare standard metrics such as accuracy and confusion matrix, we will also explore the model's resilience of data transformation. Besides, we also tried combining PointNet with graph pooling layers.
@@ -3791,7 +3790,7 @@ Author: @Xinrui Zhan.If you find any bug, contact me through the email: ctwayen@
    
    
 ",,
-62,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_19,"# Graph-based Product Recommendation
+61,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_19,"# Graph-based Product Recommendation
 DSC180B Capstone Project on Graph Data Analysis
 
 Project Website: https://nhtsai.github.io/graph-rec/
@@ -3856,7 +3855,7 @@ We use an unsupervised PinSage model (adapted from [DGL](https://github.com/dmlc
 * [PinSage Article](https://medium.com/pinterest-engineering/pinsage-a-new-graph-convolutional-neural-network-for-web-scale-recommender-systems-88795a107f48)
 * [PinSage Research Paper](https://arxiv.org/abs/1806.01973)
 ",,
-63,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_18,"# NBA-Game-Prediction
+62,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_18,"# NBA-Game-Prediction
 Project Group: MengYuan Shi, Austin Le
 
 This repository contains a data science project that discover the NBA Game Prediction. We investigate the social network for individual NBA players and the relationship between each team. We will use team's statistics and players' statistics and analysis for predicting who wins the games by leveraging the team's statistics and players' statistics from 2015 season to 2019 season. We will use GraphSAGE which is a generalizable embedding framework to create a graph classification.
@@ -3882,7 +3881,7 @@ Our group has altered and used the graphsage implementation that can be received
 - Austin Le: Responsible for the data cleaning and data scraping and the coding part as well as the report.
 - MengYuan Shi: Responsible for the paper researching and writing the report part as well as the visualization.
 ",,
-64,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_21,"# DSC180B_Project
+63,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_21,"# DSC180B_Project
 
 URL: https://sdevinl.github.io/DSC180B_Project/
 
@@ -3926,7 +3925,7 @@ URL: https://sdevinl.github.io/DSC180B_Project/
 **Acknowledgements**   
   As mentioned in the disclaimer the original version of this code can be found here https://github.com/williamleif/GraphSAGE. An appreciation to the original creators of this code and a thank you for allowing this code to be available and ready to use on projects such as ours. 
 ",,
-65,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_76,"Name: Jason Chau, Sung-Lin Chang, Dylan Loe
+64,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_76,"Name: Jason Chau, Sung-Lin Chang, Dylan Loe
 
 Welcome to our Stock Predictor. 
 
@@ -3972,7 +3971,7 @@ scipy == 1.1.0
 sklearn == 0.19.1
 matplotlib == 2.2.2
 ",,
-66,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_0,"# Political Popularity of Misinformation
+65,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_0,"# Political Popularity of Misinformation
 - This project looks at the popularity and influence of politicians on Twitter by analyzing the engagement ratios as well as the rolling and cumulative maxes of likes and retweets over time.
 
 ### Note
@@ -4016,7 +4015,7 @@ matplotlib == 2.2.2
 
 - To run the test target, from the project root directory, run `python run.py test`
     * This runs most of the above targets on a small, fake dataset.",,
-67,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_1,"# The Sentiment of U.S. Presidential Elections on Twitter
+66,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_1,"# The Sentiment of U.S. Presidential Elections on Twitter
 This project investigates the public sentiment on Twitter regarding the 2016 and 2020 U.S. Presidential Elections. Political tensions in the United States came to a head in 2020 as people disputed President Donald Trump's handling of various major events that the year brought such as the COVID-19 pandemic and the killing of George Floyd and subsequent racial protests, and we aim to identify if this was quantifiably reflected in people's behavior on social media. To do this, we perform sentiment analysis on tweets related to the elections and conduct permutation testing to analyze how sentiment may differ between the two years and between and within politically left- and right-leaning groups of users. 
 
 
@@ -4044,7 +4043,7 @@ This project investigates the public sentiment on Twitter regarding the 2016 and
 - To run the `clean` and `compute` targets on fake test data, run the command `python run.py test`
 
 ",,
-68,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_2,"# Data Science Capstone Project
+67,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_2,"# Data Science Capstone Project
 
 ## Info
 * The data being used here is Tweets from various news sources.
@@ -4111,7 +4110,7 @@ This project investigates the public sentiment on Twitter regarding the 2016 and
 * run 'python run.py results' in root directory of repo
 * Look in the outdir you specified for an html file of the results
 ",,
-69,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_3,"## Where to begin?
+68,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_3,"## Where to begin?
 ### Begin by uploading your twitter API credentials into a json file as under a new .env director. The file path should look like this: .env/twitter_credentials.json
 
 The json file should be structured as
@@ -4161,7 +4160,7 @@ run.py takes in one argument, a choice between *data*, *eda*, *test*
    * *similarity* will generate similarity hashtag vectors to be used in our main analysis *test/testreport*
 
 ",,
-70,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_4,"# Election-Sentiment
+69,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_4,"# Election-Sentiment
 An analysis of views towards the US 2020 Presidential election using Twitter data.
 
 Contained in this repository are a few notebooks that contain our analyses in this investigation on Election Sentiment analysis as well as an investigation into how Twitter impacts election results.
@@ -4198,7 +4197,7 @@ Chris was responsible for the EDA and sentiment analysis and those respective po
 
 Prem was involved heavily in creating the scripts that could be ran by anyone in order to perform ETL on the data. In addition Prem worked on developing the discussion metric that was critical to this investigation.
 ",,
-71,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_5,"
+70,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_5,"
 # The Spread of Misinformation on Reddit
 Observing how different forms of misinformation and conspiracies are spread through social media.
 
@@ -4236,7 +4235,7 @@ With the amount of actively spread misinformation circulating popular social med
 - To run the full pipeline on test data, run `python run.py test`
 	- This will run all the targets on test data. These targets include: `data`, `eda`, `user_polarity`, `matrices`, and `visualize`
 ",,
-72,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_6,"# DSC180B-Project
+71,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_6,"# DSC180B-Project
 
 ## Table of Contents
 
@@ -4336,7 +4335,7 @@ All test data are saved in `test/testdata`. Our test data contains no personal i
 * Zhou Li developed
 ```
 ",,
-73,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_25,"# DSC180B
+72,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_25,"# DSC180B
 
 There are “wars” going on every day online, but instead of cities, they are defending their options, and perspects. This phenomenon is especially common on the Wikipedia platform where users are free to edit others' revisions. In fact, there are “about 12% of discussions are devoted to reverts and vandalism, suggesting that the WP development process is highly contentious.” As Wikipedia has become a trusted source of information and knowledge which is freely accessible, It is important to investigate how editors collaborate and controvert each other in such a platform. This repository will show our coding methods to discuss a new method of measuring controvisality in Wikipedia articles. We have found out that controversiality is highly related to the number of revert edits, the sentiment level among one article comments, and the view counts of that article. Thus we developed a weighted sum formula, which combines those three factors to accurately measure the controversy level within articles in Wikipedia. 
 
@@ -4387,7 +4386,7 @@ Coding: Xingyu Jiang, Xiangchen Zhao
 Notebook: Xingyu Jiang, Xiangchen Zhao
 Report: Xingyu Jiang, Xiangchen Zhao and Hengyu Liu
 ",,
-74,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_26,"# The Large-Scale Collaborative Presence of Online Fandoms
+73,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_26,"# The Large-Scale Collaborative Presence of Online Fandoms
 
 Fan communities exist within every industry, and there has been little study on understanding their scale and how they influence the media and their industries. As technology and social media have made it easier than ever for fans to connect with their favorite influencers and find like-minded fans, we’ve seen a rise in fan culture or “fandom”. These individuals form fan groups and communities, which have become increasingly popular online and have rallied behind their favorite artists for different causes.<br><br>
 This repository contains library code to explore the similarities and differences in collaboration efforts among fans on two primary online social platforms, Twitter and Wikipedia. It contains methods to quantify the scale, strength, and influence of online fan communities—with a focus on the K-pop fanbase—and how this online collaboration affects outside audiences.
@@ -4403,7 +4402,7 @@ This repository contains library code to explore the similarities and difference
 
 - Run (test) script:
 `python run.py test` Runs the (all) script on test data found in `test/testdata`. Plots data and aggregate stats to `data/eda`",,
-75,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_27,"# DSC180BProject: Wikipedia’s Response to the COVID-19 Pandemic 
+74,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_27,"# DSC180BProject: Wikipedia’s Response to the COVID-19 Pandemic 
 
 
 This is the Wikipedia project working on its performance on providing COVID-19 pandemic information. Most of our data generated can be seen using certain targets, but 
@@ -4452,7 +4451,7 @@ The ""top_model.ipynb"" generated LDA model for the LDA model on article 'Corona
   wrote eda.py and eda_pageview.py
 - Gabrielle Avila constructed our report and made deep analysis into the ""COVID-19 pandemic data"" page. She also made the ""Word Clouds.ipynb""
 - Michael Lam made LDA model analysis on the page ""Coronavirus"" and put them into the notebook ""top_model.ipynb"".",,
-76,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_23,"# DSC 180B Final Pipeline
+75,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_23,"# DSC 180B Final Pipeline
 ---
 ## How to run
 
@@ -4510,7 +4509,7 @@ Emma Logomasini
 
 UCSD Winter 2021
 ",,
-77,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_24,"# Politics on Wikipedia
+76,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_24,"# Politics on Wikipedia
 This project is focused on detecting political controversy in online communities. We use a bag-of-words model and a party-embed model, trained on the ideological books corpus (Sim et al, 2013) as well as congressional record data (api.govinfo.gov), and attempt to generalize this to Wikipedia articles, validating it on edit comments which explicitly mention reverting bias.
 
 
@@ -4594,7 +4593,7 @@ Data
 * https://dumps.wikimedia.org
 
 ",,
-78,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_70,"Opioids Overdose Genome Analysis
+77,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_70,"Opioids Overdose Genome Analysis
 ==============================
 
 ## Project Overview
@@ -4773,10 +4772,10 @@ You will be able to see the testing procedure to run
  ┗ 📜tox.ini
 ```
 ",,
-79,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_68,"# antibiotic-resistance
+78,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_68,"# antibiotic-resistance
  Identifying the genetic basis of antibiotic resistance in E. Coli
 ",,
-80,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_67,"# DSC180B_Capstone_Project
+79,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_67,"# DSC180B_Capstone_Project
 Ryan Cummings,
 Gregory Thein,
 Justin Kang,
@@ -4867,7 +4866,7 @@ Gregory, alongside Justin worked on the researching miRNA and biomarkers, and th
 
 All assisted in the implementation of the pipeline alongside editing/reviewing each other’s work. 
 ",,
-81,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_66,"# RNASeqToolComparison
+80,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_66,"# RNASeqToolComparison
 Data Science Senior Capstone Project: Comparing RNA Sequencing Differential Gene Expression Analysis Tools
 
 In this project, we want to compare distinct differential gene expression analysis tools on simulated data created with different numbers of genes differentially expressed.
@@ -4891,7 +4890,7 @@ In this project, we want to compare distinct differential gene expression analys
 * Brandon was responsible for creating the `random` outlier synthetic datasets and performing differential expression analysis tools not built-in `compcodeR`, including `ABSSeq` and `PoissonSeq`. Brandon helped write out to the `num_expressed_by_tool.csv` for his outputs produced by `ABSSeq` and `PoissonSeq`. As for the report, he helped write the Dataset and analysis of Figure 3. He also looked over other sections to add onto or revise. Brandon mainly focused on creating the graphs for the comparisons. 
 * Luigi was responsible for creating the `single` outlier and `poisson` synthetic datasets and helped perform `NOISeq` and `voom.limma` on the synthetic datasets. As for the report, Luigi created the citations, made revisions based on comments suggested by Shannon, and briefly described Figure 2. He wrote the Methods section for ABSSeq and PoissonSeq. Luigi was mainly responsible for the creation of the website and running/creating the pipeline for the real life dataset. 
 ",,
-82,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_69,"# Title: Genetic Overlap between Alzheimer's, Parkinson’s, and healthy patients
+81,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_69,"# Title: Genetic Overlap between Alzheimer's, Parkinson’s, and healthy patients
 
 #### Capstone Project: Data Science DSC180B
 
@@ -5341,7 +5340,7 @@ Work completed:
 
 
 ",,
-83,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_9,"# Live_vs_Vod_Project
+82,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_9,"# Live_vs_Vod_Project
 ## Group Name: Live
 
 Due to the variety, affordability and convenience of online video streaming, there are more subscribers than ever to video streaming platforms. Moreover, the decreased operation of non-essential businesses and increase in the number of people working from home in this past year has further compounded this effect. More people are streaming live lectures, sports, news, and video calls via the internet at home today than we have ever seen before. Internet Service Providers, such as Viasat, are tasked with optimizing  internet connections and tailoring their allocation of resources to fit each unique customer’s needs. With this increase in internet activity, it would be especially beneficial for Viasat to understand what issues arise when customers stream various forms of video. In general, different internet activities require different resources to optimize the connection. For example, if a customer watches a lot of live video they may prefer a connection with lower latency and higher bandwidth. Although we are able to identify the genre of an activity when a user is not using a VPN, the challenge arises when a user chooses to surf the web through a VPN. When it comes to VPN use cases we can’t identify a user’s unique activity when they experience issues, thus making us unable to successfully troubleshoot  those problems. This is where a tool that could identify various internet activities, specifically live or uploaded video streaming, within a VPN tunnel would be extremely useful for an Internet Service Provider. 
@@ -5432,7 +5431,7 @@ Use console to run **python run.py all** as a script. This will run everything l
 
 Link to the webpage: https://pristinsky1.github.io/live_vs_video_on_demand_VPN_detection/
 ",,
-84,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_8,"# DANE - Data Automation and Network Emulation Tool
+83,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_8,"# DANE - Data Automation and Network Emulation Tool
 
 <img align='right' src='docs/media/dane-transparent-small.png' height=248>
 
@@ -5480,7 +5479,7 @@ https://hdsi.ucsd.edu/, https://dsc-capstone.github.io/
 DANE was motivated and developed with the generous support of **Viasat**.  
 https://viasat.com/
 ",,
-85,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_7,"# ResRecovery
+84,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_7,"# ResRecovery
 
 Website: https://stephdoan.github.io/ResRecovery/
 
@@ -5604,7 +5603,7 @@ The project was mean to be run on the UCSD DSMLP server. Below are instructions 
 
 - `python run.py predict` will either create training data to create a model or utilize a Pickle'd model that we have included. Output is an array of resolution label for each chunk in the data.
 ",,
-86,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_10,"# Data Science Senior Capstone - Viasat VPN Analysis
+85,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_10,"# Data Science Senior Capstone - Viasat VPN Analysis
 
 **Table of Contents**:
 - [Link to Blog page](#blog-page)
@@ -5712,7 +5711,7 @@ Can optionally specify targets after test to only run that target. For example `
 
 An academic report on the exploration and model built in this repository can be found at [`SPICIVPN_report.pdf`](SPICIVPN_report.pdf)
 ",,
-87,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_65,"## Interpreting Higgs Interaction Network with Layerwise Relevance Propagation
+86,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_65,"## Interpreting Higgs Interaction Network with Layerwise Relevance Propagation
 
 #### Abstract
 
@@ -5783,7 +5782,7 @@ python run.py <arguments>
 <br>
 
 ",,
-88,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_64,"# Particle Physics Result Replication
+87,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_64,"# Particle Physics Result Replication
 ## Checkpoint #1
 
 #### Brief Description of Structure
@@ -5801,7 +5800,7 @@ This file successfully extracts the data.
 
 #### In order to run the file run.py, execute the following command:
 ##### python run.py data",,
-89,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_72,"## Project MAI
+88,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_72,"## Project MAI
 ### Project Description
 MAI refers to Microservice-based Auto Infrastructure, a serverless architecture.
 This project aims to build a lightweight, effective, and robust system that helps with the automations of several workflows of the campus COVID detection team.
@@ -5834,7 +5833,7 @@ To build a graph and see the resulting csv, please run `python run.py graph`
 The data used was provided by the Knight Lab team. One data source is the daily wastewater data on the Google Spreadsheet. The other data source is the network folder which contains all the shape files about sewer and manhole connections on campus.
 
 ",,
-90,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_60,"# AutoBrick: A system for end-to-end automation of building point labels to Brick turtle files
+89,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_60,"# AutoBrick: A system for end-to-end automation of building point labels to Brick turtle files
 
 ![alt text](https://github.com/Advitya17/AutoBrickify/blob/main/autobrick_workflow.png?raw=true)
 
@@ -5867,7 +5866,7 @@ Run the project from the root directory.
 
 Your Turtle object file (`output.ttl`) will be generated in the root directory!
 ",,
-91,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_61,"## Infection Risk App
+90,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_61,"## Infection Risk App
 In this project, We propose an application which estimates infection risk of COVID-19 in buildings. The application accepts building data and a set of parameters regarding occupants and infection rates of the surrounding community. Code and assumptions made in the algorithm are clearly explained to users for transparency, which those explainations are included in the project in our last quarter. 
 
 Opening up the project
@@ -5888,7 +5887,7 @@ Nicholas Kho helped developing the application and migrated the codes to src and
 
 Zhexu Li added features to the application migrating the codes, updated the project structure and developed configs and run.py.
 ",,
-92,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_34,"# Project: User Wait
+91,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_34,"# Project: User Wait
 
 ## Introduction
 
@@ -5910,7 +5909,7 @@ The data set we use is ”mousewaitall.csv001”,which is provided by the Intel 
 
 The second data set we use is ”system sysinfo uniquenormalized.csv000”, which is provided by the Intel teams. It contain 32 different features and 100,000unique systems.This data set provides informationabout the system hardware like CPU model, GPU,ram, etc.
 ",,
-93,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_33,"# DSC180B-Capstone-Project
+92,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_33,"# DSC180B-Capstone-Project
 DSC Capstpne Project: A Prediction Model for Battery Remaining Time
 ## Usage Instructions
 We provided 4 targets for your usage. They are `data`, `eda`, `model`, and `test`.
@@ -5971,7 +5970,7 @@ PROJECT
 ### `run.py`
 * Main driver for this project.
 ",,
-94,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_35,"# DSC180B_Project checkpoint_1
+93,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_35,"# DSC180B_Project checkpoint_1
 
 # Background
 In the PC industry, there are different computer setups for omnifarious PC users. Different types of customers have different needs and budget for their computers. For instance, we think that gamers prefer desktops or laptops with high-end GPU and CPU while office users prefer the ones with decent CPU and long battery life. Hence, being aware of the different needs from different customers could help computer retailers dramatically with marketing and resource allocation. With this background, we decided to build a machine learning model that can predict a users’ persona based on the information of their computers.
@@ -5989,7 +5988,7 @@ In the PC industry, there are different computer setups for omnifarious PC users
     
     *python run.py chi-square-test*     to run the hypothesis test on column 'ram' with other columns.
 ",,
-95,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_36,"# Prediction Task: Utilizing CPU Statistics and Application Usage to Predict a User’s Persona
+94,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_36,"# Prediction Task: Utilizing CPU Statistics and Application Usage to Predict a User’s Persona
 
 
 
@@ -6081,7 +6080,7 @@ Keshan:
     - graphs + graph analysis
     - ATL work
 ",,
-96,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_32,"Scale model Group
+95,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_32,"Scale model Group
 The purpose of this project is to provide a testing ground for the transmission code in SchoolABM. By scaling down the parameters to a single room of students, effects of elements such as distance and ventilation can be seen more easily.
 This also provides a testing environment that has a significantly faster runtime and has been useful in verifying our math for transmission both through droplets and aerosols
 
@@ -6100,7 +6099,7 @@ Airavata (due wednesday)
 
 Well-Mixed room (due thursday)
 ",,
-97,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_31,"# Capstone Project dsc180B Covid-19 Transmission in Buses
+96,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_31,"# Capstone Project dsc180B Covid-19 Transmission in Buses
 
 In order to install mesa-geo and rtree, we have copied Johnny Lei's README file from our domain repo. Here it is:
 
@@ -6141,13 +6140,12 @@ In order to run this simulation, you could change the parameters in config/test.
 This simulation start with an empty bus. The bus is scheduled to stop at a certain number of stops at certain times, picking up certain number of students. 
 All these parameters are adjustable. As the bus continues, the sick students in the bus transmit the virus by normal activities like talking and breathing, and also coughing, sneezing, etc. This model stops the simulation at the end of a trip where the bus reaches the school (destination). Then this model creates a graph of the number of healthy and sick(if they received the virus) students every minute. There is also a gif of the simulation that shows the position of each student, the time since start, and the layout of the bus.
 ",,
-98,https://github.com/DSC-Capstone/projects-2020-2021/tree/main/projects/project_78,,,
-99,https://github.com/leonkuoDSC/Policing_and_Income,"# Policing_and_Income
+97,https://github.com/leonkuoDSC/Policing_and_Income,"# Policing_and_Income
 Notebooks include work on the car makes and models, using the San Diego Open Policing database, and getting the data by service area.
 
 Using run.py with target test will add the car make_model, age and price to the tx_50.csv test dataset and create a new test.csv file with the added columns.
 ",{'leonkuoDSC': 'https://github.com/leonkuoDSC'},"{'Jupyter Notebook': 1.0, 'Python': 0.0, 'Dockerfile': 0.0}"
-100,https://github.com/lizheng1226/DSC180B_Project_AutoFiNews,"# Model Analysis of Stock Price Trend Predictions based on Financial News
+98,https://github.com/lizheng1226/DSC180B_Project_AutoFiNews,"# Model Analysis of Stock Price Trend Predictions based on Financial News
 
 This is a data analysis project that aims to use different methods to predict the change of stock price from financial news and compare the performances of those methods.
 
@@ -6197,7 +6195,7 @@ launch.sh -c 2 -m 4 -g 1 -i lizheng1226/dsc180_autofinews:latest
 - Liuyang Zheng
 - Mingjia Zhu
 - Yunhan Zhang","{'mingjiazhu': 'https://github.com/mingjiazhu', 'lizheng1226': 'https://github.com/lizheng1226', 'yuz047': 'https://github.com/yuz047'}","{'Jupyter Notebook': 0.87, 'Python': 0.13, 'Dockerfile': 0.0}"
-101,https://github.com/jamesjaeyu/autophrase_over_time,"# Utilizing AutoPhrase on Computer Science papers over time
+99,https://github.com/jamesjaeyu/autophrase_over_time,"# Utilizing AutoPhrase on Computer Science papers over time
 ### DSC 180B Capstone Project
 
 ### Group Members: Cameron Brody, Jason Lin, James Yu
@@ -6228,7 +6226,7 @@ File & folder descriptions:
     - 'all' will run all targets with full dataset
     - 'test' will run 'data', 'model', and 'analysis' with test data. 'eda' will run the same
 ","{'jamesjaeyu': 'https://github.com/jamesjaeyu', 'sheildship': 'https://github.com/sheildship', 'cabrody': 'https://github.com/cabrody'}","{'Python': 0.99, 'Dockerfile': 0.01}"
-102,https://github.com/YongqingLi14/codenames-ai-analysis,"# codenames-ai-analysis
+100,https://github.com/YongqingLi14/codenames-ai-analysis,"# codenames-ai-analysis
 
 ## Introduction
 This project includes the experiments and analysis on the performance of Codenames AI, a system capable of replacing human efforts in the game Codenames.
@@ -6278,7 +6276,7 @@ We put 3 datasets to the test in this experiment:
 * Number of assassins triggered
 * Accuracy in correctly guessing the intended words
 ",{'YongqingLi14': 'https://github.com/YongqingLi14'},"{'Jupyter Notebook': 0.96, 'Python': 0.04, 'Dockerfile': 0.0}"
-103,https://github.com/jonathantanoto/spam_detection_180B/,"# Spam Detection Using Natural Language Processing
+101,https://github.com/jonathantanoto/spam_detection_180B/,"# Spam Detection Using Natural Language Processing
 
 Building a spam detection algorithm by utilizing Natural Language Processing to extract features associated with spam emails. Deep Learning methods as well as word-to-vector transformation are used to create a spam email classifier.
 
@@ -6329,7 +6327,7 @@ ROOT FOLDER
 * Website: https://jonathantanoto.github.io/spamdetection/
 * Presentation Video: https://youtu.be/wkc7R0J4_VM
 ",{'jonathantanoto': 'https://github.com/jonathantanoto'},"{'Jupyter Notebook': 0.98, 'Python': 0.02}"
-104,https://github.com/mcelz/MedCoin-Authorization-Smart-Contract,"# MedCoin Authorization Contract
+102,https://github.com/mcelz/MedCoin-Authorization-Smart-Contract,"# MedCoin Authorization Contract
 ## Overview
 EHR(Electronic Health Records) was never intended to manage and preserve the complications of cross-institutional and lifelong medical records: Medical information for a patient comes from a variety of places, and different pieces of that information must be put together for clinicians to make efficient healthcare decisions. Because of storage constraints, EHRs frequently store health data at a single location for a few years rather than keeping all-time records for patients. EHR systems used by different hospitals are frequently incompatible. Patients who seek medical treatment at several locations must frequently retype their personal information and request data transfers across these health providers, and they encounter considerable issues accessing their reports, correcting incorrect information, and authorizing medical data. <br />
 <br />
@@ -6390,7 +6388,7 @@ We also connected to MetaMask Ropsten testnetwork, however, due to the limitatio
 We also include the Project report in the notebook folder.
 Our project website is: https://ellawan.github.io/.  
 ","{'mcelz': 'https://github.com/mcelz', 'ellawan': 'https://github.com/ellawan'}",{'Solidity': 1.0}
-105,https://github.com/DSC180A-A04/spatiotemporal_analysis,"# Spatiotemporal Analysis
+103,https://github.com/DSC180A-A04/spatiotemporal_analysis,"# Spatiotemporal Analysis
 
 ## Webpage
 https://dsc180a-a04.github.io/spatiotemporal_analysis/
@@ -6430,7 +6428,7 @@ pip install -r requirements.txt
 ```bash
 python run.py
 ```","{'kailingding': 'https://github.com/kailingding', 'MilesLabrador': 'https://github.com/MilesLabrador', 'JudyJin': 'https://github.com/JudyJin', 'djleung': 'https://github.com/djleung'}","{'Jupyter Notebook': 0.94, 'Python': 0.06, 'Shell': 0.0, 'Dockerfile': 0.0}"
-106,https://github.com/dhaar-data/DSC180B-project,"# DSC180B-project
+104,https://github.com/dhaar-data/DSC180B-project,"# DSC180B-project
 This is an exploration of the bootstrap post-prediction inference approach introduced by Wang et al. in [Methods for correcting inference based on outcomes predicted by machine learning](https://www.pnas.org/content/117/48/30266/tab-article-info) through a study of tweets and their corresponding political alignment in the US. When we look at a tweet, what are the kinds of words or phrases that most strongly indicate the tweet's alignment to Democrats or Republicans? In today's political climate, what topics or figures are most heavily scrutinized by one party or another? We seek to find these key figures, phrases, and topics through a statistical analyses of political tweets.
 
 As said above, this statistical analyses also functions as an investigation of the bootstrap post-prediction inference approach. Post-prediction--or postpi, as Wang et al. calls it--is the use of predicted outcomes in lieu of observed outcomes during inferential analysis. If postpi is conducted without accounting for the use of predicted outcomes as is often the case, this leads to issues with bias and standard , among other things. While the aforementioned bootstrap post-prediction inference approach corrects these issues for a wide range of datasets, we seek to study its applicability specifically towards text data, particularly in political science. 
@@ -6466,8 +6464,8 @@ This project has already provided pre-scraped Twitter data in `data/out/raw`.
 https://dhaar-data.github.io/DSC180B-project/
 ```
 ","{'alicegunawan': 'https://github.com/alicegunawan', 'dhaar-data': 'https://github.com/dhaar-data'}","{'Python': 0.95, 'Dockerfile': 0.05}"
-107,https://github.com/sujeetyeramareddy9/NFL-Analysis,,,
-108,https://github.com/duha-aldebakel/DSC180B-LDACode,"# Overview & Setup
+105,https://github.com/sujeetyeramareddy9/NFL-Analysis,,,
+106,https://github.com/duha-aldebakel/DSC180B-LDACode,"# Overview & Setup
 
 This repository serves as the central user code repository for Group A06's DSC180B Capstone project.
 
@@ -6511,7 +6509,7 @@ To interact with jupyter notebooks (make sure virtual environment is activated a
 - ""`python run.py lda-cgs`"" to run gibbs on production data 
 - ""`python run.py onlineldavb`"" to run blei MFVI LDA on production data   
 ","{'duha-aldebakel': 'https://github.com/duha-aldebakel', 'a1limon': 'https://github.com/a1limon'}","{'Jupyter Notebook': 0.99, 'Python': 0.01, 'Dockerfile': 0.0}"
-109,https://github.com/889884m/DSC180_Project,"# Locating Sound with Machine Learning
+107,https://github.com/889884m/DSC180_Project,"# Locating Sound with Machine Learning
 
 Site URL: https://889884m.github.io/DSC180_Project/
 
@@ -6522,7 +6520,7 @@ The code is run via the command `python run.py test`. This runs the baseline mod
 Project code with working models can be found in `src` folder. Here the code for data generation and the test data can be found. This is also where the model code can be found which is in the `prediction` folder. Here, the code for the feed-forward Neural Net and the SVM can be found.
 
 To build the `docker build -t <tag_name> .` which gives a local docker container with the libraries scipy, numpy, pandas, pytorch, and sklearn.","{'889884m': 'https://github.com/889884m', 'rdszhao': 'https://github.com/rdszhao'}","{'Jupyter Notebook': 0.56, 'HTML': 0.44, 'Python': 0.01, 'Dockerfile': 0.0}"
-110,https://github.com/sunqiaochen/NeurlPS_2022_DSC180,"# NeurlPS_2022_DSC180
+108,https://github.com/sunqiaochen/NeurlPS_2022_DSC180,"# NeurlPS_2022_DSC180
 In this project, dataset we used: https://drive.google.com/drive/u/0/folders/10gwW55-9xQyAvJh7KHR1uJqYSpDBW0iL
 https://drive.google.com/file/d/1TmPrp74d2y77FCu3Fv0u_vlOP7HvLxkX/view?usp=sharing
 
@@ -6532,7 +6530,7 @@ The goal of our project is to generate subsets of audio recordings that have hig
 
 
 ",{'sunqiaochen': 'https://github.com/sunqiaochen'},"{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-111,https://github.com/EdmundoZamora/TweetyNet_CUDA_GPU_Adaptation,"### Binary classifies bird vocalizations in a wav files
+109,https://github.com/EdmundoZamora/TweetyNet_CUDA_GPU_Adaptation,"### Binary classifies bird vocalizations in a wav files
 
 ### Stores wav and csv data in data/raw/ it outputs results in data/out/
 
@@ -6547,7 +6545,7 @@ website: [DSC180-A09-Eco-Acoustic-Event-Detection](https://edmundozamora.github.
 
 link to CPU Model Repository: [CPU Model Repo](https://github.com/EdmundoZamora/Q1-Project-Code)
 ","{'EdmundoZamora': 'https://github.com/EdmundoZamora', 'mugen13lue': 'https://github.com/mugen13lue'}","{'Jupyter Notebook': 0.93, 'Python': 0.07, 'Dockerfile': 0.0, 'HTML': 0.0}"
-112,https://github.com/UCSD-E4E/Pyrenote,"## Pyrenote, The E4E Manual Audio Labeling System
+110,https://github.com/UCSD-E4E/Pyrenote,"## Pyrenote, The E4E Manual Audio Labeling System
 
 This project, Pyrenote, creates moment to moment or strong labels for audio data. Pyrenote and much of this README are based on heavily on [Audino](https://github.com/midas-research/audino) as well as [Wavesurfer.js](https://github.com/katspaugh/wavesurfer.js). The name is a combination of Py, Lyrebird, and note (such as making a note on a label).
 
@@ -6668,7 +6666,128 @@ annotation page, make sure to do the following:
   - about 20 lines down in the `setState` callback, add to the list `SOME_VAR: response.data.features_list['VARIABLE_NAMED_IN_STEP_2']`.
 
   ","{'Sean1572': 'https://github.com/Sean1572', 'nishantbalaji': 'https://github.com/nishantbalaji', 'erikajoun': 'https://github.com/erikajoun', 'victoriacyzhang': 'https://github.com/victoriacyzhang', 'dependabot[bot]': 'https://github.com/apps/dependabot', 'vaibhavtiwari33': 'https://github.com/vaibhavtiwari33', 'Vanessa-Salgado': 'https://github.com/Vanessa-Salgado', 'ntlhui': 'https://github.com/ntlhui', 'WesCodes': 'https://github.com/WesCodes', 'JacobGlennAyers': 'https://github.com/JacobGlennAyers', 'Bipul-Harsh': 'https://github.com/Bipul-Harsh', 'sprestrelski': 'https://github.com/sprestrelski', 'kchen283': 'https://github.com/kchen283', 'mugen13lue': 'https://github.com/mugen13lue'}","{'JavaScript': 0.76, 'Python': 0.2, 'Shell': 0.02, 'Dockerfile': 0.01, 'CSS': 0.0, 'HTML': 0.0, 'Mako': 0.0}"
-113,https://github.com/RuojiaTao/Covid-Misinformation-Spread-on-Tweets,"# Covid-Misinformation-Spread-on-Tweets
+111,https://github.com/UCSD-E4E/Pyrenote,"## Pyrenote, The E4E Manual Audio Labeling System
+
+This project, Pyrenote, creates moment to moment or strong labels for audio data. Pyrenote and much of this README are based on heavily on [Audino](https://github.com/midas-research/audino) as well as [Wavesurfer.js](https://github.com/katspaugh/wavesurfer.js). The name is a combination of Py, Lyrebird, and note (such as making a note on a label).
+
+If you want to use Pyrenote, use the following to get started!
+
+**NOTE**: Before making any changes to the code, make sure to create a branch to safely make changes. Never commit directly to main or production branch.
+**Read github_procedures.md for more detailed information before contributing to the repo.** 
+
+## Usage
+
+*Note: Before getting the project set up, message project leads for env file. This file should be put in `/audino`. **Make sure the file is never pushed to the github***
+
+Please install the following dependencies to run `Pyrenote` on your system:
+
+1. [git](https://git-scm.com/) *[tested on v2.23.0]*
+2. [docker](https://www.docker.com/) *[tested on v19.03.8, build afacb8b]*
+3. [docker-compose](https://docs.docker.com/compose/) *[tested on v1.25.5, build 8a1c60f6]*
+
+### Clone the repository
+
+```sh
+$ git clone https://github.com/UCSD-E4E/Pyrenote.git
+$ cd audino
+```
+
+**Note for Windows users**: Please configure git to handle line endings correctly as services might throw an error and not come up. You can do this by cloning the project this way:
+
+```sh
+$ git clone https://github.com/UCSD-E4E/Pyrenote.git --config core.autocrlf=input
+```
+
+### For Development (Note this is the one we will test on and use)
+
+Similar to `production` setup, you need to use development [configuration](./docker-compose.dev.yml) for working on the project, fixing bugs and making contributions.
+**Note**: Before proceeding further, you might need to give docker `sudo` access or run the commands listed below as `sudo`.
+
+**To build the services (do this when you first start it), run:**  
+**Note**: Remember to cd into audino before starting
+```sh
+$ docker-compose -f docker-compose.dev.yml build
+```
+
+**To bring up the services, run:**
+```sh
+$ docker-compose -f docker-compose.dev.yml up
+```
+Then, in browser, go to [http://localhost:3000/](http://localhost:3000/) to view the application.
+
+**To bring down the services, run:**
+
+```sh
+$ docker-compose -f docker-compose.dev.yml down
+```
+## Troubleshooting for starting docker
+
+1) Docker containers do not even get a chance to start
+  - Make sure docker is set up properly
+  - Make sure docker itself has started. On Windows, check the system tray and hover over the icon to see the current status. Restart it if necessary
+2) Backend crashes
+  - For this error, check the top of the log. It should be complaining about /r characters in the run-dev.sh files
+  - The backend will crash if the endline characters are set to CRLF rather than LF
+  - On VSCode, you can swap this locally via going into the file and changing the CRLF icon in the bottom right to LF
+  - Do this for `frontend/scripts/run-dev.sh` and `backend/scripts/run-dev.sh`
+3) Database migration issues
+  - If the backend complains about compiler issues while the database migration is occurring go into `backend/scripts/run-dev.sh`
+  - On line 25, check and make sure that the stamp command is pointing to the right migration for the database
+      - Ask for help on this one
+
+## Getting Started
+
+At this point, the docker should have gotten everything set up. After going to [http://localhost:3000/](http://localhost:3000/) you should be able to log into the docker
+
+To access the site, sign in with the username of **admin** and password of **password**. On logging in, navigate to the admin-portal to create your first project. Make sure to make a label group and some labels for the project!
+
+After creating a project, get the API key by returning to the admin portal. You can use the API key to add data to a project. Create a new terminal (while docker is running the severs) and cd into `audino/backend/scripts`. Here use the following command:
+
+```
+python upload_mass.py --username admin.test --is_marked_for_review True --audio_file C:\REPLACE\THIS\WITH\FOLDER\PATH\TO\AUDIO\DATA --host localhost --port 5000 --api_key REPLACE_THIS_WITH_API_KEY
+```
+Make sure to have a folder with the audio data ready to be added. For testing purposes, get a folder with about 20 clips. 
+
+Once that runs, you are ready to start testing!
+
+
+### For Production (Don't use on windows)
+
+You can either run the project on [default configuration](./docker-compose.prod.yml) or modify them to your need.  
+**Note**: Before proceeding further, you might need to give docker `sudo` access or run the commands listed below as `sudo`.  
+**Note**: Remember to cd into audino before starting  
+
+**To build the services, run:**
+
+```sh
+$ docker-compose -f docker-compose.prod.yml build
+```
+
+**To bring up the services, run:**
+
+```sh
+$ docker-compose -f docker-compose.prod.yml up
+```
+
+Then, in browser, go to [http://0.0.0.0/](http://0.0.0.0/) to view the application.
+
+**To bring down the services, run:**
+
+```sh
+$ docker-compose -f docker-compose.prod.yml down
+```
+
+### For Dev Team:
+Features should be turned on and off by admins for individual projects. When adding a new feature to either a project's data page or
+annotation page, make sure to do the following:
+1) Go to `.\audino\frontend\src\containers\forms\featureForm.js`
+2) Add a new item in the featuresEnabled directory. This will be the name of the `feature_toggle` variable. 
+3) Return to the page you are working on. 
+  - For example, if you are working on the annotation page, navigate to the `componentDidMount()` method
+  - about 20 lines down in the `setState` callback, add to the list `SOME_VAR: response.data.features_list['VARIABLE_NAMED_IN_STEP_2']`.
+
+  ","{'Sean1572': 'https://github.com/Sean1572', 'nishantbalaji': 'https://github.com/nishantbalaji', 'erikajoun': 'https://github.com/erikajoun', 'victoriacyzhang': 'https://github.com/victoriacyzhang', 'dependabot[bot]': 'https://github.com/apps/dependabot', 'vaibhavtiwari33': 'https://github.com/vaibhavtiwari33', 'Vanessa-Salgado': 'https://github.com/Vanessa-Salgado', 'ntlhui': 'https://github.com/ntlhui', 'WesCodes': 'https://github.com/WesCodes', 'JacobGlennAyers': 'https://github.com/JacobGlennAyers', 'Bipul-Harsh': 'https://github.com/Bipul-Harsh', 'sprestrelski': 'https://github.com/sprestrelski', 'kchen283': 'https://github.com/kchen283', 'mugen13lue': 'https://github.com/mugen13lue'}","{'JavaScript': 0.76, 'Python': 0.2, 'Shell': 0.02, 'Dockerfile': 0.01, 'CSS': 0.0, 'HTML': 0.0, 'Mako': 0.0}"
+112,https://github.com/RuojiaTao/Covid-Misinformation-Spread-on-Tweets,"# Covid-Misinformation-Spread-on-Tweets
 Analyze the misinformation about covid spreading in tweet
 
 Our website: https://ruojiatao.github.io/Covid-Misinformation-Spread-on-Tweets/
@@ -6697,7 +6816,7 @@ Spread of misinformation over social media posts challenges to daily information
 
 
 ","{'RuojiaTao': 'https://github.com/RuojiaTao', 'axl401': 'https://github.com/axl401'}",{'Python': 1.0}
-114,https://github.com/davamini/DSC180B_Reddit_MisInfo_Capstone,"# DSC180B Subreddit Misinformation Capstone Project
+113,https://github.com/davamini/DSC180B_Reddit_MisInfo_Capstone,"# DSC180B Subreddit Misinformation Capstone Project
 Analyzing the spread of misinformation in the Reddit platform.<br>
 Website URL: https://davamini.com/dsc180_project.github.io/index.html
 <br>
@@ -6717,7 +6836,7 @@ python run.py
 python run.py test
 ```
 ",{'davamini': 'https://github.com/davamini'},"{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-115,https://github.com/fieryashes/DSC180B_Misinformation_Project,"# DSC180B Misinformation Project
+114,https://github.com/fieryashes/DSC180B_Misinformation_Project,"# DSC180B Misinformation Project
 Project Website: https://anaaamika.github.io/DSC180B-Misinformation/
 
 ## Build Instructions
@@ -6730,7 +6849,7 @@ Then run `python run.py analysis` to view preliminary analysis on the YouTube ca
 
 Finally, run `python run.py model` to build a misinformation detection model based on the YouTube transcripts. 
 ","{'anaaamika': 'https://github.com/anaaamika', 'fieryashes': 'https://github.com/fieryashes'}","{'Jupyter Notebook': 0.86, 'HTML': 0.11, 'Python': 0.03}"
-116,https://github.com/Bryan-Az/DSC-Capstone-Result-Replication,"## DSC-Capstone-Result-Replication
+115,https://github.com/Bryan-Az/DSC-Capstone-Result-Replication,"## DSC-Capstone-Result-Replication
 ### DSC180A Quarter 1 and 2
 
 Website Link: http://www.bambriz.me/wp-content/uploads/2022/03/dsc180b.html
@@ -6749,7 +6868,7 @@ Pls. ignore the loading bar in terminal it doesn't mean anything - but training 
 
 There is really no need to run the training since the testing script loads presaved weights (stored in github) to initialize the pre-trained model for testing.  
 ",{'Bryan-Az': 'https://github.com/Bryan-Az'},"{'Jupyter Notebook': 0.98, 'Python': 0.02}"
-117,https://github.com/UCSDJLEE/DSC180B-A11-Project,"# DSC180B-A11-Project
+116,https://github.com/UCSDJLEE/DSC180B-A11-Project,"# DSC180B-A11-Project
 ## Particle Jet Mass Regression
 
 <img src='https://raw.githubusercontent.com/isacmlee/particle-physics-visuals/main/images/cern_atlas.jpeg'>
@@ -6767,7 +6886,7 @@ The model is implemented based on PyTorch Neural Network APIs and gets fitted to
  - `run.py`: main script to run within properly set-up environment using `python3 run.py train` for model training or `python3 run.py test` for model assessment
  - `simplenetwork_best.pt`: PyTorch-based file that stores weights of optimized, or best ""fitting,"" model
 ",{'UCSDJLEE': 'https://github.com/UCSDJLEE'},"{'Python': 0.59, 'Jupyter Notebook': 0.39, 'Dockerfile': 0.02, 'Shell': 0.01}"
-118,https://github.com/shonepatil/GNN-Spotify-Recommender-Project,"# Graph Neural Networks for Song Recommendation on Spotify Playlists
+117,https://github.com/shonepatil/GNN-Spotify-Recommender-Project,"# Graph Neural Networks for Song Recommendation on Spotify Playlists
 
 This project tackles the task of creating meaningful and accurate song recommendations to Spotify Playlists by using Graph Neural Networks. The goal is to better capture the characteristics of songs by analyzing co-occurence of song pairs across thousands of playlists in the form of a graph.
 
@@ -6777,7 +6896,7 @@ To run the GraphSAGE based model on the Spotify Playlist data, first use this co
 
 To customize the model parameters, edit `config/model-params`.
 ","{'Melody-Wang': 'https://github.com/Melody-Wang', 'Benjamin242': 'https://github.com/Benjamin242', 'shonepatil': 'https://github.com/shonepatil'}","{'Jupyter Notebook': 0.95, 'Python': 0.05, 'Dockerfile': 0.0}"
-119,https://github.com/yangshengaa/dynamic_stock_industry_classification,"# Dynamic Stock Industrial Classification
+118,https://github.com/yangshengaa/dynamic_stock_industry_classification,"# Dynamic Stock Industrial Classification
 
 Use graph-based analysis to re-classify stocks and experiment different re-classification methodologies to improve Markowitz portfolio optimization performance in the low-frequency quantitative trading context.
 
@@ -6907,6 +7026,29 @@ Log known issues here:
   - examine output holding stats
 - plain risk attribution
 ",{'yangshengaa': 'https://github.com/yangshengaa'},"{'Python': 1.0, 'Dockerfile': 0.0}"
+119,https://github.com/MarthaY01/hdsi_faculty_tool/tree/main,"# HDSI Faculty Exploration Tool
+
+This repository contains project code for experimenting with LDA for Faculty Information Retrieval System.
+
+This tool is now deployed @ https://hdsi-faulty-tool.herokuapp.com/
+
+## Running the Project
+* All of the below lines should be run within a terminal:
+
+* Before running any of the below commands, launch the docker image by running `launch.sh -i duxiang/dsc180a:latest`
+
+* To get the preprocessed data file, run `python run.py process_data`
+* To get the fitted sklearn.lda model, run `python run.py model`
+* To prepare/update the dashboard, run `python run.py prepare_sankey`
+* To run the live dashboard, run `python run.py run_dashboard`
+
+## Using the Dashboard
+* When executing `run_dashboard`, it will launch dash with a locally hosted port.
+* It would require port-forwarding on a remote server.
+
+# Web Link
+Website: https://marthay01.github.io/hdsi_faculty_tool/
+","{'srpatel2000': 'https://github.com/srpatel2000', 'xd00099': 'https://github.com/xd00099', 'MarthaY01': 'https://github.com/MarthaY01', 'brianrqian': 'https://github.com/brianrqian'}","{'Jupyter Notebook': 0.89, 'Python': 0.11, 'HTML': 0.0}"
 120,https://github.com/MarthaY01/hdsi_faculty_tool/tree/main,"# HDSI Faculty Exploration Tool
 
 This repository contains project code for experimenting with LDA for Faculty Information Retrieval System.
@@ -7376,38 +7518,7 @@ To measure sentiment, we utilized the
         - Saves dataframes used later to generate visuals to `data\temp\rq3_ps`
     - run `python run.py ps_visuals`
         - Saves visualizations to `data\out\rq3_ps`","{'aavelasq': 'https://github.com/aavelasq', 'nvgopal': 'https://github.com/nvgopal', 'peter-wu1': 'https://github.com/peter-wu1'}",{'Python': 1.0}
-126,https://github.com/18anguyen9/Single_Cell_Coupled_Autoencoders,"# Single-Cell-Coupled-Autoencoders
-
-&emsp; &emsp; In this project, we implement a coupled autoencoder for working with single-cell data, which includes data sets on DNA, mRNA and protein data.
-
-## About
-
-&emsp; &emsp; Historically, analysis on single-cell data has been difficult to perform, due to data collection methods often resulting in the destruction of the cell in the process of collecting information. However, an ongoing endeavor of biological data science has recently been to analyze different modalities, or forms, of the genetic information within a cell. Doing so will allow modern medicine a greater understanding of cellular functions and how cells work in the context of illnesses. The information collected on the three modalities of DNA, RNA, and protein can be done safely and because it is known that they are same information in different forms, analysis done on them can be extrapolated understand the cell as a whole. Previous research has been conducted by Gala, R., Budzillo, A., Baftizadeh, F. et al. to capture gene expression in neuron cells with a neural network called a coupled autoencoder. This autoencoder framework is able to reconstruct the inputs, allowing the prediction of one input to another, as well as align the multiple inputs in the same low dimensional representation. In our paper, we build upon this coupled autoencoder on a data set of cells taken from several sites of the human body, predicting from RNA information to protein. We find that the autoencoder is able to adequately cluster the cell types in its lower dimensional representation, as well as perform decently at the prediction task. We show that the autoencoder is a powerful tool for analyzing single-cell data analysis and may prove to be a valuable asset in single-cell data analysis.
-
-## How to run this project
-
-1. Clone this repository onto your local machine with `git clone https://github.com/18anguyen9/Single_Cell_Coupled_Autoencoders.git` and change into the directory.
-
-2. Launch the Docker image for the project with the following line: `launch.sh -i alandnin/method3:latest`
-
-3. The code is ran with command line arguments:
-
-    * `test`: (`python3 run.py test`) Due to the size of the full data set, this will perform a test run on a much smaller subset of our data sets to simulate the output of our project. 
-    
-    *  `test-full`: (`python3 run.py test-full`) This a full run of training the coupled autoencoder with the entire data set. This will take much longer (expect 20-30 minutes) than `test`, but will contain meaningful outputs compared to the simulated `test`. However, you will first need to download the entire data set using the following command line argument `aws s3 sync s3://openproblems-bio/public/ $HOME/data/ --no-sign-request` and moving the `cite_gex_processed_training.h5ad` and `cite_adt_processed_training.h5ad` files into the `/data` file of this directory.
-    
-    *  `clear-cache`: The training computation is memory expensive. `python3 run.py clear-cache` can be run in the case that your machine runs out of memory. This will only happen when `test-full` is ran.
-
-## Related
-
-We based our project off of this NeurIPS competition: https://openproblems.bio/neurips_docs/about/about/
-
-Our website: https://18anguyen9.github.io/DSC_180_website/
-    
-    
-    
-","{'brianvi-98': 'https://github.com/brianvi-98', 'brianvi98': 'https://github.com/brianvi98', '18anguyen9': 'https://github.com/18anguyen9'}",{'Python': 1.0}
-127,https://github.com/zwcolin/T5_SQuAD_Prompt_Tuning,"# On Evaluating the Robustness of Language Models with Tuning
+126,https://github.com/zwcolin/T5_SQuAD_Prompt_Tuning,"# On Evaluating the Robustness of Language Models with Tuning
 Authors: Colin Wang, Lechuan Wang, Yutong Luo
 
 Website: https://rachelluoyt.github.io/T5_SQuAD_Prompt_Tuning/
@@ -7436,8 +7547,8 @@ The script is based on the following paper:
       primaryClass={cs.CL}
 }
 ","{'zwcolin': 'https://github.com/zwcolin', 'wanglec': 'https://github.com/wanglec', 'rachelluoyt': 'https://github.com/rachelluoyt'}","{'Python': 0.97, 'Jupyter Notebook': 0.03, 'Makefile': 0.0, 'Shell': 0.0, 'Dockerfile': 0.0}"
-128,https://github.com/lkuwahara/DSC180Bhub.io-B05/tree/gh-pages,,,
-129,https://github.com/zhw005/DSC180B-Project,"# DSC180B: Explainable AI
+127,https://github.com/lkuwahara/DSC180Bhub.io-B05/tree/gh-pages,,,
+128,https://github.com/zhw005/DSC180B-Project,"# DSC180B: Explainable AI
 This is a repository that contains code for DSC180B section B06's Q2 Project: Explainable AI.
 
 ""build-script"": ""zhw005/dsc180b-project""
@@ -7467,7 +7578,7 @@ In our project, we will be focusing on using different techniques from causal in
 | model_explanations | 'config/Model_Explanations_Example_loan.json'| Do model explanations - loan data example|
 | recourse | 'config/Recourse-example.json'| Generate recourse explanation - loan data example|
 ","{'yujiezhang0914': 'https://github.com/yujiezhang0914', 'apochira': 'https://github.com/apochira', 'JerryYC': 'https://github.com/JerryYC', 'zhw005': 'https://github.com/zhw005'}","{'Jupyter Notebook': 0.98, 'Python': 0.02, 'Dockerfile': 0.0}"
-130,https://github.com/TanveerMittal/Feature_Type_Inference_Capstone,"# Feature Type Inference Capstone
+129,https://github.com/TanveerMittal/Feature_Type_Inference_Capstone,"# Feature Type Inference Capstone
 
 ### Team Members: Tanveer Mittal & Andrew Shen
 ### Mentor: Arun Kumar
@@ -7505,7 +7616,7 @@ This repository includes code for architecture and feature experiments for the t
 | Precision |   0.958 |       0.917 |    0.993 |    0.853 | 0.969 |            0.99 | 0.959 |             0.869 |            0.854 |
 | Recall    |   0.992 |       0.941 |        1 |     0.88 | 0.969 |            0.96 | 0.825 |             0.805 |            0.789 |
 ","{'TanveerMittal': 'https://github.com/TanveerMittal', 'Shen-Andrew': 'https://github.com/Shen-Andrew'}","{'Jupyter Notebook': 0.96, 'Python': 0.03, 'TeX': 0.01, 'Dockerfile': 0.0}"
-131,https://github.com/amelia-kawasaki/dsc_capstone,"# DSC Capstone: Group B08
+130,https://github.com/amelia-kawasaki/dsc_capstone,"# DSC Capstone: Group B08
 ## Exploring Noise in Data: Applications to ML Models
 ### Models Supported:
 Kernel machines, Random Forests, k-Nearest Neighbor Classification
@@ -7527,13 +7638,13 @@ To clean all output files:
 Website for an introduction to our project:
 https://amelia-kawasaki.github.io/dsc_capstone/
 ","{'amelia-kawasaki': 'https://github.com/amelia-kawasaki', 'rdunnUCSD': 'https://github.com/rdunnUCSD', 'cheolmin711': 'https://github.com/cheolmin711'}","{'Python': 0.96, 'Jupyter Notebook': 0.04}"
-132,https://github.com/edinhluo/DSC180-Capstone-Project,"# COVID-19 Group Testing Strategies
+131,https://github.com/edinhluo/DSC180-Capstone-Project,"# COVID-19 Group Testing Strategies
 
 ## Abstract
 
 The COVID-19 pandemic that has persisted for more than two years has been combated by efficient testing strategies that reliably identifies positive individuals to slow the spread of the pandemic. Opposed to other pooling strategies within the domain, the methods described in this paper prioritize true negative samples over overall accuracy. In the Monte Carlo simulations, both nonadaptive and adaptive testing strategies with random pool sampling resulted in high accuracy approaching at least 95% with varying pooling sizes and population sizes to decrease the number of tests given. A split tensor rank 2 method attempts to identify all infected samples within 961 samples, converging the number of tests to 99 as the prevalence of infection converges to 1%.
 ","{'edinhluo': 'https://github.com/edinhluo', 'j2chu': 'https://github.com/j2chu', 'MengfanChen27': 'https://github.com/MengfanChen27'}","{'Python': 0.99, 'Dockerfile': 0.01}"
-133,https://github.com/pnair7/ml-fairness,"# Patterns of Fairness in Machine Learning
+132,https://github.com/pnair7/ml-fairness,"# Patterns of Fairness in Machine Learning
 
 [Website Link](https://annemxu.github.io/ml-fairness/)
 
@@ -7580,7 +7691,7 @@ Currently, models are contained in `models/sklearn_models.py`. First, you must w
 
 The process is nearly identical for metrics. Create a metric function that takes in the same parameters as the other metric functions, add the metric to the `apply_metric` function in `utils/utils.py` with its own string name, and add that string name to the list of metrics in `run.py`.
 ","{'pnair7': 'https://github.com/pnair7', 'danieltong000': 'https://github.com/danieltong000', 'annemxu': 'https://github.com/annemxu'}","{'Jupyter Notebook': 0.97, 'Python': 0.03, 'Dockerfile': 0.0, 'HTML': 0.0}"
-134,https://github.com/mglevitt/Medical-Disparity-Causal-Analysis,"## Quality of Life Causal Analysis Project
+133,https://github.com/mglevitt/Medical-Disparity-Causal-Analysis,"## Quality of Life Causal Analysis Project
 
 In this project, we aim to establish causality between various socioeconomic variables and life expectancy outcomes in  roughly 166 different countries, noting the strongest connections between economic and political factors with the length of life expectancy. 
 
@@ -7618,7 +7729,7 @@ pipenv run .\src\scripts\download_data.py
 8. After all these steps, a table of relations with the most common relations at the top should be outputted in your terminal. 
 9. This step is not neccesary, but for further exploration into the causal relations present you can adjust the signifigance level of PC. Higher signifigance will lead to more relations being present and vice versa. The default signifigance is .2 and this value must be between 0 and 1. The signifigance can be adjusted by editing the value of alpha in the last line of code. 
 ","{'mglevitt': 'https://github.com/mglevitt', 'AdamKreitz': 'https://github.com/AdamKreitz'}","{'Jupyter Notebook': 0.87, 'Python': 0.13, 'Dockerfile': 0.0}"
-135,https://github.com/GogoHYX/DSC180_sleep_apnea,"# DSC180 Capstone Project
+134,https://github.com/GogoHYX/DSC180_sleep_apnea,"# DSC180 Capstone Project
 ## [Project Website](https://gogohyx.github.io/DSC180_sleep_apnea/)
 ### Build instructions
 
@@ -7675,7 +7786,7 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 9. `run.py`: running this script builds the requisite files.
 10. `submission.json`: contains the dockerhub-id for building the container and build-script command to build the targets.
 ","{'ShubhamKaushal15': 'https://github.com/ShubhamKaushal15', 'GogoHYX': 'https://github.com/GogoHYX', 'alxjareyliu': 'https://github.com/alxjareyliu', 'chinkevin': 'https://github.com/chinkevin'}","{'Jupyter Notebook': 0.9, 'Python': 0.1}"
-136,https://github.com/chinkevin/DSC180_sleep_apnea,"# DSC180 Capstone Project
+135,https://github.com/chinkevin/DSC180_sleep_apnea,"# DSC180 Capstone Project
 
 Sleep apnea is a sleep disorder where breathing starts and stops intermittenly. It can cause many issues while sleeping and even increases the risk of strokes and heart attacks. Traditionally, sleep research relies on human visual scoring. However with the advancement of machine learning, sleep research can be become a highly automated process. The purpose of this respoitory is to automatically classify sleep stages specifically for people with sleep apnea. Using signals from polysomnography data, such as EEG, EMG, EOG, and ECG, we can score sleep records using a Light Gradient Boosted Machine classifier into five stages: wake state, REM, N1, N2, and N3.
 
@@ -7694,7 +7805,7 @@ Sleep apnea is a sleep disorder where breathing starts and stops intermittenly. 
 * To predict and validate a model, from the project root dir, run `python run.py predict validate`
   - This runs the model on validation data, analyzes its performance, and creates visualizations.
 ","{'chinkevin': 'https://github.com/chinkevin', 'shaheendane': 'https://github.com/shaheendane', 'YilanG08': 'https://github.com/YilanG08', 'alxjareyliu': 'https://github.com/alxjareyliu'}","{'Jupyter Notebook': 0.99, 'Python': 0.01}"
-137,https://github.com/a2lu/CAPSTONE_WILDFIRE,"# CAPSTONE_WILDFIRE
+136,https://github.com/a2lu/CAPSTONE_WILDFIRE,"# CAPSTONE_WILDFIRE
 
 ## Usage
 ```
@@ -7702,7 +7813,7 @@ git clone https://github.com/a2lu/CAPSTONE_WILDFIRE.git
 cd CAPSTONE_WILDFIRE
 python run.py test
 ```","{'a2lu': 'https://github.com/a2lu', 'ant-chi': 'https://github.com/ant-chi', 'ojimenez2517': 'https://github.com/ojimenez2517', 'Jsingh-23': 'https://github.com/Jsingh-23'}","{'Jupyter Notebook': 0.97, 'Python': 0.03, 'Dockerfile': 0.0}"
-138,https://github.com/LauraDiao/Anomaly_Detectives,"# Anomaly Detectives
+137,https://github.com/LauraDiao/Anomaly_Detectives,"# Anomaly Detectives
 An in depth approach to detecting significant real-time shifts in network performance indicating network degradation. Building on the data generation process behind [DANE](https://github.com/dane-tool/dane) and Viasat's [network stats](https://github.com/Viasat/network-stats), we build a classification system that determines if there are substantial changes to packet loss rate and degree of latency. Please visit [our webpage](https://lauradiao.github.io/Anomaly_Detectives) for a more comprehensive view of this project.
 
 <br>
@@ -7770,8 +7881,8 @@ this format is crucial for the model to train on the proper labels.
  
 
 ","{'Ben243': 'https://github.com/Ben243', 'LauraDiao': 'https://github.com/LauraDiao', 'jenna-my': 'https://github.com/jenna-my'}","{'Jupyter Notebook': 1.0, 'Python': 0.0, 'Dockerfile': 0.0}"
-139,https://github.com/tatummaston/anomaly_network_detection,# anomoly_network_detection,"{'jjharsono1': 'https://github.com/jjharsono1', 'tatummaston': 'https://github.com/tatummaston', 'ctran0615': 'https://github.com/ctran0615'}","{'Python': 0.98, 'HTML': 0.01, 'Dockerfile': 0.01, 'Jupyter Notebook': 0.0}"
-140,https://github.com/arjunsawhney1/intel-capstone-project,"# Intel Telemetry: Data Collection & Time-Series Prediction of App Usage
+138,https://github.com/tatummaston/anomaly_network_detection,# anomoly_network_detection,"{'jjharsono1': 'https://github.com/jjharsono1', 'tatummaston': 'https://github.com/tatummaston', 'ctran0615': 'https://github.com/ctran0615'}","{'Python': 0.98, 'HTML': 0.01, 'Dockerfile': 0.01, 'Jupyter Notebook': 0.0}"
+139,https://github.com/arjunsawhney1/intel-capstone-project,"# Intel Telemetry: Data Collection & Time-Series Prediction of App Usage
 ## Abstract
 Despite advancements in hardware technology, PC users continue to face frustrating app launch times, especially on lower end Windows machines. The desktop experience differs vastly from the instantaneous app launches and optimized experience we have come to expect even from low end smartphones. We propose a solution to preemptively run Windows apps in the background based on the app usage patterns of the user. 
 
@@ -7804,7 +7915,7 @@ https://arjunsawhney1.github.io/intel-capstone-project/
 ## Docker Image
 arjunsawhney1/intel-telemetry:latest
 ","{'arjunsawhney1': 'https://github.com/arjunsawhney1', 'AndrewChinGitHub': 'https://github.com/AndrewChinGitHub', 'SrikarPrayaga06': 'https://github.com/SrikarPrayaga06'}","{'Jupyter Notebook': 0.98, 'C': 0.01, 'Python': 0.0, 'Batchfile': 0.0, 'Dockerfile': 0.0}"
-141,https://github.com/andydo1998/dsc180-data-analysis,"# DSC 180 Section B14 Project
+140,https://github.com/andydo1998/dsc180-data-analysis,"# DSC 180 Section B14 Project
 
 ## Project Introduction
 In an effort to reduce app wait time, the time it takes for an application to launch, we collected data on application use and app wait time for a single user over several weeks. With this data we plan to build a series of models to predict which application a user will open with an emphasis on when and for how long. The focus is currently on our foreground app data which shows us which app is in the foreground of the user’s computer with timestamp. Using this data, we created a single chain Hidden Markov Model (HMM) to predict the next app the user opens based on their current one. With not enough amount of layers, we implemented a Long Short-Term Memory (LSTM) model to predict the amount of time a user will use an application.
@@ -7828,7 +7939,7 @@ A visual presentation can also be viewed here: https://www.youtube.com/watch?v=2
 
 (note that to retrieve the most amount of information, please view the report, as the video only provides a summary of our process)
 ","{'andydo1998': 'https://github.com/andydo1998', 'SasamiScott': 'https://github.com/SasamiScott'}","{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-142,https://github.com/cgorlla/intel-sur,"# INTELli*next*: A Fully Integrated LSTM and HMM-Based Solution for Next-App Prediction With Intel SUR SDK Data Collection
+141,https://github.com/cgorlla/intel-sur,"# INTELli*next*: A Fully Integrated LSTM and HMM-Based Solution for Next-App Prediction With Intel SUR SDK Data Collection
 # Intel DCA x HDSI UCSD System Usage Reporting Research
 
 Cyril Gorlla, Jared Thach, Hiroki Hoshida. [INTELli*next*: A Fully Integrated LSTM and HMM-Based Solution for Next-App Prediction With Intel SUR SDK Data Collection.](https://github.com/cgorlla/intel-capstone-submission/blob/main/report.pdf) *Halıcıoğlu Data Science Institute Capstone Showcase, March 11, 2022*
@@ -7880,7 +7991,7 @@ Both LSTM models' architecture is similar, with the four layers in the same orde
 ## Docker
 A dockerfile is included and will create a Docker environment that allows for the successful execution of all code in this repository.
 ","{'cgorlla': 'https://github.com/cgorlla', 'jared8thach': 'https://github.com/jared8thach'}","{'Jupyter Notebook': 0.94, 'Python': 0.06, 'Dockerfile': 0.0}"
-143,https://github.com/wolftossH/DSC--180AB-escrow,"# DSC--180AB-escrow
+142,https://github.com/wolftossH/DSC--180AB-escrow,"# DSC--180AB-escrow
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name=""readme-top""></a>
 <!--
@@ -8111,7 +8222,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [hardhat]: https://hardhat.org/_next/static/media/hardhat-logo.5c5f687b.svg
 [hardhat-url]: https://hardhat.org/
 ","{'wolftossH': 'https://github.com/wolftossH', 'aliriasa': 'https://github.com/aliriasa'}","{'HTML': 0.66, 'JavaScript': 0.21, 'Solidity': 0.08, 'CSS': 0.05}"
-144,https://github.com/matin-g/Q2-DSC180B-A02,"# Most up to date web app code in this folder --> front-end-webApp
+143,https://github.com/matin-g/Q2-DSC180B-A02,"# Most up to date web app code in this folder --> front-end-webApp
 # Most up to date contract code is final_purchase.sol
 
 <br>
@@ -8131,7 +8242,7 @@ install express package: open up terminal, input ""npm install express --save""
 cd into the front-end folder, and input ""node server.js"", and you will see ""port is open on 8082""
 open chrome - ""http://127.0.0.1:8082/""
 ","{'YuHuang0525': 'https://github.com/YuHuang0525', 'matin-g': 'https://github.com/matin-g', 'WenyuanChen1326': 'https://github.com/WenyuanChen1326'}","{'HTML': 0.34, 'CSS': 0.33, 'SCSS': 0.29, 'JavaScript': 0.03, 'Solidity': 0.01}"
-145,https://github.com/crvander/capstoneproj2023,"<h1 align=""center"">
+144,https://github.com/crvander/capstoneproj2023,"<h1 align=""center"">
   Transformers for Sentiment Analysis on Financial Text
 </h1>
 
@@ -8230,7 +8341,7 @@ FinTech Project                      //
 ```
 
 ","{'crvander': 'https://github.com/crvander', 'TIMHX': 'https://github.com/TIMHX'}","{'Python': 0.83, 'TeX': 0.16, 'Dockerfile': 0.01}"
-146,https://github.com/nathansng/fintech_library,"# FinDL - Financial Deep Learning Library
+145,https://github.com/nathansng/fintech_library,"# FinDL - Financial Deep Learning Library
 
 ## DSC 180 Project
 
@@ -8321,7 +8432,7 @@ You can also specify the model to run by specifying the model name in addition t
 
 
 ","{'nathansng': 'https://github.com/nathansng', 'rrichardtang': 'https://github.com/rrichardtang', 'DavidMo113': 'https://github.com/DavidMo113'}","{'Jupyter Notebook': 0.87, 'Python': 0.13}"
-147,https://github.com/vineettalla/Servicechain.io,"This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+146,https://github.com/vineettalla/Servicechain.io,"This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 First, Make sure to install the dependencies in the package.json file by running:
@@ -8418,7 +8529,7 @@ I hope you enjoy playing around and improving our dapp. Feel free to point out a
 
 
 ","{'jxmauricio': 'https://github.com/jxmauricio', 'vineettalla': 'https://github.com/vineettalla', 'anyachandorkar': 'https://github.com/anyachandorkar'}","{'JavaScript': 0.86, 'CSS': 0.08, 'Solidity': 0.06}"
-148,https://github.com/scottasut/dsc180b-project,"<h1 align=""center"">
+147,https://github.com/scottasut/dsc180b-project,"<h1 align=""center"">
 <img src=""https://upload.wikimedia.org/wikipedia/commons/1/18/UCSD_Seal.png"", width=150, height=150>
 <img src=""https://avatars.githubusercontent.com/u/71526309?s=280&v=4"", width=150, height=150>
 <img src=""https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png"", width=150, height=150>
@@ -8565,7 +8676,7 @@ Targets can be called as follows `python run.py data features`.
 - [Reddit Comment Datasets](https://files.pushshift.io/reddit/comments/)
 - [TigerGraph Community ML Algos](https://docs.tigergraph.com/graph-ml/current/community-algorithms/)
 ","{'PravarBhandari': 'https://github.com/PravarBhandari', 'scottasut': 'https://github.com/scottasut', 'ryand0n': 'https://github.com/ryand0n', 'felicia-chan': 'https://github.com/felicia-chan'}","{'Jupyter Notebook': 0.83, 'Python': 0.17, 'Dockerfile': 0.0}"
-149,https://github.com/KazumaYamamoto2023/DSC180B-Q2-Project,"# Graph-Based Deep Learning for Fraud Detection in Ethereum Transaction Networks
+148,https://github.com/KazumaYamamoto2023/DSC180B-Q2-Project,"# Graph-Based Deep Learning for Fraud Detection in Ethereum Transaction Networks
 
 This project aims to compare graph-based to non-graph based algorithms for fraud detection in Ethereum transaction networks. We will predict whether a given Ethereum wallet in the transaction graph is fraudulent or non-fraudulent, given the wallet's transaction history in the network.
 
@@ -8680,7 +8791,7 @@ We collect the transaction records based on an assumption that for a typical mon
 [Project Website](https://srgelinas.github.io/dsc180b_eth_fraud/)
 
 [Demo Video](https://youtu.be/WStx_VLHuNk)","{'srgelinas': 'https://github.com/srgelinas', 'KazumaYamamoto2023': 'https://github.com/KazumaYamamoto2023', 'ethannhzhouu': 'https://github.com/ethannhzhouu'}","{'Jupyter Notebook': 0.72, 'TeX': 0.18, 'Python': 0.1, 'Dockerfile': 0.0}"
-150,https://github.com/nickthegroot/recipe-recommendation,"<h1 align=""center"">
+149,https://github.com/nickthegroot/recipe-recommendation,"<h1 align=""center"">
    <img src=""reports/badges/ucsdseal.png"" width=20% />
    <img src=""reports/badges/tigergraph.png"" width=20% />
 
@@ -8751,7 +8862,7 @@ All models can be trained using `python src/cli/train.py`.
 - In general, all models can be trained via `python src/cli/train.py --model {model}`
   - For example, `LightGCN` is trained with `python src/cli/train.py --model LightGCN`
 ",{'nickthegroot': 'https://github.com/nickthegroot'},"{'Jupyter Notebook': 0.9, 'TeX': 0.07, 'Python': 0.02, 'JavaScript': 0.0, 'TypeScript': 0.0, 'Makefile': 0.0, 'CSS': 0.0, 'Dockerfile': 0.0, 'Shell': 0.0}"
-151,https://github.com/mjw49/DSC180B-Quarter-2-Project,"# Running the Project
+150,https://github.com/mjw49/DSC180B-Quarter-2-Project,"# Running the Project
 For building, please run the commands below in this order 
 
 - `launch-scipy-ml.sh -i mjw49/q1project`
@@ -8766,7 +8877,7 @@ The raw data for this project is obtainable from the website for Stanford's Netw
 Once downloaded, extract the compressed zip file and drop the file into the `data/raw` folder.
 
 ","{'mjw49': 'https://github.com/mjw49', 'dylanknlee': 'https://github.com/dylanknlee'}","{'Jupyter Notebook': 0.81, 'Python': 0.19, 'Dockerfile': 0.0}"
-152,https://github.com/camille-004/Graph-HSCN,"<h1 align=""center"">
+151,https://github.com/camille-004/Graph-HSCN,"<h1 align=""center"">
 GraphHSCN: Heterogenized Spectral Cluster Network for Long Range Representation Learning</h1>
 <div align=""center"">
 
@@ -8828,7 +8939,7 @@ The code in this project is heavily adapted and modified from the following repo
 2. [torch_geometric GraphGym](https://github.com/pyg-team/pytorch_geometric/tree/master/graphgym)
 3. [Hierarchical Graph Net](https://github.com/rampasek/HGNet)
 ","{'camille-004': 'https://github.com/camille-004', 'DylanTao': 'https://github.com/DylanTao'}","{'Python': 0.56, 'Jupyter Notebook': 0.43, 'Makefile': 0.01, 'Dockerfile': 0.0}"
-153,https://github.com/bliu8923/dsc180b-project,"## GNN Performance on Long Range Node Classification and Graph Classification
+152,https://github.com/bliu8923/dsc180b-project,"## GNN Performance on Long Range Node Classification and Graph Classification
 
 This repository holds the code to test 4 different neural network architectures
 on 2 different long range datasets. 
@@ -8924,7 +9035,7 @@ And to GraphGPS, for many loss functions, SAN, and encoders:
   year={2022}
 }
 ```","{'bliu8923': 'https://github.com/bliu8923', 'R1chZhang': 'https://github.com/R1chZhang'}","{'Python': 0.7, 'Jupyter Notebook': 0.16, 'Shell': 0.13, 'Dockerfile': 0.01}"
-154,https://github.com/Barry0121/graph-neural-net-benchmark,"# DSC180 - Graph Neural Network
+153,https://github.com/Barry0121/graph-neural-net-benchmark,"# DSC180 - Graph Neural Network
 
 Author: Barry Xue
 
@@ -8959,7 +9070,7 @@ Other options:
 * If you are interested in the ""Discovering Continuous Latent Space Representation of Graph"", everything is in the `src` directory. 
 * If you are interested in simple GNNs, everything is in `legacy_code/model` and `legacy_code/features`. 
 ","{'Barry0121': 'https://github.com/Barry0121', 'winston-yu': 'https://github.com/winston-yu', 'jgeng99': 'https://github.com/jgeng99'}","{'Jupyter Notebook': 0.94, 'Python': 0.06, 'Dockerfile': 0.0}"
-155,https://github.com/hblyx/CommunityDetection,"# DSC180 Project 2 - Performance Evaluation of Community Detection on Neural Networks
+154,https://github.com/hblyx/CommunityDetection,"# DSC180 Project 2 - Performance Evaluation of Community Detection on Neural Networks
 #### Yaoxin Li, Justin Nguyen, Vivek Rayalu
 
 ### Introduction
@@ -8994,7 +9105,7 @@ Instead of presenting our results and code in `run.py`, we choose notebooks to s
 
 The project [website](https://hblyx.github.io/CommunityDetection/) and its source code is under the [gh-pages branch](https://github.com/hblyx/CommunityDetection/tree/gh-pages) of the same repository.
 ","{'hblyx': 'https://github.com/hblyx', 'Leffania': 'https://github.com/Leffania'}","{'Jupyter Notebook': 0.99, 'Python': 0.01}"
-156,https://github.com/stassinopoulosari/dsc180b-a15-q2project,"# DSC 180B WI23-A15-2: Community Detection on Twitter
+155,https://github.com/stassinopoulosari/dsc180b-a15-q2project,"# DSC 180B WI23-A15-2: Community Detection on Twitter
 
 ## Abstract
 
@@ -9005,7 +9116,7 @@ Recent work examined the vast unfolding of communities in large networks, in whi
 We recommend using [this docker repository](https://hub.docker.com/repository/docker/stassinopoulosari/dsc180b-wi23-a15-2/general). To start the code, use the following entry point command:
 
 `python run.py data test`","{'stassinopoulosari': 'https://github.com/stassinopoulosari', 'Tuz2': 'https://github.com/Tuz2'}",{'Python': 1.0}
-157,https://github.com/darehunt/DSC180B-Project2,"# DSC 180B [WI 23] Project 2:<br> Community Detection of Music Genres
+156,https://github.com/darehunt/DSC180B-Project2,"# DSC 180B [WI 23] Project 2:<br> Community Detection of Music Genres
 *** Classifying Spotify Artists through Community Detection and Clustering ***
 
 <!--This site was built using [GitHub Pages](https://pages.github.com/).-->
@@ -9053,7 +9164,7 @@ The build script can be run directly from bash `python run.py`
 - [@jul016](https://www.github.com/jul016)
 
 ","{'darehunt': 'https://github.com/darehunt', 'anmokhta': 'https://github.com/anmokhta', 'Btran206': 'https://github.com/Btran206', 'jul016': 'https://github.com/jul016'}","{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-158,https://github.com/gordonhu608/Revisit_CLIP,"# Revist CLIP: Multi-perspective improvements on Vision-Language Model
+157,https://github.com/gordonhu608/Revisit_CLIP,"# Revist CLIP: Multi-perspective improvements on Vision-Language Model
 
 
 > [Wenbo Hu](https://gordonhu608.github.io/), [Johnny Liu](https://github.com/jawkneeLoo)
@@ -9143,7 +9254,7 @@ If you have any questions, please create an issue on this repository or contact 
 Our code is based on [Co-CoOp, CoOp](https://github.com/KaiyangZhou/CoOp) and [MaPLe](https://github.com/muzairkhattak/multimodal-prompt-learning) repository. We thank the authors for releasing their code. If you use our model and code, please consider citing these works as well.
 
 ","{'gordonhu608': 'https://github.com/gordonhu608', 'jawkneeLoo': 'https://github.com/jawkneeLoo'}","{'Python': 0.98, 'Shell': 0.02}"
-159,https://github.com/GSam789/DSC180B-Capstone-Network-Dissection,"# Improving Network Accuracy through Network Manipulation
+158,https://github.com/GSam789/DSC180B-Capstone-Network-Dissection,"# Improving Network Accuracy through Network Manipulation
 
 
 ## To run our code:
@@ -9181,7 +9292,7 @@ saves final model's state dictionary into the models/ folder
   - train_input_grad.py: When run, trains VGG16 with Input Gradient Regularization and saves final model's state dictionary into the models/ folder
 
 ","{'kent831': 'https://github.com/kent831', 'jyulkm': 'https://github.com/jyulkm', 'GSam789': 'https://github.com/GSam789'}","{'Python': 0.88, 'Jupyter Notebook': 0.07, 'Cuda': 0.04, 'C': 0.01}"
-160,https://github.com/agupta01/ml-theory-capstone,"# Benchmarking Kernel Machines on Text Datasets
+159,https://github.com/agupta01/ml-theory-capstone,"# Benchmarking Kernel Machines on Text Datasets
 Data Science Capstone Project advised by Mikhail Belkin.
 
 ## Scaling Tests
@@ -9252,7 +9363,7 @@ avoid bricking your laptop for 5 minutes.
 
 If you're using DSMLP, subset = 0.01 should work for most datasets.
 ","{'agupta01': 'https://github.com/agupta01', 'ro-mish': 'https://github.com/ro-mish', 'wjluu': 'https://github.com/wjluu', 'mbouassa': 'https://github.com/mbouassa'}","{'Jupyter Notebook': 1.0, 'Python': 0.0, 'Dockerfile': 0.0}"
-161,https://github.com/jimzers/DSC180B-A08,"# DSC180B A08: Imitating Behavior to Understand the Brain
+160,https://github.com/jimzers/DSC180B-A08,"# DSC180B A08: Imitating Behavior to Understand the Brain
 
 Scott Yang, Daniel Son, Akshay Murali, Adam Lee, Eric Leonardis, Talmo Pereira
 
@@ -9319,7 +9430,7 @@ bash scripts/collect_activations.sh
 bash scripts/collect_activations_bc.sh
 ```
 ","{'jimzers': 'https://github.com/jimzers', 'scott-yj-yang': 'https://github.com/scott-yj-yang', 'danielcson': 'https://github.com/danielcson', 'a-murali': 'https://github.com/a-murali'}","{'Jupyter Notebook': 0.96, 'Python': 0.03, 'Shell': 0.0}"
-162,https://github.com/jmryan19/DSC180,"# DSC180
+161,https://github.com/jmryan19/DSC180,"# DSC180
 Helpers contatins python files of helper code written to make experimentation faster
 Most exploring is done in 1-3_NAME.ipynb.
 
@@ -9334,7 +9445,7 @@ Test will run all statistics on models used on paper and regenerate figures.
 
 The website corresponding to this project is located at https://jmryan19.github.io/DSC180.io/
 ","{'jmryan19': 'https://github.com/jmryan19', 'ryanjake19': 'https://github.com/ryanjake19'}","{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-163,https://github.com/ddav118/DSC-180B,"# UC San Diego, DSC-180B, Winter 2023 <br>
+162,https://github.com/ddav118/DSC-180B,"# UC San Diego, DSC-180B, Winter 2023 <br>
 Predicting Pulmonary Edema Using Deep Learning and Image Segmentation <br>
 Team Members: David Davila-Garcia, Marco Morocho, Yash Potdar
 
@@ -9357,7 +9468,7 @@ Note: All data was deidentified but is not publicly available
 
 Acknowledgements: Thank you to our incredible mentor Albert Hsiao, MD, PhD for his guidance, and Amin Mahmoodi for providing the U-Net segmentation network.
 ","{'ddav118': 'https://github.com/ddav118', 'MarcoM310': 'https://github.com/MarcoM310', 'YashPotdar': 'https://github.com/YashPotdar'}","{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-164,https://github.com/shivsakthivel/CNN-Multilabel-Classification,"# Exploring the viability of Convolutional Neural Networks (CNNs) on a multi-label classification task to detect radiographic outliers
+163,https://github.com/shivsakthivel/CNN-Multilabel-Classification,"# Exploring the viability of Convolutional Neural Networks (CNNs) on a multi-label classification task to detect radiographic outliers
 
 ## Task
 An implementation of a Convolutional Neural Network (CNN) multi-label classifier that takes in chest radiograph images as and outputs their corresponding predicted labels for detecting pulmonary edema and pleural effusion.
@@ -9379,7 +9490,7 @@ The dependencies required for this project can be installed by running `pip inst
 ## Other Notes
 If running the code on this repository, the DSMLP instance should be launched with GPU to ensure that the files run efficiently (The project was developed using tensorflow).
 ",{'shivsakthivel': 'https://github.com/shivsakthivel'},"{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-165,https://github.com/Angela-Wang111/Pneumothorax_classification,"# DSC-180B-Project
+164,https://github.com/Angela-Wang111/Pneumothorax_classification,"# DSC-180B-Project
 **Project Topic:** classification of penumothorax dataset [CANDID-PTX](https://pubs.rsna.org/doi/10.1148/ryai.2021210136) using classification models, segmentation models, and cascade models.
 
 GROUP NAME: AC/DS :metal: (Angela + Cecilia -> AC, Data Science -> DS, AC/DC -> AC/DS) :fist_right::fist_left:
@@ -9459,7 +9570,7 @@ This should be an empty folder before executing the pipeline. After executing th
 - train/val losses inside *both_loss* folder.
 - confusion matrix inside *confusion_matrix* folder.
 ","{'cecilialmw': 'https://github.com/cecilialmw', 'Angela-Wang111': 'https://github.com/Angela-Wang111'}","{'Jupyter Notebook': 1.0, 'Python': 0.0}"
-166,https://github.com/styyxofficial/DSC180B-Quarter-2-Project,"# Processing Electrophysiology Data to Extract Neural Trajectories
+165,https://github.com/styyxofficial/DSC180B-Quarter-2-Project,"# Processing Electrophysiology Data to Extract Neural Trajectories
 
 Raw electrophysiology data is very high dimensional and contains a lot of noisy, spiky, activity. Due to this, it must be heavily processed before the accurate neural trajectories can be extracted.
 We utilized Variational Latent Gaussian Process in our study to reduce its dimensions and smooth our data.
@@ -9482,7 +9593,7 @@ Config files are .json files stored in ""config/"". They contain the hyperparame
 
 Outputs of run.py will be stored in ""output/<exp_name>/""
 ","{'styyxofficial': 'https://github.com/styyxofficial', 'rishbob13': 'https://github.com/rishbob13', 'Saketarora13': 'https://github.com/Saketarora13'}","{'HTML': 0.59, 'Jupyter Notebook': 0.41, 'Python': 0.0, 'Dockerfile': 0.0, 'CSS': 0.0}"
-167,https://github.com/somet3000/1kgp-coverage-analysis,"# 1KGP Coverage Analysis
+166,https://github.com/somet3000/1kgp-coverage-analysis,"# 1KGP Coverage Analysis
 Expression quantitative trait loci (eQTL) and fine-mapping analysis of a cohort from the 1000 Genomes Project using both lower coverage and higher coverage (30x) data.
 
 The raw VCF data can be obtained from the 1000 Genomes Project: https://www.internationalgenome.org/data
@@ -9496,7 +9607,7 @@ This repository uses plink (https://www.cog-genomics.org/plink/1.9/), Matrix eQT
 Thanks for stopping by this repository! :)
 
 ",{'somet3000': 'https://github.com/somet3000'},"{'R': 0.81, 'Python': 0.11, 'Shell': 0.06, 'Dockerfile': 0.02}"
-168,https://github.com/jacquelinekclee/twas-dsc180-a17,"# Application of Transcriptome-Wide Association Studies for Identifying Genes Associated with Inflammatory Bowel Disease
+167,https://github.com/jacquelinekclee/twas-dsc180-a17,"# Application of Transcriptome-Wide Association Studies for Identifying Genes Associated with Inflammatory Bowel Disease
 
 Find the capston project website, including the full report and summary of the project's background, analysis, and findings, [here](https://notsamzhou.github.io/twas/).
 
@@ -9526,6 +9637,8 @@ Various summary statistic files can be downloaded from [here](https://github.com
 
 All of these files should be placed directly in data/raw
 ","{'notsamzhou': 'https://github.com/notsamzhou', 'jacquelinekclee': 'https://github.com/jacquelinekclee'}",{'Python': 1.0}
+168,https://github.com/Med-Dash/Med-Dash.github.io,"# Medical Dashboarding - Quarter 2 Project
+","{'nbrye': 'https://github.com/nbrye', 'ProfessorMomo': 'https://github.com/ProfessorMomo', 'anjsri878': 'https://github.com/anjsri878', 'Kamen-R': 'https://github.com/Kamen-R', 'xxwwyytt1': 'https://github.com/xxwwyytt1'}","{'JavaScript': 0.91, 'Python': 0.06, 'HTML': 0.02, 'Dockerfile': 0.0}"
 169,https://github.com/Med-Dash/Med-Dash.github.io,"# Medical Dashboarding - Quarter 2 Project
 ","{'nbrye': 'https://github.com/nbrye', 'ProfessorMomo': 'https://github.com/ProfessorMomo', 'anjsri878': 'https://github.com/anjsri878', 'Kamen-R': 'https://github.com/Kamen-R', 'xxwwyytt1': 'https://github.com/xxwwyytt1'}","{'JavaScript': 0.91, 'Python': 0.06, 'HTML': 0.02, 'Dockerfile': 0.0}"
 170,https://github.com/BradPowell23/First-and-Second-Level-Brain-Analysis,"Dataset Link:
