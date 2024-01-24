@@ -1,0 +1,213 @@
+project_id,year_presented,domain,project_title
+0,2020,Wikipedia & Social Analysis,Racial Bias in Film Awards Shows: Oscars & Golden Globes 
+1,2020,Wikipedia & Social Analysis,User Engagement in Wikipedia 
+2,2020,Wikipedia & Social Analysis,Investigating the Trustworthiness of Wikipedia and the Media in the Scope of COVID-19 
+3,2020,Quantifying Artistic Style,Name That Raga: An Analysis and Classification of Indian Classical Music 
+4,2020,Quantifying Artistic Style,Red Means Go: Analyzing YouTube Thumbnail Trends. 
+5,2020,Quantifying Artistic Style,RestoreNet: Quantifying Image Restoration of World War II Images 
+6,2020,Quantifying Artistic Style,MineSkins 
+7,2020,Quantifying Artistic Style,What Makes a Super Bowl Commercial Super? 
+8,2020,Quantifying Artistic Style,Book Cover Reader 
+9,2020,Fair Policing,Analyzing the Media's Effect on SD Police Traffic Stops 
+10,2020,Fair Policing,Does the Race of a Police Officer Influence Traffic Stop Outcomes? 
+11,2020,Fair Policing,Is Predictive Policing Preventative? An analysis of predictive policing systems and their effect on crime. 
+12,2020,Fair Policing,Effects of Recreational Marijuana Legalization on Traffic Collisions in California 
+13,2020,Clustering the Human Genome,Genetic Differences Between Glioblastoma Multiforme and Low-Grade Glioma Populations: How Does Copy Number Variation Distinguish Each Disease? 
+14,2020,Clustering the Human Genome,Meta-Analysis to find Genes related to T2Ds 
+15,2020,Clustering the Human Genome,Predicting Disease Risk Through Machine Learning 
+16,2020,Clustering the Human Genome,Cancer Survivability & Genetic Mutations across Germ Layers 
+17,2020,Clustering the Human Genome,Evaluating miRNA as Biomarkers for pre-Type 1 Diabetes 
+18,2020,Clustering the Human Genome,Genome-wide association studies on Alzheimers Disease 
+19,2020,Malware / Graph Learning,Exploration of Graph Embedding Techniques in HinDroid 
+20,2020,Malware / Graph Learning,HinReddit: Understanding Hate and Conflict in Reddit Communities 
+21,2020,Malware / Graph Learning,Heterogenous Graph Embedding for Record Linkage 
+22,2020,Malware / Graph Learning,Improving and Explaining HinDroid 
+23,2020,Malware / Graph Learning,The Food Chain - A Personalized Restaurant Recommender System 
+24,2020,Malware / Graph Learning,CodeHonestly - Advanced Python Code Plagiarism Checker 
+25,2020,Malware / Graph Learning,Malware Category Detection 
+26,2020,Malware / Graph Learning,Android Malware Detection with metapath2vec 
+27,2021,Explainable AI,Determining Correct Face Mask Usage with Inception Resnet and MaskedFace-Net Dataset
+28,2021,Explainable AI,Face Mask Detection with Explainable Artificial Intelligence
+29,2021,Explainable AI,"Explaining Image Captioning Models Through Attention Maps, Image
+Perturbations, and Object Importance Maps"
+30,2021,Explainable AI,Image Recognition in Stock Prediction with Visual Explanations from Grad-CAM
+31,2021,Explainable AI,Demystifying Machine Learning for Facial Analysis
+32,2021,Explainable AI,Snake Classification using Neural-Backed Decision Trees
+33,2021,Autonomous Vehicles,Autoware and LGSVL
+34,2021,Autonomous Vehicles,Computer Vision and Lane Segmentation in Autonomous Vehicles
+35,2021,Autonomous Vehicles,"Autonomous Mapping, Localization and Navigation using Computer Vision as well as Tuning of Camera"
+36,2021,Autonomous Vehicles,Data Visualizations and Interface For Autonomous Robots
+37,2021,Autonomous Vehicles,GPS Based Autonomous Navigation on the 1/5th Scale
+38,2021,Autonomous Vehicles,Autonomous: Odometry and IMU
+39,2021,Malware and Graph Learning,Malware Detection
+40,2021,Malware and Graph Learning,Potential Improvement of MAMADROID System
+41,2021,Malware and Graph Learning,Exploring the Language of Malware
+42,2021,Malware and Graph Learning,CoCoDroid: Detecting Malware By Building Common Graph Using Control Flow Graph
+43,2021,Malware and Graph Learning,Attacking the HinDroid Malware Detector
+44,2021,Text Mining and NLP,AutoPhrase Application Web
+45,2021,Text Mining and NLP,Analyzing Movies Using Phrase Mining
+46,2021,Text Mining and NLP,AutoPhrase for Financial Documents Interpretation
+47,2021,Text Mining and NLP,Text Classification with Named-Entity Recognition and AutoPhrase
+48,2021,Text Mining and NLP,AutoLibrary - A Personal Digital Library to Find Related Works via Text Analyzer
+49,2021,Text Mining and NLP,Restaurant Recommender System
+50,2021,Recommender Systems,ForumRec - A Question Recommender for the Super User Community
+51,2021,Recommender Systems,OnSight: Outdoor Rock Climbing Recommendations
+52,2021,Recommender Systems,Bridging the Gap: Solving Music Disputes with Recommendation Systems
+53,2021,Recommender Systems,Asnapp - Workout Video Recommender
+54,2021,Recommender Systems,Plates4U
+55,2021,Recommender Systems,Makeup Recommender
+56,2021,Opioid Overdose Prevalence Analysis,Opioid Overdose Prevalence Analysis
+57,2021,Large-scale Multiple Testing,Multiple Testing Method with Empirical Null Distribution in Leukemia Studies
+58,2021,Large-scale Multiple Testing,Large-scale Multiple Testing with Empirical Null Distribution in Predicting Cardiovascular Disease
+59,2021,Spatial-temporal Analyses of Infectious Disease Dynamics,Spatial-temporal Prediction of COVID-19 Case Counts Through Epidemiology Model
+60,2021,Graph Data Analysis,A Graph ML Analysis of Senatorial Twitter Accounts
+61,2021,Graph Data Analysis,GCN on 3d Points
+62,2021,Graph Data Analysis,Graph-Based Product Recommendation
+63,2021,Graph Data Analysis,NBA Game Prediction
+64,2021,Graph Data Analysis,NBA Seeds with Graph Neural Networks
+65,2021,Graph Data Analysis,Stock Market Sentiment Predictor
+66,2021,The Spread of Misinformation,Political Popularity of Misinformation
+67,2021,The Spread of Misinformation,The Sentiment of U.S. Presidential Elections on Twitter
+68,2021,The Spread of Misinformation,Community Effects From Misinformation Flags on Twitter
+69,2021,The Spread of Misinformation,Political Polarization of Major News Networks on Twitter
+70,2021,The Spread of Misinformation,Twitter’s Impact on Elections
+71,2021,The Spread of Misinformation,Analyzing the the Diffusions of Various Forms of Misinformation on Reddit
+72,2021,The Spread of Misinformation,COVID-19 Sentiment and Daily ases Analysis on Social Media
+73,2021,Conflict and Collaboration in Online Communities,Controversy In Wikipedia Articles
+74,2021,Conflict and Collaboration in Online Communities,The Large-Scale Collaborative Presence of Online Fandoms
+75,2021,Conflict and Collaboration in Online Communities,Wikipedia’s Response to the COVID-19 Pandemic
+76,2021,Conflict and Collaboration in Online Communities,A Study of LGBTQ+ Wikipedia Articles Sentiment over Time
+77,2021,Conflict and Collaboration in Online Communities,Politics on Wikipedia
+78,2021,Genetic Basis of Mental Health,Differential Gene Expression Analysis of Human Opioid Abusers
+79,2021,Genetic Basis of Mental Health,The Genetic Basis of Antibiotic Resistance in E. Coli
+80,2021,Genetic Basis of Mental Health,Blood-based Analysis of Alzheimer's Disease from miRNA Data
+81,2021,Genetic Basis of Mental Health,Comparison of Differential Gene Expression Analysis Tools
+82,2021,Genetic Basis of Mental Health,"Genetic Overlap between Alzheimer's, Parkinson’s, and healthy patients"
+83,2021,VPN X-Ray,Live vs. Video on Demand Inside VPN Detection
+84,2021,VPN X-Ray,DANE: Data Automation and Network Emulation Tool
+85,2021,VPN X-Ray,Res Recovery: Classifying Video Resolutions Through a VPN Tunnel
+86,2021,VPN X-Ray,SPICIVPN
+87,2021,Particle Physics,Interpreting Higgs Boson Interaction Network with Layerwise Relevance Propagation
+88,2021,Particle Physics,Deep Learning for Particle Jet Multiclassification
+89,2021,COVID-19 & Microbiome,RTL Automation
+90,2021,Cyber-Physical Systems (CPS) using IOT Devices,AUTOBRICK: A system for end-to-end automation of building point labels to Brick turtle files
+91,2021,Cyber-Physical Systems (CPS) using IOT Devices,Airborne Infection Risk Estimator for COVID-19
+92,2021,"System Usage Reporting (SUR, a.k.a. DCA)",Mouse Wait Classification
+93,2021,"System Usage Reporting (SUR, a.k.a. DCA)",Predicting Battery Remaining Minutes based Related Features
+94,2021,"System Usage Reporting (SUR, a.k.a. DCA)",Persona Analysis
+95,2021,"System Usage Reporting (SUR, a.k.a. DCA)","Predicting a User’s Persona Using Computer’s Specifications, CPU Utilization, CPU Temperature & Application Usage Time"
+96,2021,Spatial Agent-based Modeling for School Reopening,Geographically Assisted Agent-based Model for COVID-19 Transmission (GeoACT)
+97,2021,Spatial Agent-based Modeling for School Reopening,Modelling COVID-19 Transmission in San Diego School Buses
+98,2021,Spatial Agent-based Modeling for School Reopening,COVID-19 Spatial Agent-based Modeling: Single Room Infection
+99,2022,Fair Policing,Traffic Policing And Its Relationship With Income
+100,2022,Text Mining and NLP,Model Analysis of Stock Price Trend Predictions based on Financial News
+101,2022,Text Mining and NLP,Utilizing AutoPhrase on Computer Science papers over time
+102,2022,Text Mining and NLP,Codenames AI
+103,2022,Text Mining and NLP,Spam Detection Using Natural Language Processing
+104,2022,Blockchain / Smart-Contracts,An Exploration on Medical Records using Blockchain Technology
+105,2022,spatiotemporal machine learning,Uncertainty Quantification and Deep Learning for Scalable Spatiotemporal Analysis
+106,2022,"High-dimensional Statistical Learning, Causal Inference, Robust ML, Fair ML",Post-Prediction Inference on Political Twitter
+107,2022,"High-dimensional Statistical Learning, Causal Inference, Robust ML, Fair ML",NFL-Analysis
+108,2022,Machine Learning (TBA),Investigation on Latent Dirichlet Allocation
+109,2022,Machine learning for physical systems,Locating Sound with Machine Learning
+110,2022,"Environmental Monitoring, remote sensing, cyber-physical systems, Engineers for Exploration",E4E MicroFaune Project
+111,2022,"Environmental Monitoring, remote sensing, cyber-physical systems, Engineers for Exploration",Eco-Acoustic Event Detection: Classifying temporal presence of birds in recorded bird vocalization audio
+112,2022,"Environmental Monitoring, remote sensing, cyber-physical systems, Engineers for Exploration",Pyrenote - User Profile Design & Accessible Data
+113,2022,"Environmental Monitoring, remote sensing, cyber-physical systems, Engineers for Exploration",Pyrenote Webdeveloper
+114,2022,Spread of Misinformation Online,Who is Spreading Misinformation and Worries in Twitter?
+115,2022,Spread of Misinformation Online,Misinformation on Reddit
+116,2022,Spread of Misinformation Online,The Spread of YouTube Misinformation Through Twitter
+117,2022,Particle Physics,Understanding Higgs Boson Particle Jets with Graph Neural Networks
+118,2022,Particle Physics,Predicting a Particle's True Mass
+119,2022,graph neural networks,Graph Neural Network Based Recommender Systems for Spotify Playlists
+120,2022,graph neural networks,Dynamic Stock Industry Classification
+121,2022,"NLP, Misinformation",HDSI Faculty Exploration Tool
+122,2022,"NLP, Misinformation",HDSI Faculty Exploration Tool
+123,2022,"AI in Healthcare, Deep Reinforcement Learning, Trustworthy Machine Learning",Improving Robustness in Deep Fusion Modeling Against Adversarial Attacks
+124,2022,"AI in Healthcare, Deep Reinforcement Learning, Trustworthy Machine Learning",Healthcare: Adversarial Defense In Medical Deep Learning Systems
+125,2022,"ML for Finance, ML for Healthcare, Fair ML, ML for Science",Actionable Recourse
+126,2022,Social media; online communities; text analysis; ethics,Finding Commonalities in misinformative Articles Across Topics
+127,2022,Social media; online communities; text analysis; ethics,The Effect of Twitter Cancel Culture on the Music Industry
+128,2022,Analyzing single cell multimodality data via (coupled) autoencoder neural networks,Coupled Autoencoders for Single-Cell Data Analysis
+129,2022,"Machine Learning, Natural Language Processing",On Evaluating the Robustness of Language Models with Tuning
+130,2022,Activity Based Travel Models and Feature Selection,A Tree-Based Model for Activity Based Travel Models and Feature Selection
+131,2022,"Explainable AI, Causal Inference",Explainable AI
+132,2022,AutoML Platforms,Deep Learning Transformer Models for Feature Type Inference
+133,2022,AI/ML,Exploring Noise in Data: Applications to ML Models
+134,2022,Group Testing for Optimizing COVID-19 Testing,COVID-19 Group Testing Optimization Strategies
+135,2022,Causal Discovery,Patterns of Fairness in Machine Learning
+136,2022,Causal Discovery,Causal Effects of Socioeconomic and Political Factors on Life Expectancy in 166 Different Countries
+137,2022,Time series analysis in health,Time Series Analysis on the Effect of Light Exposure on Sleep Quality
+138,2022,Time series analysis in health,Sleep Stage Classification for Patients With Sleep Apnea
+139,2022,Environmental health exposures & pollution modeling & land-use change dynamics,Supervised Classification Approach to Wildfire Mapping in Northern California
+140,2022,Network Performance Classification,Network Signal Anomaly Detection
+141,2022,Network Performance Classification,Real Time Anomaly Detection in Networks
+142,2022,System Usage Reporting,Intel Telemetry: Data Collection & Time-Series Prediction of App Usage
+143,2022,System Usage Reporting,Predicting Application Use to Reduce User Wait Time
+144,2022,System Usage Reporting,INTELlinext: A Fully Integrated LSTM and HMM-Based Solution for Next-App Prediction With Intel SUR SDK Data Collection
+145,2023,Finance and Blockchain,Escryptow: Design and Implementation of an E-commerce Dapp
+146,2023,Finance and Blockchain,BlockBazaar - Smart Contracts for Decentralized E-Commerce
+147,2023,Finance and Blockchain,Fine-tuned Transformers For Financial Sentiment Analysis
+148,2023,Finance and Blockchain,Stock Market Prediction 
+149,2023,Finance and Blockchain,Servicechain.io
+150,2023,Graphs and Deep Learning,Reddit Interaction Graph-based Community Recommendations
+151,2023,Graphs and Deep Learning,Graph-Based Deep Learning for Fraud Detection in ETH Transaction Networks
+152,2023,Graphs and Deep Learning,Personalized Recipe Recommendation Using Heterogeneous Graphs
+153,2023,Graphs and Deep Learning,Counting and Sampling Triangular Patterns to Perform Optimal Spectral Clustering on Higher-Order Networks
+154,2023,Graphs and Deep Learning,Graph-HSCN: Heterogenized Spectral Cluster Network for Long-Range Representation Learning
+155,2023,Graphs and Deep Learning,Exploring Techniques for Addressing Long-Range Interactions in GNN
+156,2023,Graphs and Deep Learning,Adversarial Attacks via Latent Space Perturbations
+157,2023,Graphs and Deep Learning,Performance Evaluation of Community Detection on Neural Networks
+158,2023,Graphs and Deep Learning,Community Detection on Twitter
+159,2023,Graphs and Deep Learning,Community Detection of Music Genres Using Spotify Playlists
+160,2023,Graphs and Deep Learning,Efficient Few Shot Learning for Vision-Language Models on Complex Datasets
+161,2023,Graphs and Deep Learning,Improve Accuracy via Net-Dissection
+162,2023,Graphs and Deep Learning,Your Neural Network is Secretly a Kernel Machine
+163,2023,Medicine and Bioinformatics,BRAINIARB: Behavioral Reconstruction And Insight via Neuroethological Imitation And Realistic Bodies
+164,2023,Medicine and Bioinformatics,Performance of Biomarkers for CNN Training: A Comparison of Results
+165,2023,Medicine and Bioinformatics,Predicting Pulmonary Edema Using Convolutional Neural Networks and Lung Image Segmentation
+166,2023,Medicine and Bioinformatics,Simultaneously detecting Pulmonary Edema and Pleural Effusion using a multi-label CNN classifier
+167,2023,Medicine and Bioinformatics,"Comparing Segmentation, Classification, and Cascade Convolutional Neural Networks for Pneumothorax Prediction"
+168,2023,Medicine and Bioinformatics,Using Latent Variable Models to Predict Mouse Behavior
+169,2023,Medicine and Bioinformatics,Comparing the Effects of Increased Sequencing Coverage on Analyses of Human Genetic Variation
+170,2023,Medicine and Bioinformatics,Application of Transcriptome-Wide Association Studies to Identifying Genes Associated with Inflammatory Bowel Disease
+171,2023,Medicine and Bioinformatics,Longitudinal integrative graphical medical application
+172,2023,Medicine and Bioinformatics,Longitudinal integrative graphical medical application
+173,2023,Medicine and Bioinformatics,Brain Region Activation From Sports Viewing
+174,2023,Medicine and Bioinformatics,Evaluating Fungal Feature Importance in Predicting Life Expectancy for Cancer Patients
+175,2023,Medicine and Bioinformatics,Multi-label Disease Prediction Based on Gut Microbiome
+176,2023,Medicine and Bioinformatics,Modeling and Simulation of Aerosol Flow in a Classroom Environment with Mobile Sensors
+177,2023,Medicine and Bioinformatics,Accelerating Spatiotemporal Neural Process Simulator with Deep Reinforcement Learning
+178,2023,Medicine and Bioinformatics,Optimizing DeepGLEAM Model for Flu Prediction
+179,2023,Medicine and Bioinformatics,Active Learning with Neural Processes for Epidemiology Modeling
+180,2023,Fairness and Causal Inference,Investigating Occupational Gender Bias In DALL-E 2
+181,2023,Fairness and Causal Inference,An Investigation on Mitigating Airline Pricing Model's Bias
+182,2023,Fairness and Causal Inference,Tree-based method towards the Estimation of the Conditional Average Treatment Effect of Education on Earning
+183,2023,Fairness and Causal Inference,Analysis on the Effect of Missingness on Fairness Notions
+184,2023,Fairness and Causal Inference,Trustworthy Recommender Systems via Bayesian Bandits
+185,2023,"NLP, Sentiment Analysis, and Social Media",Sentiment Analysis of Gun Control Using Twitter Data
+186,2023,"NLP, Sentiment Analysis, and Social Media",Predicting Financial Markets with Wisdom of the Crowd
+187,2023,"NLP, Sentiment Analysis, and Social Media",Effect of Spam Detection Models on Real-time Tweet Sentiment
+188,2023,"NLP, Sentiment Analysis, and Social Media",Rethinking Credit Scores: Ensuring Fair Lending through NLP for Transaction Categorization
+189,2023,"NLP, Sentiment Analysis, and Social Media",Using Natural Language Processing to Predict Categories of Transactions
+190,2023,"NLP, Sentiment Analysis, and Social Media",Auditing race inequality based on gender in data science related job market
+191,2023,"NLP, Sentiment Analysis, and Social Media",CryptoWho: Auditing YouTube Investment Recommendations using GPT-3
+192,2023,"NLP, Sentiment Analysis, and Social Media",Analyzing Tweets from U.S. Congresspeople with GPT-3
+193,2023,"NLP, Sentiment Analysis, and Social Media",Active Learning in Natural Language Processing
+194,2023,"NLP, Sentiment Analysis, and Social Media",Incomplete Supervision: Text Classification based on a Subset of Labels
+195,2023,"NLP, Sentiment Analysis, and Social Media",Reverse Dictionary with Video Game Characters
+196,2023,"NLP, Sentiment Analysis, and Social Media",Weakly Supervised Spam-Label Classification
+197,2023,Other Applications,Improving App Launch Time with Deep Learning
+198,2023,Other Applications,Solutions of Foreground Window Recommendations
+199,2023,Other Applications,Discover User-App Interactions and Solutions to Reducing the Initial User-CPU Latency
+200,2023,Other Applications,Flock Freight Offer Acceptance
+201,2023,Other Applications,Developing Optimal Stopping Alogirthm for Freight Auction Platform
+202,2023,Other Applications,Energy Cost and HVAC Optimization in Smart Buildings
+203,2023,Other Applications,Spatiotemporal Changes in Lake Oroville
+204,2023,Other Applications,Maritime Ship Detection in Satellite Imagery
+205,2023,Other Applications,Graph Database Solutions for Perovskite Solar Cell Manufacturing
+206,2023,Other Applications,Decentralized Location Consensus Through Proximity Tracing
+207,2023,Other Applications,Decentralized Location Consensus Through Proximity Tracing
+208,2023,Other Applications,Unsupervised Domain Adaptation on Satellite Images to Assess Poverty
+209,2023,Other Applications,Build CNN model for animal recognition
+210,2023,Other Applications,DOTA2 Match Winning Rate Prediction
