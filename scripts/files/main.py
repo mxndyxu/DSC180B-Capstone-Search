@@ -1,6 +1,6 @@
 from typing import Union
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 
 app = FastAPI()
 
@@ -22,4 +22,9 @@ app.add_middleware(
 @app.get("/api/hello")
 def read_root():
     return {"message": "Hello World"}
+
+@app.get("/api/search")
+def search(query: str=Query(...)):
+    print(query)
+    return query
 
