@@ -1,4 +1,5 @@
 from typing import Union
+import search_engine 
 
 from fastapi import FastAPI, Query
 
