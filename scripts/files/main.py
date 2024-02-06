@@ -7,6 +7,10 @@ app = FastAPI()
 
 from fastapi.middleware.cors import CORSMiddleware
 
+es_instance = search_engine.search_engine("http://localhost:9200", "capstones")
+
+# uvicorn main:app --reload 
+
 origins = [
     "http://localhost:8000",
     "http://localhost:3000",  # React app port
@@ -27,5 +31,7 @@ def read_root():
 @app.get("/api/search")
 def search(query: str=Query(...)):
     print(query)
-    return query
+    results = es_instance.search_query(query)
+    print(results)
+    return {"message" : results}
 

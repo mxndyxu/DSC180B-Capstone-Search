@@ -1,8 +1,12 @@
-// src/App.js
 import React, { useState } from 'react';
-import Header from './Header';
-import SearchBar from './SearchBar';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import Navbar from './components/Navbar';
+import About from './pages/About';
+import SearchResults from './pages/SearchResults'
+import './styles/App.css';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -13,40 +17,24 @@ function App() {
       .then((data) => setMessage(data.message));
   };
 
-  return (
-    <div className="App">
+  const Home = () => (
+    <div>
+      <Header />
       <header className="App-header">
         <SearchBar onSearch={fetchSearchResult} />
-        <p>{message}</p>
       </header>
     </div>
+  );
+
+  return (
+    <Router>
+      <Routes>
+          <Route exact path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/search/:searchTerm" element={<Layout><SearchResults /></Layout>} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-// function App() {
-//   const [searchResults, setSearchResults] = useState([]);
-
-//   // Function to handle the search and update searchResults state
-//   const handleSearch = (searchTerm) => {
-//     // Implement your search logic here (e.g., filtering data)
-//     // For demonstration purposes, let's just update the state with the search term
-//     setSearchResults([searchTerm]);
-//   };
-
-//   return (
-//     <div className="App">
-//       <Header />
-//       <SearchBar onSearch={handleSearch} />
-//       <div>
-//         {/* Display search results */}
-//         {searchResults.map((result, index) => (
-//           <p key={index}>{result}</p>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -1,0 +1,117 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(249, 245, 236);
+}
+
+/* Header component styles */
+header {
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+  /* text-align: left; */
+  padding: 15px;
+  margin-bottom: -65px;
+}
+
+h1.ucsd {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+h1.subtitle {
+  font-size: 35px;
+  /* flex-direction: column; */
+  margin-top: 10px;
+}
+
+/* SearchBar component styles */
+div.search-bar {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+}
+
+div.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Inconsolata', monospace;
+  width: 600px;
+  border: 2px solid rgb(68, 39, 24);
+  border-radius: 7px;
+  margin-right: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+div.search-bar label.filters {
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+  margin-right: 18px;
+}
+
+div.search-bar button.search {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  color: rgb(249, 245, 236);
+  background-color: #3e68a2;
+  width: 75;
+  cursor: pointer;
+  border: 2px solid #3e68a2;
+  border-radius: 7px;
+}
+
+div.search-bar button.search:hover {
+  background-color: #2e5489;
+  border: 2px solid #2e5489;
+}
+
+div.search-bar select {
+  padding: 8px;
+  font-size: 16px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  color: rgb(249, 245, 236);
+  background-color: #e5bf3a;
+  border: none;
+  border-radius: 7px;
+  margin-top: 15px;
+  margin-right: 8px;
+  width: 165px;
+  text-align: center;
+}
+
+div.search-bar select:hover {
+  background-color: #d3b031;
+}
+
+div.search-bar label {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  color: rgb(68, 39, 24);
+}
+
+/* About component styles */
+.about-container {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 375px;
+  margin-left: -350px;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+}
+
+h1.about-text {
+  font-family: 'Inconsolata', monospace;
+  font-size: 35px;
+  color: rgb(68, 39, 24);
+}
