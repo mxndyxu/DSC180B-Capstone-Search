@@ -4,4 +4,4 @@ images/
 
 .env
 
-scripts/files/__pycache__/
+backend/__pycache__/

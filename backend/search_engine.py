@@ -65,7 +65,7 @@ class search_engine:
         self.es.indices.create(index = self.index_name, mappings = mappings) 
 
     def ingest_data(self):
-        es_data_DF = pd.read_pickle("../../data/es_data_DF.pkl")
+        es_data_DF = pd.read_pickle("../data/es_data_DF.pkl")
         for _, row in es_data_DF.iterrows():
             doc = {
                 "year_presented": row['year_presented'],
