@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
-import Navbar from './components/Navbar';
 import About from './pages/About';
 import SearchResults from './pages/SearchResults'
 import './styles/App.css';
@@ -21,7 +20,7 @@ function App() {
     <div>
       <Header />
       <header className="App-header">
-        <SearchBar onSearch={fetchSearchResult} />
+        <SearchBar onSearch={fetchSearchResult} className="home-search-bar"/>
       </header>
     </div>
   );
