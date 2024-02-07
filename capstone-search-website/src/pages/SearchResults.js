@@ -1,18 +1,53 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useLocation, useParams, NavLink } from 'react-router-dom';
 // import SearchBar from '../components/SearchBar';
 
 const SearchResults = () => {
   const { searchTerm } = useParams();
-  const [searchResults, setSearchResults] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
+  const [filters, setFilters] = useState({});
+  const { state } = useLocation();
+  const { year, domain, mentor } = state || {};
 
   useEffect(() => {
-    // Fetch search results from FastAPI backend
-    fetch(`http://localhost:8000/api/search?query=${searchTerm}`)
+
+    console.log(year)
+    console.log(domain)
+    console.log(mentor)
+
+    if (year || domain || mentor) {
+      const appliedFilters = {};
+      if (year) appliedFilters.year = year;
+      if (domain) appliedFilters.domain = domain;
+      if (mentor) appliedFilters.mentor = mentor;
+      setFilters(appliedFilters);
+    }
+    
+    // console.log(filters)
+    // Construct the API query based on the URL parameters
+    let apiUrl = `http://localhost:8000/api/search?query=${searchTerm}`;
+
+    // Add optional filters if they exist
+    if (year) {
+      apiUrl += `&year=${year}`;
+    }
+    if (domain) {
+      apiUrl += `&domain=${domain}`;
+    }
+    if (mentor) {
+      apiUrl += `&mentor=${mentor}`;
+    }
+
+    // Fetch search results from your FastAPI backend
+    fetch(apiUrl)
       .then(response => response.json())
-      .then(data => setSearchResults(data.message))  // Assuming results is a dictionary
+      .then(data => setSearchResults(data.message))  // Assuming results is an array of strings
       .catch(error => console.error('Error fetching search results:', error));
-  }, [searchTerm]);
+
+      // console.log(filters)
+      console.log(searchTerm)
+      
+  }, [searchTerm, year, mentor, domain]);
 
   return (
     <div>
@@ -38,4 +73,36 @@ const SearchResults = () => {
 
 export default SearchResults;
 
+
+// import React, { useEffect, useState } from 'react';
+// import { useParams } from 'react-router-dom';
+
+// const SearchResults = () => {
+//   const { searchTerm } = useParams();
+//   const [searchResults, setSearchResults] = useState([]);
+
+//   useEffect(() => {
+//     // Fetch search results from your FastAPI backend
+//     // Replace 'http://localhost:8000' with your actual backend URL
+//     fetch(`http://localhost:8000/api/search?query=${searchTerm}`)
+//       .then(response => response.json())
+//       .then(data => setSearchResults(data.message))  // Assuming results is an array of strings
+//       .catch(error => console.error('Error fetching search results:', error));
+
+//       // console.log(searchTerm)
+//   }, [searchTerm]);
+
+//   return (
+//     <div>
+//       <h2>Search results for: {searchTerm}</h2>
+//       <ul>
+//         {searchResults.map((result, index) => (
+//           <li key={index}>{result}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default SearchResults;
 

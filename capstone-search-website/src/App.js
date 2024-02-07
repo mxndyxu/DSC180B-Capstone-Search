@@ -10,8 +10,25 @@ import './styles/App.css';
 function App() {
   const [message, setMessage] = useState('');
 
-  const fetchSearchResult = (searchTerm) => {
-    fetch(`http://localhost:8000/api/search?query=${searchTerm}`)
+  const fetchSearchResult = (searchTerm, selectedFilters) => {
+    
+    let url = `http://localhost:8000/api/search?query=${searchTerm}`;
+
+    if (selectedFilters.year) {
+      url += `&year=${selectedFilters.year}`;
+    }
+
+    if (selectedFilters.domain) {
+      url += `&domain=${selectedFilters.domain}`;
+    }
+
+    if (selectedFilters.mentor) {
+      url += `&mentor=${selectedFilters.mentor}`;
+    }
+
+    console.log(searchTerm)
+    console.log(selectedFilters)
+    fetch(url)
       .then((response) => response.json())
       .then((data) => setMessage(data.message));
   };
@@ -30,7 +47,7 @@ function App() {
       <Routes>
           <Route exact path="/" element={<Layout><Home /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/search/:searchTerm" element={<Layout><SearchResults /></Layout>} />
+          <Route path="/search/:searchTerm/*" element={<Layout><SearchResults /></Layout>} />
       </Routes>
     </Router>
   );

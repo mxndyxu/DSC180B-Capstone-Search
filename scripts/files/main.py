@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Optional
 import search_engine 
 
 from fastapi import FastAPI, Query
@@ -29,8 +29,13 @@ def read_root():
     return {"message": "Hello World"}
 
 @app.get("/api/search")
-def search(query: str=Query(...)):
+def search(query: str = Query(...), year: Optional[str] = None, domain: Optional[str] = None, mentor: Optional[str] = None):
     print(query)
+    print(year)
+    print(domain)
+    print(mentor)
+    # print(filter)
+    # query + year, domain, mentor
     results = es_instance.search_query(query)
     print(results)
     return {"message" : results}
