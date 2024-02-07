@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useParams, NavLink } from 'react-router-dom';
-// import SearchBar from '../components/SearchBar';
+import { useLocation, useParams } from 'react-router-dom';
 
 const SearchResults = () => {
   const { searchTerm } = useParams();
@@ -41,7 +40,7 @@ const SearchResults = () => {
     // Fetch search results from your FastAPI backend
     fetch(apiUrl)
       .then(response => response.json())
-      .then(data => setSearchResults(data.message))  // Assuming results is an array of strings
+      .then(data => setSearchResults(data.message))
       .catch(error => console.error('Error fetching search results:', error));
 
       // console.log(filters)
@@ -51,20 +50,10 @@ const SearchResults = () => {
 
   return (
     <div>
-      {/* <SearchBar className="results-search-bar"/> */}
-      <h2 className="results-text">Search results for: {searchTerm}</h2>
-      <ul className="search-results">
-        {Object.keys(searchResults).map(key => (
-            <li key={key}>
-              <ul className="search-results-specs">
-                <NavLink to={`/project${key}`} className="proj-link">
-                  <li className="result-line-title"><strong>{searchResults[key].proj_title}</strong></li>
-                  <li className="result-line"><strong>Year: </strong>{String(Number(searchResults[key].year) - 1) + " - " + searchResults[key].year}</li>
-                  <li className="result-line"><strong>Student(s): </strong>{searchResults[key].members}</li>
-                  <li className="result-line"><strong>{searchResults[key].ucsd_or_ind} Mentor(s): </strong>{searchResults[key].mentors}</li>
-                </NavLink>
-              </ul>
-            </li>
+      <h2>Search results for: {searchTerm}</h2>
+      <ul>
+        {searchResults.map((result, index) => (
+          <li key={index}>{result}</li>
         ))}
       </ul>
     </div>

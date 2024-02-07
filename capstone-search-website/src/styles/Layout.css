@@ -6,12 +6,14 @@
     width: 100%;
     padding: 10px;
     font-family: 'Inconsolata', monospace;
+    background-color: rgb(249, 245, 236);
     color: rgb(68, 39, 24);
     margin-top: 50px;
     margin-left: 330px;
+    z-index: 1000;
 }
 
-ul {
+ul.nav {
     list-style-type: none;
     margin: 0;
     padding: 0px;
@@ -23,7 +25,11 @@ li {
     cursor: pointer;
 }
 
-li:hover {
+li.home-link:hover {
+    font-weight: bold;
+}
+
+li.about-link:hover {
     font-weight: bold;
 }
 
