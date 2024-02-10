@@ -26,11 +26,43 @@ The current Github Repository Structure as follows:
 ## Setup Instructions
 
 ### Backend Setup
+If you want to run this project, you can run anaconda and clone the environment.yml file to get the code environment to run these files locally. 
+
+To setup the backend, you want to navigate to the directory with the main.py (backend folder) and run the following command:
+uvicorn main:app --reload
 
 ### Front End Setup
+You're going to make sure you have NodeJS installed, then after cloning the Github Repository, navigate to the capstone-search-website/ folder and type in the command:
+
+npm install (This is will install the required dependencies)
+
+Then, to run the project run:
+
+npm start
 
 ### ElasticSearch Setup
+You will need to have Docker Desktop installed and run the following command:
 
+docker run --rm -p 9200:9200 -p 9300:9300 -e "xpack.security.enabled=false" -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+
+## Credit
+We used the internet and a lot of various articles in our code. A huge thanks to:
+
+* Colin for being a fantastic mentor and always providing great feedback and solutions!
+* ChatGPT for being our guide to ReactJS
+* https://www.freecodecamp.org/news/extract-data-from-pdf-files-with-python/
+* https://dylancastillo.co/elasticsearch-python/#create-a-local-elasticsearch-cluster
+* https://medium.com/muthoni-wanyoike/implementing-text-summarization-using-openais-gpt-3-api-dcd6be4f6933
+* https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28#http-method
+* https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#get-a-repository
+* https://www.geeksforgeeks.org/how-to-scrape-all-pdf-files-in-a-website/
+* https://pypdf2.readthedocs.io/en/3.0.0/user/extract-images.html
+* https://www.elastic.co/guide/en/elasticsearch/reference/current/semantic-search.html
+* https://github.com/elastic/elasticsearch-labs/blob/main/notebooks/search/03-ELSER.ipynb
+* https://dev.to/am20dipi/how-to-build-a-simple-search-bar-in-javascript-4onf
+* https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/
+* https://blog.openreplay.com/reacts-layout-components-concept/
+* https://stackoverflow.com/questions/70054635/passing-props-with-navlink-in-react-router-dom-v6 
 
 
 
