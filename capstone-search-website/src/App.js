@@ -48,6 +48,7 @@ function App() {
           <Route exact path="/" element={<Layout><Home /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
           <Route path="/search/:searchTerm/*" element={<Layout><SearchResults /></Layout>} />
+          <Route path="/search/*" element={<Layout><SearchResults /></Layout>} />
       </Routes>
     </Router>
   );

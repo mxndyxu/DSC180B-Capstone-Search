@@ -29,14 +29,21 @@ def read_root():
     return {"message": "Hello World"}
 
 @app.get("/api/search")
-def search(query: str = Query(...), year: Optional[str] = None, domain: Optional[str] = None, mentor: Optional[str] = None):
+def search(query: Optional[str] = None, year: Optional[str] = None, domain: Optional[str] = None, mentor: Optional[str] = None):
     print(query)
     print(year)
     print(domain)
     print(mentor)
     # print(filter)
     # query + year, domain, mentor
-    results = es_instance.search_query(query)
+    final_query = ""
+    if query != "undefined": final_query += query
+    if year: final_query += " " + year
+    if domain: final_query += " " +  domain
+    if mentor: final_query += " " + mentor
+
+    print(final_query)
+    results = es_instance.search_query(final_query)
     print(results)
     return {"message" : results}
 

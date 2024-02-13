@@ -65,7 +65,7 @@ class search_engine:
         self.es.indices.create(index = self.index_name, mappings = mappings) 
 
     def ingest_data(self):
-        es_data_DF = pd.read_pickle("../../data/es_data_DF.pkl")
+        es_data_DF = pd.read_pickle("../data/es_data_DF.pkl")
         for _, row in es_data_DF.iterrows():
             doc = {
                 "year_presented": row['year_presented'],
@@ -145,27 +145,4 @@ class search_engine:
 
         return res_dict
 
-        # res_str_lst = []
-        # if verbose:
-        #     print(f'Number of hits: {resp.body["hits"]["total"]["value"]}')
-        #     print('----------------')
-        #     for hit in hits:
-        #         res_str = ""
-        #         res_str += (f'ID: {hit["_id"]} | ')
-        #         res_str += (f'Score: {hit["_score"]} | ')
-        #         res_str+=(f'Project: {hit["_source"]["project_title"]} | ')
-        #         res_str+=(f'Domain: {hit["_source"]["domain"]} | ')
-        #         res_str+=(f'Students: {hit["_source"]["members"]} | ')
-        #         res_str+=(f'Industry/UCSD: {hit["_source"]["industry"]} | ')
-        #         res_str+=(f'Mentor: {hit["_source"]["mentors"]} ')
-                
-        #         res_str_lst.append(res_str)
-        #         print(f'Score: {hit["_id"]}')
-        #         print(f'Score: {hit["_score"]}')
-        #         print(f'Project: {hit["_source"]["project_title"]}')
-        #         print(f'Domain: {hit["_source"]["domain"]}')
-        #         print(f'Students: {hit["_source"]["members"]}')
-        #         print(f'Industry/UCSD: {hit["_source"]["industry"]}')
-        #         print(f'Mentor: {hit["_source"]["mentors"]}')
-        #         print('----------------')
-        # return (res_str_lst)
+        
