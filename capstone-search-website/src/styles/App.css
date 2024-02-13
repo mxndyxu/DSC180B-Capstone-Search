@@ -116,6 +116,23 @@ h1.about-text {
   position: relative;
 }
 
+/* Projects component styles */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60vh;
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+}
+
+h1.projects-text {
+  font-family: 'Inconsolata', monospace;
+  font-size: 35px;
+  color: rgb(68, 39, 24);
+  position: relative;
+}
+
 /* SearchResults component styles */
 h2.results-text {
   font-family: 'Inconsolata', monospace;
@@ -169,3 +186,20 @@ li.result-line {
   align-items: center;
   height: 100vh;
 } */
+
+/* ProjectDetails component styles */
+.proj-details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 65vh;
+  width: 800px;
+  font-family: 'Inconsolata', monospace;
+  color: rgb(68, 39, 24);
+}
+
+.proj-title {
+  font-family: 'Inconsolata', monospace;
+  font-size: 30px;
+  color: rgb(68, 39, 24);
+}

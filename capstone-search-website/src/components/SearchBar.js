@@ -59,12 +59,6 @@ const SearchBar = ({ onSearch }) => {
         console.error('Error fetching data:', error);
       }
     };
-
-    // console.log(es_data)
-
-    
-    
-    
     fetchData();
   }, []);
 
@@ -111,7 +105,7 @@ const SearchBar = ({ onSearch }) => {
     }
 
     console.log(url)
-    navigate(url, { //THIS ONE
+    navigate(url, {
       state: {
         year: selectedYear,
         domain: selectedDomain,
@@ -134,19 +128,19 @@ const SearchBar = ({ onSearch }) => {
       <div className="filter">
         <label className="filters">Filters</label>
         <select value={selectedYear} onChange={handleYearChange}>
-          <option value="">All Years</option>
+          <option value="">Years</option>
           {uniqueYears.map((year, index) => (
-            <option key={index} value={year}>{year}</option>
+            <option key={index} value={year}>{String(Number(year) - 1) + " - " + year}</option>
           ))}
         </select>
         <select value={selectedDomain} onChange={handleDomainChange}>
-          <option value="">All Domains</option>
+          <option value="">Domains</option>
           {uniqueDomains.map((domain, index) => (
             <option key={index} value={domain}>{domain}</option>
           ))}
         </select>
         <select value={selectedMentor} onChange={handleMentorChange}>
-          <option value="">All Mentors</option>
+          <option value="">Mentors</option>
           {uniqueMentors.map((mentor, index) => (
             <option key={index} value={mentor}>{mentor}</option>
           ))}
