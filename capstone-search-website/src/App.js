@@ -81,6 +81,7 @@ function App() {
           {uniqueIds.map((id) => {
             return <Route path={`/project${id}`} element={<Layout><ProjectDetails /></Layout>}/>
           })}
+          <Route path="/search/*" element={<Layout><SearchResults /></Layout>} />
       </Routes>
     </Router>
   );
