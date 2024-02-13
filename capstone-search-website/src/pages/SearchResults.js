@@ -49,6 +49,8 @@ const SearchResults = () => {
       
   }, [searchTerm, year, mentor, domain]);
 
+  // console.log(searchResults);
+
   return (
     <div>
       {/* <SearchBar className="results-search-bar"/> */}

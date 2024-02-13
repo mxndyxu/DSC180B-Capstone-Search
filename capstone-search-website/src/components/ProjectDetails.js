@@ -13,6 +13,12 @@ const ProjectDetails = () => {
       <p>Mentors: {projectDetails.mentors}</p>
       <p>UCSD or Industry: {projectDetails.ucsd_or_ind}</p>
       <p>Year: {projectDetails.year}</p>
+      <a href={projectDetails.github_url}>GitHub Repository</a>
+      <a href={projectDetails.website_url}>Website</a>
+      <a href={projectDetails.report_url}>Report</a>
+      <a href={projectDetails.poster_url}>Poster</a>
+      <p>GitHub contributors: {projectDetails.github_contributors}</p>
+      <p>Language breakdown: {projectDetails.language_breakdown}</p>
     </div>
   );
 };

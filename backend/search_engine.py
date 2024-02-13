@@ -46,8 +46,14 @@ class search_engine:
                     "report_text_summarization": {"type": "text"},
                     "readme_summarization": {"type": "text", "analyzer" : "english"},
                     "readme_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
-                    "report_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"}}
-                    })
+                    "report_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
+                    "github_url": {"type": "text", "index": False},
+                    "website_url": {"type": "text", "index": False},
+                    "report_url": {"type": "text", "index": False},
+                    "poster_url": {"type": "text", "index": False},
+                    "github_contributors": {"type": "text", "index": False},
+                    "github_lang_breakdown": {"type": "text", "index": False}}
+                })
         print("Mappings Set!")
         self.ingest_data()
         print("Done loading in data!")
@@ -65,7 +71,8 @@ class search_engine:
         self.es.indices.create(index = self.index_name, mappings = mappings) 
 
     def ingest_data(self):
-        es_data_DF = pd.read_pickle("../data/es_data_DF.pkl")
+        # es_data_DF = pd.read_pickle("../data/es_data_DF.pkl")
+        es_data_DF = pd.read_pickle("../data/es_data.pkl")
         for _, row in es_data_DF.iterrows():
             doc = {
                 "year_presented": row['year_presented'],
@@ -78,12 +85,16 @@ class search_engine:
                 "report_text_summarization": row["report_text_summarization"],
                 "readme_summarization": row["readme_summarization"],
                 "readme_vector": row["readme_vector"],
-                "report_vector": row["report_vector"]
+                "report_vector": row["report_vector"],
+                "github_url": row["github_repo"],
+                "website_url": row["website"],
+                "report_url": row["report"],
+                "poster_url": row["poster"],
+                "github_contributors": row["contributors"],
+                "github_lang_breakdown": row["language_breakdown"]
             }
             self.es.index(index="capstones", id=row["project_id"], document=doc)
         
-        
-
     def search_query(self, query_str, results = 10, verbose = True):
         resp = self.es.search(
                 index="capstones",
@@ -128,6 +139,7 @@ class search_engine:
                 size=results
             )
         
+        print(f'resp.body: {resp.body}')
         hits = resp.body['hits']['hits']
         ids = [hit["_id"] for hit in hits]
 
@@ -140,32 +152,14 @@ class search_engine:
             vals['members'] = hit["_source"]["members"].replace(',', ', ')
             vals['ucsd_or_ind'] = hit["_source"]["industry"].replace(',', ', ')
             vals['mentors'] = hit["_source"]["mentors"].replace(',', ', ')
+            # vals['summarized'] = hit["_source"]["report_text_summarization"]
+            vals['github_url'] = hit["_source"]["github_url"]
+            vals['website_url'] = hit["_source"]["website_url"]
+            vals['report_url'] = hit["_source"]["report_url"]
+            vals['poster_url'] = hit["_source"]["poster_url"]
+            vals['github_contributors'] = hit["_source"]["github_contributors"]
+            vals['language_breakdown'] = hit["_source"]["github_lang_breakdown"]
 
             res_dict[hit['_id']] = vals
 
         return res_dict
-
-        # res_str_lst = []
-        # if verbose:
-        #     print(f'Number of hits: {resp.body["hits"]["total"]["value"]}')
-        #     print('----------------')
-        #     for hit in hits:
-        #         res_str = ""
-        #         res_str += (f'ID: {hit["_id"]} | ')
-        #         res_str += (f'Score: {hit["_score"]} | ')
-        #         res_str+=(f'Project: {hit["_source"]["project_title"]} | ')
-        #         res_str+=(f'Domain: {hit["_source"]["domain"]} | ')
-        #         res_str+=(f'Students: {hit["_source"]["members"]} | ')
-        #         res_str+=(f'Industry/UCSD: {hit["_source"]["industry"]} | ')
-        #         res_str+=(f'Mentor: {hit["_source"]["mentors"]} ')
-                
-        #         res_str_lst.append(res_str)
-        #         print(f'Score: {hit["_id"]}')
-        #         print(f'Score: {hit["_score"]}')
-        #         print(f'Project: {hit["_source"]["project_title"]}')
-        #         print(f'Domain: {hit["_source"]["domain"]}')
-        #         print(f'Students: {hit["_source"]["members"]}')
-        #         print(f'Industry/UCSD: {hit["_source"]["industry"]}')
-        #         print(f'Mentor: {hit["_source"]["mentors"]}')
-        #         print('----------------')
-        # return (res_str_lst)
