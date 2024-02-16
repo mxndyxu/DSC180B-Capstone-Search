@@ -5,6 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow-y: auto;
   background-color: rgb(249, 245, 236);
 }
 
@@ -12,12 +13,14 @@ body {
 header {
   font-family: 'Inconsolata', monospace;
   color: rgb(68, 39, 24);
-  padding: 15px;
-  margin-bottom: -65px;
+  /* padding: 15px; */
+  /* margin-bottom: -65px; */
+  /* margin-bottom: 0%; */
 }
 
 h1.ucsd {
   font-size: 60px;
+  margin-top: 50%;
   margin-bottom: 10px;
 }
 
@@ -97,6 +100,46 @@ div.search-bar label {
 input[type="text"] {
   color: rgb(68, 39, 24);
   /* font-weight: bold; */
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid rgb(68, 39, 24);
+  border-radius: 7px;
+  padding: 20px;
+  background-color: rgb(249, 245, 236);
+  width: 30%;
+  z-index: 1000;
+}
+
+.popup-text {
+  /* padding: 10px; */
+  text-align: center;
+}
+
+.popup-close {
+  display: flex;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  border: 2px solid #3e68a2;
+  background-color: #3e68a2;
+  color: rgb(249, 245, 236);
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 20px;
+  margin-top: -5%;
+  margin-left: auto;
+  margin-right: -5%;
+}
+
+.popup-close:hover {
+  background-color: #2e5489;
+  border: 2px solid #2e5489;
 }
 
 /* About component styles */
@@ -191,7 +234,7 @@ li.result-line {
 .proj-details-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   height: 65vh;
   width: 800px;
   font-family: 'Inconsolata', monospace;
