@@ -210,6 +210,10 @@ ul.search-results-specs {
 li.result-line-title {
   padding: 3px;
   font-size: 18px;
+  /* text-decoration: underline; */
+}
+
+li.result-line-title:hover {
   text-decoration: underline;
 }
 
