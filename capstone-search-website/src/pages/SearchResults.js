@@ -46,6 +46,8 @@ const SearchResults = () => {
 
       // console.log(filters)
       console.log(searchTerm)
+
+      console.log(searchResults)
       
   }, [searchTerm, year, mentor, domain]);
 
@@ -67,9 +69,11 @@ const SearchResults = () => {
                   className="proj-link"
                 >
                   <li className="result-line-title"><strong>{searchResults[key].proj_title}</strong></li>
+                  <li className="result-line"><strong>ID: </strong>{key}</li>
                   <li className="result-line"><strong>Year: </strong>{String(Number(searchResults[key].year) - 1) + " - " + searchResults[key].year}</li>
                   <li className="result-line"><strong>Student(s): </strong>{searchResults[key].members}</li>
                   <li className="result-line"><strong>{searchResults[key].ucsd_or_ind} Mentor(s): </strong>{searchResults[key].mentors}</li>
+                  <li className="result-line"><strong>Domain: </strong>{searchResults[key].domain}</li>
                 </NavLink>
               </ul>
             </li>

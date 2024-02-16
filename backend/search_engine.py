@@ -1,3 +1,22 @@
+"""
+search_engine.py
+
+Is the class that utilizes ElasticSearch and is a search engine.
+
+Class Functions
+---------------
+cls_pooling - 
+    Helper function to obtain embedding vectors from embedding model (Method obtained from HuggingFace)
+get_embeddings - 
+    Helper function to create embedding vectors from HuggingFace models (Method obtained from HuggingFace)
+
+Class attributes
+---------------
+model_ckpt: str
+    String that sets which specific huggingFace model to create the embeddings off of
+tokenizer: AutoTokenizer
+    HuggingFace autotokenizer that is made off the corresponding "model_ckpt"
+"""
 from transformers import AutoTokenizer, AutoModel
 import torch
 import pandas as pd
@@ -7,19 +26,33 @@ import pickle
 
 # docker run --rm -p 9200:9200 -p 9300:9300 -e "xpack.security.enabled=false" -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.11.0
 
-# print(torch.backends.cudnn.enabled)
-# print(torch.cuda.is_available()) #We have GPU on deck and ready
-# print(f"CUDA device: {torch.cuda.get_device_name(torch.cuda.current_device())}")
-
 model_ckpt = "sentence-transformers/multi-qa-mpnet-base-dot-v1"
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 model = AutoModel.from_pretrained(model_ckpt)
 
 #From Hugging Face Tutorials
 def cls_pooling(model_output):
+    """
+    Function that helps in creating the semantic search embeddings
+    Code was taken from HuggingFace tutorials
+
+    Parameters
+    ----------
+    model_output : str
+        The file location of the answers csv file
+    """
     return model_output.last_hidden_state[:, 0]
 
 def get_embeddings(text_list):
+    """
+    Function that obtains the semantic search embeddings
+    given a list of strings comprising of the tokens
+
+    Parameters
+    ----------
+    text_list : list
+        The list of string tokens to obtain the embeddings
+    """
     encoded_input = tokenizer(
         text_list, padding=True, truncation=True, return_tensors="pt"
     )
@@ -28,7 +61,66 @@ def get_embeddings(text_list):
     return cls_pooling(model_output)
 
 class search_engine:
+    """
+    search_engine class
+
+    Class Attributes
+    ----------
+    self.connection_string: string
+        The routing string to connect to the Elastic Search instance
+    
+    self.index_name: string
+        The index name in ElasticSearch
+    
+    self.es: ElasticSearch Instance
+        The ElasticSearch Instance
+    
+    Methods
+    ----------
+    connect_to_es: 
+        Makes the ElasticSearch instance and connects to it with the connection_string
+    
+    set_mappings:
+        Sets the mappings for the ElasticSearch (all the fields that are to be loaded in)
+
+    ingest_data:
+        Ingests the information into the ElasticSearch index
+
+    make_filter_list:
+        Given filter parameters, create the list of filters to be added into the Elastic Search
+        query
+
+    search_filter:
+        Searches purely with filters
+
+    search_query:
+        Searches ElasticSearch with only a text query.
+
+    search_query_filter:
+        Searches with both a text query and some filters.
+
+    search:
+        The search function that given the inputs will determine
+        which specific search (search_filter, search_query, or search_query_filter)
+        to be used.
+    
+    create_res_dict:
+        Given the output of hits for each ElasticSearch query,
+        returns it into a dict of the relevant info. This is what is
+        returned back to ReactJS.
+    """
     def __init__(self, connection_string, index_name):
+        """ __init__ method
+        Initializes a search_engine object
+
+        Parameters
+        ----------
+        connection_string: str
+            The url string route that is used to connect to the ElasticSearch instance.
+    
+        index_name: str
+            The index name for the ElasticSearch
+        """
         self.connection_string = connection_string
         self.index_name = index_name
 
@@ -42,7 +134,7 @@ class search_engine:
                     "project_title_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
                     "industry": {"type": "text"},
                     "mentors": {"type": "text"},
-                    "members": {"type": "text"},
+                    "members": {"type": "match_only_text"},
                     "report_text_summarization": {"type": "text"},
                     "readme_summarization": {"type": "text", "analyzer" : "english"},
                     "readme_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
@@ -60,10 +152,24 @@ class search_engine:
 
 
     def connect_to_es(self):
+        """ connect_to_es method
+        Initializes the ElasticSearch object with the connection string
+        """
         self.es = Elasticsearch(self.connection_string)
         print(self.es.info().body)
     
     def set_mappings(self, mappings: dict):
+        """ set_mappings method
+        Sets the mappings for the ElasticSearch instance
+
+        Parameters
+        ----------
+        mappings: dict
+            The mappings structure to be loaded
+        """
+
+        # This is testing if the ElasticSearch instance already exists and if so, deletes and reloads
+        # Used often when doing the webdev setup
         try:
             self.es.indices.delete(index=self.index_name)
         except:
@@ -71,7 +177,9 @@ class search_engine:
         self.es.indices.create(index = self.index_name, mappings = mappings) 
 
     def ingest_data(self):
-        # es_data_DF = pd.read_pickle("../data/es_data_DF.pkl")
+        """ ingest_data method
+        Reads the pickle object and loads in the data to the ElasticSearch engine
+        """
         es_data_DF = pd.read_pickle("../data/es_data.pkl")
         for _, row in es_data_DF.iterrows():
             doc = {
@@ -94,8 +202,98 @@ class search_engine:
                 "github_lang_breakdown": row["language_breakdown"]
             }
             self.es.index(index="capstones", id=row["project_id"], document=doc)
-        
+
+    def make_filter_list(self, mentor = None, domain = None, year_presented = None):
+        """ make_filter_list method
+        Creates the filter list in a format accepted by the ElasticSearch query
+
+        Parameters
+        ----------
+        mentor: str (Default = None)
+            The mentor string filter
+    
+        domain: str (Default = None)
+            The domain string filter
+
+        year_presented: str (Default = None)
+            The year_presented string filter
+        """
+        res = []
+        if mentor:
+            res.append({"terms" : {"mentors" : mentor.lower().split()}})
+        if domain:
+            res.append({"terms" : {"domain" : domain.lower().split()}})
+        if year_presented:
+            res.append({"terms" : {"year_presented" : [year_presented]}})
+        return res
+
+    def create_res_dict(self, hits):
+        """create_res_dict method
+
+        Given a hits (list of dictionaries), convert the ElasticSearch response
+        into a json format accepted into the ReactJS front-end
+
+        Parameters
+        ----------
+        hits: dict
+            Dictionary format that ElasticSearch sends back
+        """
+        res_dict = {}
+        for hit in hits:
+            vals = {}
+
+            vals['proj_title'] = hit["_source"]["project_title"]
+            vals['year'] = hit["_source"]["year_presented"]
+            vals['members'] = hit["_source"]["members"].replace(',', ', ')
+            vals['ucsd_or_ind'] = hit["_source"]["industry"].replace(',', ', ')
+            vals['mentors'] = hit["_source"]["mentors"].replace(',', ', ')
+            vals['domain'] = hit["_source"]["domain"]
+            vals['summarized'] = hit["_source"]["report_text_summarization"]
+            vals['github_url'] = hit["_source"]["github_url"]
+            vals['website_url'] = hit["_source"]["website_url"]
+            vals['report_url'] = hit["_source"]["report_url"]
+            vals['poster_url'] = hit["_source"]["poster_url"]
+            vals['github_contributors'] = hit["_source"]["github_contributors"]
+            vals['language_breakdown'] = hit["_source"]["github_lang_breakdown"]
+
+            res_dict[hit['_id']] = vals
+
+        return res_dict
+
+    def search_filter(self, filter_lst):
+        """search_filter method
+
+        The search where ElasticSearch merely uses filters. (All results that fit the filters
+        will be returned)
+
+        Parameters
+        ----------
+        filter_lst: list
+            List object returned from make_filter_list method
+        """
+        resp = self.es.search(index="capstones", query={
+            "bool": {
+                "filter": filter_lst
+            },
+        })
+
+        hits = resp.body['hits']['hits']
+        return self.create_res_dict(hits)
+
+
     def search_query(self, query_str, results = 10, verbose = True):
+        """search_query method
+
+        The search where ElasticSearch merely uses a string query. 
+
+        Parameters
+        ----------
+        query_str: str
+            The string query to be searched with
+        
+        results: int (Default = 10)
+            The number of results to return
+        """
         resp = self.es.search(
                 index="capstones",
                 query={
@@ -139,27 +337,107 @@ class search_engine:
                 size=results
             )
         
-        print(f'resp.body: {resp.body}')
+        # print(f'resp.body: {resp.body}')
         hits = resp.body['hits']['hits']
-        ids = [hit["_id"] for hit in hits]
+        return self.create_res_dict(hits)
+    
+    def search_query_filter(self, query_str, filter_lst, results = 10):
+        """search_query_filter method
 
-        res_dict = {}
-        for hit in hits:
-            vals = {}
+        The search where ElasticSearch uses both a string query and a filter. 
 
-            vals['proj_title'] = hit["_source"]["project_title"]
-            vals['year'] = hit["_source"]["year_presented"]
-            vals['members'] = hit["_source"]["members"].replace(',', ', ')
-            vals['ucsd_or_ind'] = hit["_source"]["industry"].replace(',', ', ')
-            vals['mentors'] = hit["_source"]["mentors"].replace(',', ', ')
-            # vals['summarized'] = hit["_source"]["report_text_summarization"]
-            vals['github_url'] = hit["_source"]["github_url"]
-            vals['website_url'] = hit["_source"]["website_url"]
-            vals['report_url'] = hit["_source"]["report_url"]
-            vals['poster_url'] = hit["_source"]["poster_url"]
-            vals['github_contributors'] = hit["_source"]["github_contributors"]
-            vals['language_breakdown'] = hit["_source"]["github_lang_breakdown"]
+        Parameters
+        ----------
+        query_str: str
+            The string query to be searched with
+        
+        filter_lst: list
+            List object returned from make_filter_list method
+        
+        results: int (Default = 10)
+            The number of results to return
+        """
+        resp = self.es.search(
+            index="capstones",
+            query={
+                "bool": {
+                    "filter" : filter_lst,
+                    "should" : [{
+                        "multi_match": {
+                            "query": query_str,
+                            "type": "phrase",
+                            "fields" : ["project_title^2", "domain^2", "year_presented", "industry^2", "mentors^3", "members^3", "readme_summarization"],
+                            # "boost": 0.9
+                        },
+                        "multi_match": {
+                            "query": query_str,
+                            "fields" : ["project_title^2", "domain^2", "year_presented", "industry^2", "mentors^3", "members^3", "readme_summarization"],
+                            "fuzziness": "AUTO",
+                            # "boost": 0.9
+                        },
+                    }]
+                }
+            },
+            knn=[
+                {
+                    "field": "project_title_vector",
+                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                    "k": 10,
+                    "num_candidates": 100,
+                    "filter" : filter_lst
+                    # "boost": 0.1
+                },
+                {
+                    "field": "readme_vector",
+                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                    "k": 10,
+                    "num_candidates": 100,
+                    "filter" : filter_lst
+                    # "boost": 0.1
+                },
+                {
+                    "field": "report_vector",
+                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                    "k": 10,
+                    "num_candidates": 100,
+                    "filter" : filter_lst
+                    # "boost": 0.1
+                } 
+            ],
+            size=results
+        )
 
-            res_dict[hit['_id']] = vals
+        hits = resp.body['hits']['hits']
+        return self.create_res_dict(hits)
 
-        return res_dict
+    def search(self, query_string, year, domain, mentor):
+        """search method
+        The search method that the main.py calls. It will then determine
+        which specific search function to use.
+
+        Parameters
+        ----------
+        query_str: str
+            The string query to be searched with
+            
+        mentor: str (Default = None)
+            The mentor string filter
+    
+        domain: str (Default = None)
+            The domain string filter
+
+        year_presented: str (Default = None)
+            The year_presented string filter
+        """
+        #Only filter situation
+        filter_lst = self.make_filter_list(mentor, domain, year)
+
+
+        if query_string == "undefined":
+            print(f'Query String UNDEFINED')
+            return self.search_filter(filter_lst)
+        elif len(filter_lst) == 0: # query only string
+            return self.search_query(query_string)
+        else:
+            return self.search_query_filter(query_string, filter_lst)
+            
