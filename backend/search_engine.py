@@ -563,4 +563,29 @@ class search_engine:
             return self.search_query(query_string)
         else:
             return self.search_query_filter(query_string, filter_lst)
+    
+    def get_project(self, id):
+        resp = self.es.get(index = self.index_name, id = id)
+        # print(resp)
+        # hits = resp["_source"]
+        
+        vals = {}
+
+        vals['proj_title'] = resp["_source"]["project_title"]
+        vals['year'] = resp["_source"]["year_presented"]
+        vals['members'] = resp["_source"]["members"].replace(',', ', ')
+        vals['ucsd_or_ind'] = resp["_source"]["industry"].replace(',', ', ')
+        vals['mentors'] = resp["_source"]["mentors"].replace(',', ', ')
+        vals['domain'] = resp["_source"]["domain"]
+        vals['summarized'] = resp["_source"]["report_text_summarization"]
+        vals['github_url'] = resp["_source"]["github_url"]
+        vals['website_url'] = resp["_source"]["website_url"]
+        vals['report_url'] = resp["_source"]["report_url"]
+        vals['poster_url'] = resp["_source"]["poster_url"]
+        vals['github_contributors'] = resp["_source"]["github_contributors"]
+        vals['language_breakdown'] = resp["_source"]["github_lang_breakdown"]
+
+        
+
+        return vals
             

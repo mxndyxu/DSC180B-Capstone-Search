@@ -1,23 +1,63 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import {useLocation, useParams, NavLink } from 'react-router-dom';
+
+import {getProjectDetails, getProjectByID} from './helpers/projectDetailHelpers'
 
 const ProjectDetails = () => {
+
     const location = useLocation();
-    console.log("LOCATION", location)
-    let projectDetails = null
-    if (location.state !== null){
-        projectDetails = location.state.projectDetails;
-    }
-    // else {
-    //     return (
-    //         <h2 className="proj-title">'404: project not retrieved'</h2>
-    //     )
-    // }
-    console.log(projectDetails)
+    const [projectDetails, setProjectDetails] = useState(null);
 
     useEffect(() => {
-        console.log('in useEffect');
-    }, [])
+        const fetchProjectDetails = async () => {
+            try {
+                if (location.state !== null && location.state.projectDetails) {
+                    // If project details are available in location state, use them directly
+                    setProjectDetails(location.state.projectDetails);
+                } else {
+                    // If not available, fetch from API using the pathname
+                    const fetchedProjectDetails = await getProjectByID(location.pathname);
+                    setProjectDetails(fetchedProjectDetails);
+                }
+            } catch (error) {
+                console.error('Error fetching project details:', error);
+            }
+        };
+
+        fetchProjectDetails();
+    }, [location.pathname, location.state]);
+
+    // Check if project details are available
+    if (!projectDetails) {
+        return <h2 className="proj-title">'Loading project details...'</h2>;
+    }
+    // const location = useLocation();
+    // console.log("LOCATION", location)
+
+    // // const [pathname, setPathname] = useState(#);
+
+    // let projectDetails = null
+    // if (location.state !== null){
+    //     projectDetails = location.state.projectDetails;
+    // } else {
+    //     console.log("No location.state found")
+    //     projectDetails = getProjectByID(location.pathname);
+    // }
+    
+    // // else {
+    // //     return (
+    // //         <h2 className="proj-title">'404: project not retrieved'</h2>
+    // //     )
+    // // }
+    // console.log(projectDetails)
+
+    // useEffect(() => {
+    //     console.log('in useEffect');
+    //     if (location.state === null){
+    //         console.log('useEffect preparing to fetch')
+    //         // projectDetails = location.state.projectDetails;
+    //     }
+    // }, [location.pathname])
     
 
     // Function to check if the URL is valid
