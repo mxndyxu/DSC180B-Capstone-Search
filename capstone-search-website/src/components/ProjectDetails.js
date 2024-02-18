@@ -1,9 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ProjectDetails = () => {
+import {getProjectDetails} from './helpers/projectDetailHelpers'
+
+const ProjectDetails = async () => {
     const location = useLocation();
-    const { projectDetails } = location.state;
+
+    console.log("LOCATION", location)
+    const [projectDetails, setProjectDetails] = useState(null);
+
+    useEffect(() => {
+        console.log('IN USEFFECT');
+        const fetchDetails = async () => {
+            const details = await getProjectDetails(location);
+            setProjectDetails(details)
+        }
+
+        fetchDetails().catch(console.error);
+
+        // getProjectDetails(location).then(response => {
+        //     console.log('promise response: ', response);
+        //     setProjectDetails(response);
+        // });
+    }, [location])
+    
+    console.log("Project DETAILS", projectDetails)
+    
 
     // Function to check if the URL is valid
     const isValidUrl = (url) => url && url !== "null";

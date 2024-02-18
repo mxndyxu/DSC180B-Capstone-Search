@@ -173,7 +173,7 @@ class search_engine:
                     "industry": {"type": "text"},
                     "mentors": {
                         "type": "text",
-                        "analyzer": "comma_analyzer"  # Custom analyzer for mentors
+                        # "analyzer": "comma_analyzer"  # Custom analyzer for mentors
                     },
                     "members": {
                         "type": "text",
@@ -563,4 +563,9 @@ class search_engine:
             return self.search_query(query_string)
         else:
             return self.search_query_filter(query_string, filter_lst)
+    
+    def get_project(self, id):
+        resp = self.es.get(self.index_name, id)
+        hits = resp.body['hits']['hits']
+        return self.create_res_dict(hits)
             
