@@ -62,7 +62,7 @@ const SearchResults = () => {
             <li key={key}>
               <ul className="search-results-specs">
                 <NavLink
-                  to={`/project${key}`}
+                  to={`/project/${key}`}
                   state={{
                     projectDetails: searchResults[key]
                   }}

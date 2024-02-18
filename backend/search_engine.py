@@ -173,7 +173,7 @@ class search_engine:
                     "industry": {"type": "text"},
                     "mentors": {
                         "type": "text",
-                        "analyzer": "comma_analyzer"  # Custom analyzer for mentors
+                        # "analyzer": "comma_analyzer"  # Custom analyzer for mentors
                     },
                     "members": {
                         "type": "text",

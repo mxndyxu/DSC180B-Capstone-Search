@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ProjectDetails = () => {
     const location = useLocation();
-    const { projectDetails } = location.state;
+    console.log("LOCATION", location)
+    let projectDetails = null
+    if (location.state !== null){
+        projectDetails = location.state.projectDetails;
+    }
+    // else {
+    //     return (
+    //         <h2 className="proj-title">'404: project not retrieved'</h2>
+    //     )
+    // }
+    console.log(projectDetails)
+
+    useEffect(() => {
+        console.log('in useEffect');
+    }, [])
+    
 
     // Function to check if the URL is valid
     const isValidUrl = (url) => url && url !== "null";

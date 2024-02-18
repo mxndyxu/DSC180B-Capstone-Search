@@ -78,9 +78,9 @@ function App() {
           <Route path="/about" element={<Layout><About /></Layout>} />
           <Route path="/projects" element={<Layout><Projects /></Layout>} />
           <Route path="/search/:searchTerm/*" element={<Layout><SearchResults /></Layout>} />
-          {uniqueIds.map((id) => {
-            return <Route path={`/project${id}`} element={<Layout><ProjectDetails /></Layout>}/>
-          })}
+          {/* {uniqueIds.map((id) => { */}
+          <Route path={`/project/:id`} element={<Layout><ProjectDetails /></Layout>}/>
+          {/* })} */}
           <Route path="/search/*" element={<Layout><SearchResults /></Layout>} />
       </Routes>
     </Router>
