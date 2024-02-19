@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/App.css';
 
+// SearchBar component
 const SearchBar = ({ onSearch }) => {
+  // State variables for search term, selected filters, unique filter options, and popup visibility
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
   const navigate = useNavigate();
@@ -14,16 +16,18 @@ const SearchBar = ({ onSearch }) => {
   const [selectedMentor, setSelectedMentor] = useState('');
   const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
 
+  // Fetch unique filter options on component mount
   useEffect(() => {
-    // Fetch JSON data or import it directly
     const fetchData = async () => {
       try {
+        // Fetch JSON data
         const response = await fetch('./es_data_json.json');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
         const es_data = await response.json();
 
+        // Extract unique years, domains, and mentors from the data
         const years = [];
         const domains = [];
         const mentors = [];
@@ -37,13 +41,14 @@ const SearchBar = ({ onSearch }) => {
           }
 
           const mentorsArray = item.mentors.split(',');
-
           for (let i = 0; i < mentorsArray.length; i++) {
             if (!mentors.includes(mentorsArray[i])) {
               mentors.push(mentorsArray[i]);
             }
           }
         });
+
+        // Update state with unique years, domains, and mentors
         setUniqueYears(years);
         setUniqueDomains(domains);
         setUniqueMentors(mentors);
@@ -52,22 +57,19 @@ const SearchBar = ({ onSearch }) => {
       }
     };
 
-    // console.log(es_data)
     fetchData();
   }, []);
 
+  // Event handlers for filter selection and search term input
   const handleYearChange = event => {
-    const selectedValue = event.target.value;
     setSelectedYear(event.target.value);
   };
 
   const handleDomainChange = event => {
-    const selectedValue = event.target.value;
     setSelectedDomain(event.target.value);
   };
 
   const handleMentorChange = event => {
-    const selectedValue = event.target.value;
     setSelectedMentor(event.target.value);
   };
 
@@ -79,12 +81,14 @@ const SearchBar = ({ onSearch }) => {
     setSelectedFilter(event.target.value);
   };
 
+  // Handle key press events (e.g., pressing Enter to search)
   const handleKeyPress = event => {
     if (event.key === 'Enter') {
-        handleSearch();
+      handleSearch();
     }
   };
 
+  // Perform search based on selected filters and search term
   const handleSearch = () => {
     if (!searchTerm && !selectedYear && !selectedDomain && !selectedMentor) {
       // If no search term and no filters selected, show popup
@@ -92,8 +96,8 @@ const SearchBar = ({ onSearch }) => {
       return;
     }
 
+    // Construct URL based on selected filters and search term
     let url = '/search';
-
     if (searchTerm) {
       url += `/${searchTerm}`;
     } else if (selectedYear || selectedDomain || selectedMentor) {
@@ -112,6 +116,7 @@ const SearchBar = ({ onSearch }) => {
       url += `/mentor/${selectedMentor}`;
     }
 
+    // Navigate to search results page with selected filters
     navigate(url, {
       state: {
         year: selectedYear,
@@ -121,28 +126,34 @@ const SearchBar = ({ onSearch }) => {
     });
   };
 
+  // Render search bar component
   return (
-    <div className="search-bar">
+    <div className="search-bar content-container">
+      {/* Search input field */}
       <div className="input-container">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search for capstone..."
           value={searchTerm}
           onChange={handleInputChange}
           onKeyUp={handleKeyPress}
         />
+        {/* Search button */}
         <button className="search" onClick={handleSearch}>
           Search
         </button>
       </div>
+      {/* Filter options */}
       <div className="filter">
         <label className="filters">Filters</label>
+        {/* Year filter dropdown */}
         <select value={selectedYear} onChange={handleYearChange} onKeyUp={handleKeyPress}>
           <option value="">Years</option>
           {uniqueYears.map((year, index) => (
             <option key={index} value={year}>{String(Number(year) - 1) + " - " + year}</option>
           ))}
         </select>
+        {/* Domain filter dropdown */}
         <select value={selectedDomain} onChange={handleDomainChange} onKeyUp={handleKeyPress}>
           <option value="">Domains</option>
           {uniqueDomains.map((domain, index) => (
@@ -151,6 +162,7 @@ const SearchBar = ({ onSearch }) => {
             </option>
           ))}
         </select>
+        {/* Mentor filter dropdown */}
         <select value={selectedMentor} onChange={handleMentorChange} onKeyUp={handleKeyPress}>
           <option value="">Mentors</option>
           {uniqueMentors.map((mentor, index) => (
@@ -160,6 +172,7 @@ const SearchBar = ({ onSearch }) => {
           ))}
         </select>
       </div>
+      {/* Popup message for empty search term and filters */}
       {showPopup && (
         <div className="popup">
           <button className="popup-close" onClick={() => setShowPopup(false)}>x</button>
@@ -170,4 +183,5 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
+// Export SearchBar component
 export default SearchBar;

@@ -6,6 +6,7 @@ const SearchResults = () => {
   const { searchTerm } = useParams();
   const [searchResults, setSearchResults] = useState([]);
   const [filters, setFilters] = useState({});
+  const [queryParams, setQueryParams] = useState('');
   const { state } = useLocation();
   const { year, domain, mentor } = state || {};
 
@@ -22,6 +23,8 @@ const SearchResults = () => {
       if (mentor) appliedFilters.mentor = mentor;
       setFilters(appliedFilters);
     }
+
+    let userInputFilters = []
     
     // console.log(filters)
     // Construct the API query based on the URL parameters
@@ -30,13 +33,18 @@ const SearchResults = () => {
     // Add optional filters if they exist
     if (year) {
       apiUrl += `&year=${year}`;
+      userInputFilters.push(`year: ${year}`);
     }
     if (domain) {
       apiUrl += `&domain=${domain}`;
+      userInputFilters.push(`domain: ${domain}`);
     }
     if (mentor) {
       apiUrl += `&mentor=${mentor}`;
+      userInputFilters.push(`mentor: ${mentor}`);
     }
+
+    setQueryParams(`${userInputFilters.join(', ')}`)
 
     // Fetch search results from your FastAPI backend
     fetch(apiUrl)
@@ -48,15 +56,20 @@ const SearchResults = () => {
       console.log(searchTerm)
 
       console.log(searchResults)
-      
   }, [searchTerm, year, mentor, domain]);
 
   // console.log(searchResults);
 
   return (
-    <div>
+    <div className='content-container search-results-container'>
       {/* <SearchBar className="results-search-bar"/> */}
-      <h2 className="results-text">Search results for: {searchTerm}</h2>
+      <div className='spacer'></div>
+      <h2 className="search-results-text">
+        Search results for:
+        </h2>
+      <h3 className="search-results-subtitle">
+        {searchTerm ? "Query: " + searchTerm + `${year || domain || mentor ? `, ${queryParams}` : ''}`: `${year || domain || mentor ? `\n${queryParams}` : ''}`}
+      </h3>
       <ul className="search-results">
         {Object.keys(searchResults).map(key => (
             <li key={key}>

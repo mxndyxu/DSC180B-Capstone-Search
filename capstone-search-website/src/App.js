@@ -8,13 +8,15 @@ import Projects from './pages/Projects';
 import SearchResults from './pages/SearchResults'
 import ProjectDetails from './components/ProjectDetails';
 import './styles/App.css';
+import './styles/Layout.css';
 
 function App() {
+  // State variables for managing message and unique project IDs
   const [message, setMessage] = useState('');
   const [uniqueIds, setUniqueIds] = useState([]);
 
+  // Function to fetch search results from API based on search term and filters
   const fetchSearchResult = (searchTerm, selectedFilters) => {
-    
     let url = `http://localhost:8000/api/search?query=${searchTerm}`;
 
     if (selectedFilters.year) {
@@ -29,22 +31,20 @@ function App() {
       url += `&mentor=${selectedFilters.mentor}`;
     }
 
-    console.log(searchTerm)
-    console.log(selectedFilters)
     fetch(url)
       .then((response) => response.json())
       .then((data) => setMessage(data.message));
   };
 
+  // Home component displaying header and search bar
   const Home = () => (
-    <div>
+    <div className='content-container'>
       <Header />
-      <header className="App-header">
-        <SearchBar onSearch={fetchSearchResult} className="home-search-bar"/>
-      </header>
+      <SearchBar onSearch={fetchSearchResult} className="home-search-bar"/>
     </div>
   );
 
+  // Fetch unique project IDs from JSON data on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -54,13 +54,11 @@ function App() {
         }
         const es_data = await response.json();
 
-
         const proj_ids = [];
         es_data.forEach(item => {
           if (!proj_ids.includes(item.project_id)) {
             proj_ids.push(item.project_id);
           } 
-
         });
         setUniqueIds(proj_ids);
       } catch (error) {
@@ -69,19 +67,17 @@ function App() {
     };
     fetchData();
   }, []);
-  // console.log(uniqueIds);
 
   return (
     <Router>
       <Routes>
-          <Route exact path="/" element={<Layout><Home /></Layout>} />
-          <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/projects" element={<Layout><Projects /></Layout>} />
-          <Route path="/search/:searchTerm/*" element={<Layout><SearchResults /></Layout>} />
-          {/* {uniqueIds.map((id) => { */}
-          <Route path={`/project/:id`} element={<Layout><ProjectDetails /></Layout>}/>
-          {/* })} */}
-          <Route path="/search/*" element={<Layout><SearchResults /></Layout>} />
+        {/* Route definitions */}
+        <Route exact path="/" element={<div><div className='spacer'></div><Layout><Home /></Layout></div>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/projects" element={<Layout><Projects /></Layout>} />
+        <Route path="/search/:searchTerm/*" element={<Layout><SearchResults /></Layout>} />
+        <Route path={`/project/:id`} element={<Layout><ProjectDetails /></Layout>}/>
+        <Route path="/search/*" element={<Layout><SearchResults /></Layout>} />
       </Routes>
     </Router>
   );

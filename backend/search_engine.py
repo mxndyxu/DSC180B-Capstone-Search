@@ -288,7 +288,7 @@ class search_engine:
         res_dict = {}
         for hit in hits:
             vals = {}
-
+            vals["score"] = hit["_score"]
             vals['proj_title'] = hit["_source"]["project_title"]
             vals['year'] = hit["_source"]["year_presented"]
             vals['members'] = hit["_source"]["members"].replace(',', ', ')
@@ -325,6 +325,7 @@ class search_engine:
         })
 
         hits = resp.body['hits']['hits']
+        # print(hits)
         return self.create_res_dict(hits)
 
 
@@ -462,6 +463,7 @@ class search_engine:
         
         # print(f'resp.body: {resp.body}')
         hits = resp.body['hits']['hits']
+        # print(hits)
         return self.create_res_dict(hits)
     
     def search_query_filter(self, query_str, filter_lst, results = 10):
@@ -531,6 +533,7 @@ class search_engine:
         )
 
         hits = resp.body['hits']['hits']
+        # print(hits)
         return self.create_res_dict(hits)
 
     def search(self, query_string, year, domain, mentor):

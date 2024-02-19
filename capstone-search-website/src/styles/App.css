@@ -4,27 +4,23 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   overflow-y: auto;
-  background-color: rgb(249, 245, 236);
+  background-color: #fff;
 }
 
-/* Home component styles */
-header {
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
-  /* padding: 15px; */
-  /* margin-bottom: -65px; */
-  /* margin-bottom: 0%; */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1.ucsd {
+h1#ucsd {
   font-size: 60px;
-  margin-top: 50%;
   margin-bottom: 10px;
 }
 
-h1.subtitle {
+h1#subtitle {
   font-size: 35px;
   margin-top: 10px;
 }
@@ -36,33 +32,34 @@ div.search-bar {
 }
 
 div.search-bar input {
-  padding: 10px;
+  padding: 2% 5%;
   font-size: 16px;
-  font-family: 'Inconsolata', monospace;
-  width: 600px;
-  border: 2px solid rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  width: 100%;
+  border: 2px solid rgb(23, 22, 71);
   border-radius: 7px;
-  margin-right: 5px;
   background-color: rgb(255, 255, 255);
 }
 
 div.search-bar label.filters {
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
   margin-right: 18px;
 }
 
 div.search-bar button.search {
   padding: 10px;
   font-size: 16px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   font-weight: bold;
   color: rgb(249, 245, 236);
   background-color: #3e68a2;
-  width: 75;
+  width: 25%;
+  min-width: 100px;
   cursor: pointer;
   border: 2px solid #3e68a2;
   border-radius: 7px;
+  margin-top: 2%;
 }
 
 div.search-bar button.search:hover {
@@ -73,7 +70,7 @@ div.search-bar button.search:hover {
 div.search-bar select {
   padding: 8px;
   font-size: 16px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   font-weight: bold;
   color: rgb(249, 245, 236);
   background-color: #e5bf3a;
@@ -94,11 +91,11 @@ div.search-bar label {
   margin-left: 10px;
   /* margin-right: 20px; */
   font-weight: bold;
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
 }
 
 input[type="text"] {
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
   /* font-weight: bold; */
 }
 
@@ -108,7 +105,7 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  border: 2px solid rgb(68, 39, 24);
+  border: 2px solid rgb(23, 22, 71);
   border-radius: 7px;
   padding: 20px;
   background-color: rgb(249, 245, 236);
@@ -124,7 +121,7 @@ input[type="text"] {
 .popup-close {
   display: flex;
   justify-content: center;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   border: 2px solid #3e68a2;
   background-color: #3e68a2;
   color: rgb(249, 245, 236);
@@ -148,14 +145,14 @@ input[type="text"] {
   flex-direction: column;
   flex-wrap: wrap;
   height: 60vh;
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
 }
 
 h1.about-text {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   font-size: 35px;
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
   position: relative;
 }
 
@@ -165,42 +162,48 @@ h1.about-text {
   flex-direction: column;
   flex-wrap: wrap;
   height: 60vh;
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
 }
 
 h1.projects-text {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   font-size: 35px;
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
   position: relative;
+}
+
+div.spacer {
+  height: 25%;
+  min-height: 75px;
 }
 
 /* SearchResults component styles */
-h2.results-text {
-  font-family: 'Inconsolata', monospace;
+h2.search-results-text {
+  font-family: 'Verdana', sans-serif;
   font-size: 35px;
-  color: rgb(68, 39, 24);
-  margin-top: 600px;
-  margin-left: 180px;
+  color: rgb(23, 22, 71);
+}
+
+h3.search-results-subtitle {
+  font-family: 'Verdana', sans-serif;
+  font-size: 20px;
+  color: #353552;
+  width: 90%;
+  font-weight: 300;
 }
 
 ul.search-results {
-  height: 900px;
-  width: 950px;
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
   padding: 10px;
   flex-direction: column;
   list-style-type: none;
-  position: relative;
-  top: 20px;
-  margin-left: 160px;
 }
 
 ul.search-results-specs {
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
   padding: 10px;
   list-style-type: none;
   position: relative;
@@ -223,7 +226,7 @@ li.result-line {
 }
 
 .proj-link {
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
   text-decoration: none;
 }
 
@@ -238,15 +241,41 @@ li.result-line {
 .proj-details-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  height: 65vh;
-  width: 800px;
-  font-family: 'Inconsolata', monospace;
-  color: rgb(68, 39, 24);
+  width: 90%;
+  font-family: 'Verdana', sans-serif;
+  color: rgb(23, 22, 71);
 }
 
 .proj-title {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Verdana', sans-serif;
   font-size: 30px;
-  color: rgb(68, 39, 24);
+  color: rgb(23, 22, 71);
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  div.search-bar input {
+    padding: 10px 20px;
+    /* font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    width: 100%;
+    border: 2px solid rgb(23, 22, 71);
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255); */
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 }
