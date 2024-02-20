@@ -81,7 +81,7 @@ const ProjectDetails = () => {
             <p>Members: {projectDetails.members}</p>
             <p>Mentors: {projectDetails.mentors}</p>
             <p>UCSD or Industry: {projectDetails.ucsd_or_ind}</p>
-            <p>Year: {projectDetails.year}</p>
+            <p>Year: {String(Number(projectDetails.year) - 1) + " - " + projectDetails.year}</p>
             <p>Report summary: {projectDetails.summarized}</p>
             {isValidUrl(projectDetails.github_url) && (
                 <p><a href={projectDetails.github_url}>GitHub Repository</a></p>
