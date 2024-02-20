@@ -55,10 +55,25 @@ const SearchResults = () => {
       // console.log(filters)
       console.log(searchTerm)
 
-      console.log(searchResults)
+      
+
+
   }, [searchTerm, year, mentor, domain]);
 
-  // console.log(searchResults);
+  // console.log("searchResults", searchResults)
+
+  // Convert the JSON object to an array of key-value pairs
+  const resultsArray = Object.entries(searchResults);
+
+  // Sort the array based on the "score" value in descending order
+  resultsArray.sort(([, a], [, b]) => b.score - a.score);
+
+  // console.log("resultsArray", resultsArray)
+
+//   resultsArray.map(([key, value]) => (
+//     console.log("key", key, "value", value)
+//  ))
+
 
   return (
     <div className='content-container search-results-container'>
@@ -71,22 +86,22 @@ const SearchResults = () => {
         {searchTerm ? "Query: " + searchTerm + `${year || domain || mentor ? `, ${queryParams}` : ''}`: `${year || domain || mentor ? `\n${queryParams}` : ''}`}
       </h3>
       <ul className="search-results">
-        {Object.keys(searchResults).map(key => (
+        {resultsArray.map(([key, value]) => (
             <li key={key}>
               <ul className="search-results-specs">
                 <NavLink
                   to={`/project/${key}`}
                   state={{
-                    projectDetails: searchResults[key]
+                    projectDetails: value
                   }}
                   className="proj-link"
                 >
-                  <li className="result-line-title"><strong>{searchResults[key].proj_title}</strong></li>
+                  <li className="result-line-title"><strong>{value.proj_title}</strong></li>
                   <li className="result-line"><strong>ID: </strong>{key}</li>
-                  <li className="result-line"><strong>Year: </strong>{String(Number(searchResults[key].year) - 1) + " - " + searchResults[key].year}</li>
-                  <li className="result-line"><strong>Student(s): </strong>{searchResults[key].members}</li>
-                  <li className="result-line"><strong>{searchResults[key].ucsd_or_ind} Mentor(s): </strong>{searchResults[key].mentors}</li>
-                  <li className="result-line"><strong>Domain: </strong>{searchResults[key].domain}</li>
+                  <li className="result-line"><strong>Year: </strong>{String(Number(value.year) - 1) + " - " + value.year}</li>
+                  <li className="result-line"><strong>Student(s): </strong>{value.members}</li>
+                  <li className="result-line"><strong>{value.ucsd_or_ind} Mentor(s): </strong>{value.mentors}</li>
+                  <li className="result-line"><strong>Domain: </strong>{value.domain}</li>
                 </NavLink>
               </ul>
             </li>

@@ -166,18 +166,48 @@ class search_engine:
             },
             "mappings": {
                 "properties": {
-                    "year_presented": {"type": "text"},
-                    "domain": {"type": "text"},
+                    "year_presented": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "domain": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
                     "project_title": {"type": "text"},
                     "project_title_vector": {"type": "dense_vector", "dims": 768, "similarity": "cosine"},
-                    "industry": {"type": "text"},
+                    "industry": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
                     "mentors": {
                         "type": "text",
-                        # "analyzer": "comma_analyzer"  # Custom analyzer for mentors
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
                     },
                     "members": {
                         "type": "text",
-                        "analyzer": "comma_analyzer"  # Custom analyzer for members
+                        "analyzer": "comma_analyzer",  # Custom analyzer for members
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
                     },
                     "report_text_summarization": {"type": "text"},
                     "readme_summarization": {"type": "text", "analyzer": "english"},
@@ -267,9 +297,9 @@ class search_engine:
         """
         res = []
         if mentor:
-            res.append({"terms" : {"mentors" : mentor.lower().split()}})
+            res.append({"term" : {"mentors.keyword" : mentor}})
         if domain:
-            res.append({"terms" : {"domain" : domain.lower().split()}})
+            res.append({"term" : {"domain.keyword" : domain}})
         if year_presented:
             res.append({"terms" : {"year_presented" : [year_presented]}})
         return res
@@ -328,8 +358,67 @@ class search_engine:
         # print(hits)
         return self.create_res_dict(hits)
 
+    def search_query(self, query_str, results=10):
+        resp = self.es.search(
+            index="capstones",
+            body={
+                "query": {
+                    "function_score": {
+                        "query": {
+                            "multi_match": {
+                                "query": query_str,
+                                "fields": ["members.keyword^3", "mentors.keyword^3", "industry.keyword^3", "domain.keyword^3"],
+                                "type": "phrase",
+                                "boost": 3
+                            }
+                        },
+                        
+                        "boost_mode": "sum"
+                    }
+                },
+                "size": results,
+                "query": {
+                    "bool": {
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": query_str,
+                                    "fields": ["project_title", "report_text_summarization", "readme_summarization",  "year_presented^3", "members^3", "mentors^3", "industry^3", "domain^3"],
+                                    "fuzziness": "AUTO"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "knn": [
+                    {
+                        "field": "project_title_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100
+                    },
+                    {
+                        "field": "readme_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100
+                    },
+                    {
+                        "field": "report_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100
+                    }
+                ]
+            }
+        )
 
-    def search_query(self, query_str, results = 10, verbose = True):
+        hits = resp.body['hits']['hits']
+        return self.create_res_dict(hits)
+
+
+
+    # def search_query(self, query_str, results = 10, verbose = True):
         """search_query method
 
         The search where ElasticSearch merely uses a string query. 
@@ -484,52 +573,61 @@ class search_engine:
         """
         resp = self.es.search(
             index="capstones",
-            query={
-                "bool": {
-                    "filter" : filter_lst,
-                    "should" : [{
-                        "multi_match": {
-                            "query": query_str,
-                            "type": "phrase",
-                            "fields" : ["project_title^2", "domain^2", "year_presented", "industry^2", "mentors^3", "members^3", "readme_summarization"],
-                            # "boost": 0.9
+            body={
+                "query": {
+                    "function_score": {
+                        "filter": filter_lst,
+                        "query": {
+                            "multi_match": {
+                                "query": query_str,
+                                "fields": ["members.keyword^3", "mentors.keyword^3", "industry.keyword^3", "domain.keyword^3"],
+                                "type": "phrase",
+                                "boost": 3
+                            }
                         },
-                        "multi_match": {
-                            "query": query_str,
-                            "fields" : ["project_title^2", "domain^2", "year_presented", "industry^2", "mentors^3", "members^3", "readme_summarization"],
-                            "fuzziness": "AUTO",
-                            # "boost": 0.9
-                        },
-                    }]
-                }
-            },
-            knn=[
-                {
-                    "field": "project_title_vector",
-                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
-                    "k": 10,
-                    "num_candidates": 100,
-                    "filter" : filter_lst
-                    # "boost": 0.1
+                        
+                        "boost_mode": "sum"
+                    }
                 },
-                {
-                    "field": "readme_vector",
-                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
-                    "k": 10,
-                    "num_candidates": 100,
-                    "filter" : filter_lst
-                    # "boost": 0.1
+                "size": results,
+                "query": {
+                    "bool": {
+                        "filter": filter_lst,
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": query_str,
+                                    "fields": ["project_title", "report_text_summarization", "readme_summarization",  "year_presented^3", "members^3", "mentors^3", "industry^3", "domain^3"],
+                                    "fuzziness": "AUTO"
+                                }
+                            }
+                        ]
+                    }
                 },
-                {
-                    "field": "report_vector",
-                    "query_vector": get_embeddings(query_str).detach().numpy()[0],
-                    "k": 10,
-                    "num_candidates": 100,
-                    "filter" : filter_lst
-                    # "boost": 0.1
-                } 
-            ],
-            size=results
+                "knn": [
+                    {
+                        "field": "project_title_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100,
+                        "filter": filter_lst
+                    },
+                    {
+                        "field": "readme_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100,
+                        "filter": filter_lst
+                    },
+                    {
+                        "field": "report_vector",
+                        "query_vector": get_embeddings(query_str).detach().numpy()[0],
+                        "k": 10,
+                        "num_candidates": 100,
+                        "filter": filter_lst
+                    }
+                ]
+            }
         )
 
         hits = resp.body['hits']['hits']
