@@ -43,7 +43,7 @@ const Projects = () => {
   
 
   return (
-    <div>
+    <div className ="content-container">
       <h1 className="projects-text">Projects</h1>
       <ul className="search-results">
         {data &&
