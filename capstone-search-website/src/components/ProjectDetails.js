@@ -78,52 +78,71 @@ const ProjectDetails = () => {
     return (
         <div className="proj-details-container">
             <h2 className="proj-title">{projectDetails.proj_title}</h2>
-            <p>Members: {projectDetails.members}</p>
-            <p>Mentors: {projectDetails.mentors}</p>
-            <p>UCSD or Industry: {projectDetails.ucsd_or_ind}</p>
-            <p>Year: {String(Number(projectDetails.year) - 1) + " - " + projectDetails.year}</p>
-            <p>Report summary: {projectDetails.summarized}</p>
-            {isValidUrl(projectDetails.github_url) && (
-                <p><a href={projectDetails.github_url}>GitHub Repository</a></p>
-            )}
-            {isValidUrl(projectDetails.website_url) && (
-                <p><a href={projectDetails.website_url}>Website</a></p>
-            )}
-            {isValidUrl(projectDetails.report_url) && (
-                <p><a href={projectDetails.report_url}>Report</a></p>
-            )}
-            {isValidUrl(projectDetails.poster_url) && (
-                <p><a href={projectDetails.poster_url}>Poster</a></p>
-            )}
-            {github_contributors_json !== null ? (
+            <h3 className="subheadings-text">Project Overview</h3>
+            <div className="proj-body">
+                <p><strong>Year: </strong>{String(Number(projectDetails.year) - 1) + " - " + projectDetails.year}</p>
+                <p><strong>Member(s): </strong>{projectDetails.members}</p>
+                <p><strong>Mentor(s): </strong>{projectDetails.mentors}</p>
+                <p><strong>UCSD or Industry Led: </strong>{projectDetails.ucsd_or_ind}</p>
+            </div>
+            <h3 className="subheadings-text">Report Summary</h3>
+            <div className="proj-body">
+                <p>{projectDetails.summarized}</p>
+            </div>
+            <h3 className="subheadings-text">Links</h3>
+            <div className="proj-body">
+                {isValidUrl(projectDetails.website_url) && (
+                    <p><a href={projectDetails.website_url}>Website</a></p>
+                )}
+                {isValidUrl(projectDetails.report_url) && (
+                    <p><a href={projectDetails.report_url}>Report</a></p>
+                )}
+                {isValidUrl(projectDetails.github_url) && (
+                    <p><a href={projectDetails.github_url}>GitHub Repo</a></p>
+                )}
+                {isValidUrl(projectDetails.poster_url) && (
+                    <p><a href={projectDetails.poster_url}>Poster</a></p>
+                )}
+                <p><strong>Note: </strong>Some of these links may not work.</p>
+            </div>
+            <h3 className="subheadings-text">Some More GitHub Details</h3>
+            <div className="proj-body">
+                {github_contributors_json !== null ? (
+                    <div>
+                        <p>
+                            <strong>GitHub Contributors: </strong>
+                            {Object.entries(github_contributors_json).map(([name, link], index, array) => (
+                                <span key={name}>
+                                    <a href={link}>{name}</a>
+                                    {index !== array.length - 1 && ", "}
+                                </span>
+                            ))}
+                        </p>
+                    </div>
+                ) : (
+                    <p><strong>GitHub Contributors: </strong>Information unavailable.</p>
+                )}
                 <div>
-                    <p>GitHub contributors:</p>
-                    <ul>
-                        {Object.entries(github_contributors_json).map(([name, link]) => (
-                            <li key={name}>
-                                <a href={link}>{name}</a>
-                            </li>
-                        ))}
-                    </ul>
+                {language_breakdown_json !== null ? (
+                    <div>
+                        <p>
+                            <strong>Language Breakdown: </strong>
+                            {Object.entries(language_breakdown_json).map(([lang, prop], index, array) => (
+                                <span key={lang}>
+                                    {lang}: {Math.round(parseFloat(prop) * 100) + "%"}
+                                    {index !== array.length - 1 && ", "}
+                                </span>
+                            ))}
+                        </p>
+                    </div>
+                ) : (
+                    <p><strong>Language Breakdown: </strong>Information unavailable.</p>
+                )}
+                <p>
+                    <strong>Note: </strong>Some of these links may not work.<br />
+                    The language breakdown may also not be accurate.
+                </p>
                 </div>
-            ) : (
-                <p>GitHub contributors: Information unavailable</p>
-            )}
-            <div>
-            {language_breakdown_json !== null ? (
-                <div>
-                    <p>Language breakdown:</p>
-                    <ul>
-                        {Object.entries(language_breakdown_json).map(([lang, prop]) => (
-                            <li key={lang}>
-                                <p>{lang}: {Math.round(parseFloat(prop) * 100) + "%"}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ) : (
-                <p>Language breakdown: Information unavailable</p>
-            )}
             </div>
         </div>
     );

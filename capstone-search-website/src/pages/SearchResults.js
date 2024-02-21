@@ -33,15 +33,15 @@ const SearchResults = () => {
     // Add optional filters if they exist
     if (year) {
       apiUrl += `&year=${year}`;
-      userInputFilters.push(`year: ${year}`);
+      userInputFilters.push(`Year: ${String(Number(year) - 1) + " - " + year}`);
     }
     if (domain) {
       apiUrl += `&domain=${domain}`;
-      userInputFilters.push(`domain: ${domain}`);
+      userInputFilters.push(`Domain: ${domain}`);
     }
     if (mentor) {
       apiUrl += `&mentor=${mentor}`;
-      userInputFilters.push(`mentor: ${mentor}`);
+      userInputFilters.push(`Mentor: ${mentor}`);
     }
 
     setQueryParams(`${userInputFilters.join(', ')}`)
@@ -55,9 +55,6 @@ const SearchResults = () => {
       // console.log(filters)
       console.log(searchTerm)
 
-      
-
-
   }, [searchTerm, year, mentor, domain]);
 
   // console.log("searchResults", searchResults)
@@ -68,23 +65,25 @@ const SearchResults = () => {
   // Sort the array based on the "score" value in descending order
   resultsArray.sort(([, a], [, b]) => b.score - a.score);
 
-  // console.log("resultsArray", resultsArray)
-
-//   resultsArray.map(([key, value]) => (
-//     console.log("key", key, "value", value)
-//  ))
-
+  if (resultsArray.length === 0) {
+    return (
+      <div className='content-container no-search-results-container'>
+        <h2 className="search-results-text">Oops...</h2>
+        <h2 className="search-results-subtitle">We couldn’t find what you were searching for. Try adjusting your parameters.</h2>
+      </div>
+    );
+  }
 
   return (
     <div className='content-container search-results-container'>
       {/* <SearchBar className="results-search-bar"/> */}
       <div className='spacer'></div>
       <h2 className="search-results-text">
-        Search results for:
+        Search results for...
         </h2>
-      <h3 className="search-results-subtitle">
+      <h2 className="search-results-subtitle">
         {searchTerm ? "Query: " + searchTerm + `${year || domain || mentor ? `, ${queryParams}` : ''}`: `${year || domain || mentor ? `\n${queryParams}` : ''}`}
-      </h3>
+      </h2>
       <ul className="search-results">
         {resultsArray.map(([key, value]) => (
             <li key={key}>

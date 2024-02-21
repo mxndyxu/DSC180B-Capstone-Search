@@ -40,8 +40,6 @@ const Projects = () => {
     return reversedGroups.flat();
   };
 
-  
-
   return (
     <div className ="content-container">
       <h1 className="projects-text">Projects</h1>
