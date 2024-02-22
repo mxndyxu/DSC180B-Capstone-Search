@@ -1,4 +1,5 @@
 # Capstonian: An HDSI Capstone Search Gallery
+### By: William Hu, Mandy Xu
 
 ## Introduction
 The UC San Diego Halıcıoğlu Data Science Institute (HDSI) is a fairly recent department where students learn the foundations of data science through a complete curriculum. One aspect of this program is the senior capstone sequence that students participate in their last year in which faculty and industry mentors guide students in a quarter-long project that is then showcased to members of the data science department at the end of the quarter. However, while the annual capstone showcase is a great way to celebrate the graduating class and their hard efforts, there is no easy or accessible way to display their work past the showcase. Currently, student capstone projects are presented in a list-type format on a website that is pretty much only available for current capstone students. The absence of a search tool for these projects makes it difficult for users, particularly faculty and current students, to efficiently navigate through various projects based on their desired parameters. That is why through this project, we hope to provide a more visible gallery to showcase these projects through ease of navigation that also serves as an efficient way to discover new projects. To do so, we have implemented a search engine that takes in a string query and/or preset filters and returns relevant projects using keyword and semantic search techniques. We package our search engine with a user-friendly interface in order to deliver a full stack website that streamlines the exploration of capstone projects. With our approach, we aim to improve the navigation of capstone projects, enhancing the overall user experience!
@@ -20,7 +21,7 @@ Once we extracted all of the required data, we created a combined dataframe that
 ## Methods
 After processing our data into an organized and readable format, we began implementing our search tool. To do so, we employed [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html), a distributed search and analytics engine designed for scalability and speed. At the same time, we applied [React](https://react.dev/), a JavaScript library for building user interfaces. To connect the two endpoints, we used [FastAPI](https://fastapi.tiangolo.com/), a web framework for building APIs with Python.
 
-<!-- Insert tech design image -->
+![Technical Design of Capstonian](imgs/techdesign.png)
 
 ### ElasticSearch
 Our ElasticSearch ingested traditional keyword matching as well as semantic search elements. 
