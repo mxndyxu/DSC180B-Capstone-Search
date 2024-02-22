@@ -1,3 +1,9 @@
+/**
+ * React component for a search bar.
+ * Allows users to search for capstone projects based on various filters.
+ * Provides search input field, filter options for year, domain, and mentor,
+ * and handles navigation to search results page.
+ */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/App.css';
@@ -128,7 +134,15 @@ const SearchBar = ({ onSearch }) => {
 
   // Render search bar component
   return (
+    
     <div className="search-bar content-container">
+      {/* Popup message for empty search term and filters */}
+      {showPopup && (
+        <div className="popup">
+          <button className="popup-close" onClick={() => setShowPopup(false)}>x</button>
+          <p className="popup-text">Please enter at least one of the search term or filters.</p>
+        </div>
+      )}
       {/* Search input field */}
       <div className="input-container">
         <input
@@ -172,13 +186,7 @@ const SearchBar = ({ onSearch }) => {
           ))}
         </select>
       </div>
-      {/* Popup message for empty search term and filters */}
-      {showPopup && (
-        <div className="popup">
-          <button className="popup-close" onClick={() => setShowPopup(false)}>x</button>
-          <p className="popup-text">Please enter at least one of the search term or filters.</p>
-        </div>
-      )}
+      
     </div>
   );
 };

@@ -222,13 +222,7 @@ def project(id: int):
     id : int
         The document id
     """
-    # print(id)
-
-    # # print(es_instance.es.exists(index="capstones", id=id))
-    # # print(es_instance.es.get(index = "capstones", id = id))
-    # results = es_instance.get_project(id)
-    # print(results)
-    # return {"message" : results}
+    
     return {
         "message": {
             "proj_title": "Racial Bias in Film Awards Shows: Oscars & Golden Globes ",

@@ -1,3 +1,8 @@
+/**
+ * React component for displaying search results.
+ * Fetches search results from the backend API based on the search term and filters.
+ * Renders search results with project details and provides links to individual project pages.
+ */
 import React, { useEffect, useState } from 'react';
 import { useLocation, useParams, NavLink } from 'react-router-dom';
 // import SearchBar from '../components/SearchBar';

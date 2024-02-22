@@ -1,10 +1,17 @@
+/**
+ * React component for displaying a list of projects.
+ * Fetches project data from a JSON file and renders project details with links to individual project pages.
+ * Projects are displayed in reverse order by year presented.
+ */
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/App.css';
 
 const Projects = () => {
+  // State variable to hold project data
   const [data, setData] = useState(null);
 
+  // Function to fetch project data from JSON file
   const fetchData = async () => {
     try {
       const response = await fetch('./es_data_json.json');
@@ -18,10 +25,12 @@ const Projects = () => {
     }
   };
 
+  // Fetch project data on component mount
   useEffect(() => {
     fetchData();
   }, []);
 
+  // Function to reverse order of projects by year presented
   const reverseOrderByYearPresented = (projects) => {
     // Group projects by year_presented
     const groupedProjects = projects.reduce((acc, project) => {
@@ -40,18 +49,22 @@ const Projects = () => {
     return reversedGroups.flat();
   };
 
+  // Render projects
   return (
     <div className ="content-container">
       <h1 className="projects-text">Projects</h1>
       <ul className="search-results">
+        {/* Render project details */}
         {data &&
           reverseOrderByYearPresented(Object.values(data)).map(project => (
             <li key={project.project_id}>
               <ul className="search-results-specs">
+                {/* Link to individual project page */}
                 <NavLink
                   to={`/project/${project.project_id}`}
                   className="proj-link"
                 >
+                  {/* Project details */}
                   <li className="result-line-title"><strong>{project.project_title}</strong></li>
                   <li className="result-line"><strong>Year: </strong>{String(Number(project.year_presented) - 1) + " - " + project.year_presented}</li>
                   <li className="result-line"><strong>Student(s): </strong>{project.members.replaceAll(",", ", ")}</li>

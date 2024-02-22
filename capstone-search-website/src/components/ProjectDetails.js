@@ -1,6 +1,10 @@
+/**
+ * React component for displaying project details.
+ * Fetches project details either from location state or API based on the pathname.
+ * Renders project title, overview, report summary, links, GitHub contributors, and language breakdown.
+ */
 import React, { useState, useEffect } from 'react';
 import {useLocation, useParams, NavLink } from 'react-router-dom';
-
 import {getProjectDetails, getProjectByID} from './helpers/projectDetailHelpers'
 
 const ProjectDetails = () => {
@@ -31,34 +35,6 @@ const ProjectDetails = () => {
     if (!projectDetails) {
         return <h2 className="proj-title">'Loading project details...'</h2>;
     }
-    // const location = useLocation();
-    // console.log("LOCATION", location)
-
-    // // const [pathname, setPathname] = useState(#);
-
-    // let projectDetails = null
-    // if (location.state !== null){
-    //     projectDetails = location.state.projectDetails;
-    // } else {
-    //     console.log("No location.state found")
-    //     projectDetails = getProjectByID(location.pathname);
-    // }
-    
-    // // else {
-    // //     return (
-    // //         <h2 className="proj-title">'404: project not retrieved'</h2>
-    // //     )
-    // // }
-    // console.log(projectDetails)
-
-    // useEffect(() => {
-    //     console.log('in useEffect');
-    //     if (location.state === null){
-    //         console.log('useEffect preparing to fetch')
-    //         // projectDetails = location.state.projectDetails;
-    //     }
-    // }, [location.pathname])
-    
 
     // Function to check if the URL is valid
     const isValidUrl = (url) => url && url !== "null";
