@@ -43,7 +43,7 @@ To evaluate our search engine, we employed normalized discounted cumulative gain
 Using a mixture of 15 query/filter combinations, our final search engine obtained an NDCG score of 0.98.
 
 ### React.js
-Our goal for a friendly user experience is to provide a clean, simple, and easy to navigate user interface. Since the main feature of our website is the search function, emphasizing the search tool was crucial. We believed that React would provide us with the necessary tools to create an enjoyable yet practical user interface because it offers a variety of pre-built components and a declarative syntax that simplifies UI development, making it an ideal choice for our project. 
+Our goal for a friendly user experience is to provide a clean, simple, and easy to navigate user interface. Since the main feature of our website is the search function, emphasizing the search tool was crucial.
 
 For every result deemed most relevant to the user's query, we offer a concise, at-a-glance overview of a project's details: the project name, year, students involved, UCSD or industry mentors involved, and domain. Each project synthesis is redirected to the their respective pages that present more detailed information (e.g. project summary) upon a user's click.
 
