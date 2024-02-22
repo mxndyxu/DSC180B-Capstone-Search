@@ -2,7 +2,7 @@
 Mandy Xu, William Hu
 Mentor: Colin Jemmott
 
-[https://mxndyxu.github.io/DSC180B-Capstone-Search/](Website Checkpoint)
+[Website Checkpoint](https://mxndyxu.github.io/DSC180B-Capstone-Search/)
 <!-- Add link to actual search tool website -->
 
 ## Introduction
