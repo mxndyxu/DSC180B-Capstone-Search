@@ -32,6 +32,13 @@ h1#subtitle {
 }
 
 /* SearchBar component styles */
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 div.search-bar {
   margin-top: 30px;
   margin-bottom: 300px;
@@ -123,6 +130,7 @@ input[type="text"] {
 
 .popup-text {
   /* padding: 10px; */
+  font-family: 'Inconsolata', monospace;
   text-align: center;
 }
 
@@ -272,14 +280,6 @@ li.result-line {
   margin: 0 auto;
   padding: 2%;
   padding-bottom: 4%;
-}
-
-.input-container {
-  width: 100%;
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
 }
 
 .proj-body {

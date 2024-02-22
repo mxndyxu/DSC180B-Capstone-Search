@@ -40,7 +40,7 @@ function App() {
   const Home = () => (
     <div className='content-container'>
       <Header />
-      <SearchBar onSearch={fetchSearchResult} className="home-search-bar"/>
+      <SearchBar onSearch={fetchSearchResult} id="home-search-bar"/>
     </div>
   );
 

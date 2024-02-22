@@ -5,6 +5,7 @@
  */
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+// import SearchBar from '../components/SearchBar';
 import '../styles/App.css';
 
 const Projects = () => {
@@ -53,6 +54,7 @@ const Projects = () => {
   return (
     <div className ="content-container">
       <h1 className="projects-text">Projects</h1>
+      {/* <SearchBar id="proj-page-search-bar"/> */}
       <ul className="search-results">
         {/* Render project details */}
         {data &&
