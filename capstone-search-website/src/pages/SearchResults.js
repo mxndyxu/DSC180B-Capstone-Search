@@ -5,7 +5,7 @@
  */
 import React, { useEffect, useState } from 'react';
 import { useLocation, useParams, NavLink } from 'react-router-dom';
-// import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar';
 
 const SearchResults = () => {
   const { searchTerm } = useParams();
@@ -14,7 +14,8 @@ const SearchResults = () => {
   const [queryParams, setQueryParams] = useState('');
   const { state } = useLocation();
   const { year, domain, mentor } = state || {};
-
+  const [loading, setLoading] = useState(true); // State to track loading status
+  
   useEffect(() => {
 
     console.log(year)
@@ -54,8 +55,14 @@ const SearchResults = () => {
     // Fetch search results from your FastAPI backend
     fetch(apiUrl)
       .then(response => response.json())
-      .then(data => setSearchResults(data.message))  // Assuming results is an array of strings
-      .catch(error => console.error('Error fetching search results:', error));
+      .then(data => {
+                setSearchResults(data.message);
+                setLoading(false);
+              })  // Assuming results is an array of strings
+      .catch(error => {
+        console.error('Error fetching search results:', error);
+        setLoading(false)
+      });
 
       // console.log(filters)
       console.log(searchTerm)
@@ -70,18 +77,29 @@ const SearchResults = () => {
   // Sort the array based on the "score" value in descending order
   resultsArray.sort(([, a], [, b]) => b.score - a.score);
 
+  if (loading) {
+    // Return a loading indicator instead of the "no results found" message while loading
+    return (
+      <div className='content-container'>
+        <h2 className="search-results-text">Loading...</h2>
+      </div>
+    );
+  }
+
   if (resultsArray.length === 0) {
     return (
       <div className='content-container no-search-results-container'>
         <h2 className="search-results-text">Oops...</h2>
         <h2 className="search-results-subtitle">We couldn’t find what you were searching for. Try adjusting your parameters.</h2>
+        <SearchBar className="results-search-bar"/>
       </div>
     );
   }
 
   return (
     <div className='content-container search-results-container'>
-      {/* <SearchBar className="results-search-bar"/> */}
+      <div className='spacer'></div>
+      <SearchBar className="results-search-bar"/>
       <div className='spacer'></div>
       <h2 className="search-results-text">
         Search results for...
@@ -98,8 +116,7 @@ const SearchResults = () => {
                   state={{
                     projectDetails: value
                   }}
-                  className="proj-link"
-                >
+                  className="proj-link">
                   <li className="result-line-title"><strong>{value.proj_title}</strong></li>
                   <li className="result-line"><strong>ID: </strong>{key}</li>
                   <li className="result-line"><strong>Year: </strong>{String(Number(value.year) - 1) + " - " + value.year}</li>

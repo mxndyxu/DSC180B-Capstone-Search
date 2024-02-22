@@ -39,10 +39,10 @@ h1#subtitle {
   align-items: center;
 }
 
-div.search-bar {
-  margin-top: 30px;
+/* div.search-bar {
+  margin-top: 30px; 
   margin-bottom: 300px;
-}
+} */
 
 div.search-bar input {
   padding: 2% 3%;
@@ -199,7 +199,7 @@ h1.projects-text {
 
 div.spacer {
   height: 25%;
-  min-height: 75px;
+  min-height: 25px;
 }
 
 /* SearchResults component styles */

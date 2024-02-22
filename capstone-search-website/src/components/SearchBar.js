@@ -48,8 +48,15 @@ const SearchBar = ({ onSearch }) => {
 
           const mentorsArray = item.mentors.split(',');
           for (let i = 0; i < mentorsArray.length; i++) {
-            if (!mentors.includes(mentorsArray[i])) {
+            if (!mentors.includes(mentorsArray[i]) && mentorsArray[i] !== 'Not Specified') {
               mentors.push(mentorsArray[i]);
+            }
+          }
+
+          const industriesArray = item.industry.split(',');
+          for (let i=0; i<industriesArray.length; i++) {
+            if (!mentors.includes(industriesArray[i])) {
+              mentors.push(industriesArray[i]);
             }
           }
         });
@@ -58,6 +65,7 @@ const SearchBar = ({ onSearch }) => {
         setUniqueYears(years);
         setUniqueDomains(domains);
         setUniqueMentors(mentors);
+        
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -136,6 +144,7 @@ const SearchBar = ({ onSearch }) => {
   return (
     
     <div className="search-bar content-container">
+      {/* {console.log("DMY",uniqueDomains, uniqueMentors, uniqueYears)} */}
       {/* Popup message for empty search term and filters */}
       {showPopup && (
         <div className="popup">
@@ -193,3 +202,4 @@ const SearchBar = ({ onSearch }) => {
 
 // Export SearchBar component
 export default SearchBar;
+

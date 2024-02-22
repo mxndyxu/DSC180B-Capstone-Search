@@ -186,6 +186,7 @@ class search_engine:
                     "project_title_vector": {"type": "dense_vector", "dims": 768, "similarity": "cosine"},
                     "industry": {
                         "type": "text",
+                        "analyzer": "comma_analyzer",
                         "fields": {
                             "keyword": {
                                 "type": "keyword"
@@ -194,6 +195,7 @@ class search_engine:
                     },
                     "mentors": {
                         "type": "text",
+                        "analyzer": "comma_analyzer",
                         "fields": {
                             "keyword": {
                                 "type": "keyword"
@@ -296,8 +298,18 @@ class search_engine:
             The year_presented string filter
         """
         res = []
+        # if mentor:
+        #     res.append({"terms" : {"mentors.keyword" : mentor}})
         if mentor:
-            res.append({"term" : {"mentors.keyword" : mentor}})
+            res.append({
+                "bool": {
+                    "should": [
+                        {"term": {"mentors.keyword": mentor}},
+                        {"terms": {"mentors": [mentor]}},
+                        {"terms": {"industry": [mentor]}}
+                    ]
+                }
+            })
         if domain:
             res.append({"term" : {"domain.keyword" : domain}})
         if year_presented:
