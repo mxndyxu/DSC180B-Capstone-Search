@@ -21,7 +21,7 @@ li.nav-menu-item:hover {
 
 @media (min-width: 700px) {
     .navbar {
-        width: 100%;
+        width: 700px;
         padding: 2%;
         font-family: 'Inconsolata', monospace;
         color: rgb(68, 39, 24);
