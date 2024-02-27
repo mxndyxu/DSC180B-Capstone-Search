@@ -99,7 +99,7 @@ const SearchResults = () => {
   return (
     <div className='content-container search-results-container'>
       <h2 className="search-results-text">
-        Search results for...
+      {`${resultsArray.length} Search results for...`}
         </h2>
       <h2 className="search-results-subtitle">
         {searchTerm ? "Query: " + searchTerm + `${year || domain || mentor ? `, ${queryParams}` : ''}`: `${year || domain || mentor ? `\n${queryParams}` : ''}`}
