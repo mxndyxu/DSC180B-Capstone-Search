@@ -7,6 +7,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/App.css';
+import {useLocation} from 'react-router-dom';
+import {es_data_json} from '../resources/es_data_json';
 
 // SearchBar component
 const SearchBar = ({ onSearch }) => {
@@ -21,17 +23,24 @@ const SearchBar = ({ onSearch }) => {
   const [selectedDomain, setSelectedDomain] = useState('');
   const [selectedMentor, setSelectedMentor] = useState('');
   const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
+  
+
+  const location = useLocation();
+
+  console.log('SEARCH BARRRRRRRRRR')
 
   // Fetch unique filter options on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Fetch JSON data
-        const response = await fetch('./es_data_json.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        const es_data = await response.json();
+        // const response = await fetch('http://localhost:3000/es_data_json.json');
+        // if (!response.ok) {
+        //   throw new Error('Failed to fetch data');
+        // }
+        // const es_data = await response.json();
+
+        const es_data = es_data_json
 
         // Extract unique years, domains, and mentors from the data
         const years = [];
@@ -72,7 +81,7 @@ const SearchBar = ({ onSearch }) => {
     };
 
     fetchData();
-  }, []);
+  }, [location.state]);
 
   // Event handlers for filter selection and search term input
   const handleYearChange = event => {
@@ -144,7 +153,7 @@ const SearchBar = ({ onSearch }) => {
   return (
     
     <div className="search-bar content-container">
-      {/* {console.log("DMY",uniqueDomains, uniqueMentors, uniqueYears)} */}
+      {console.log("DMY",uniqueDomains, uniqueMentors, uniqueYears)}
       {/* Popup message for empty search term and filters */}
       {showPopup && (
         <div className="popup">

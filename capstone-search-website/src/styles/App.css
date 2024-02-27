@@ -327,3 +327,9 @@ li.result-line {
     margin-top: 20px;
   }
 }
+
+#about_page_people{
+  display: flex;
+  justify-content: space-between;
+  
+}

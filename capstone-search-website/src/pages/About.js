@@ -21,25 +21,37 @@ const About = () => (
         <p>Link to our project: </p>
         <p>Link to our poster: </p>
 
-        <h3>Mandy Xu</h3>
-        <p>LinkedIN: </p>
-        <p>Github: </p>
-        <p>Email: </p>
+        <div id='about_page_people'>
 
-        <h3>William Hu</h3>
-        <p>LinkedIN: </p>
-        <p>Github: </p>
-        <p>Email: </p>
+          <div>
+            <h3>Mandy Xu</h3>
+            <a href="https://www.linkedin.com/in/mandyxuu/"> LinkedIN </a>
+            <p/>
+            <a href="https://github.com/mxndyxu"> Github </a>
+            <p>Email: gb.mandy.xu@gmail.com</p>
+          </div>
 
-        <h3>Colin Jemmott</h3>
-        <p>LinkedIN: </p>
-        <p>Github: </p>
-        <p>Email: </p>
+          <div>
+            <h3>William Hu</h3>
+            <a href="https://www.linkedin.com/in/william-hu-a24638220/"> LinkedIN </a>
+            <p/>
+            <a href="https://github.com/whu769"> Github </a>
+            <p>Email: williamyhu30@gmail.com</p>
+          </div>
+
+          <div>
+            <h3>Colin Jemmot</h3>
+            <a href="https://www.linkedin.com/in/cjemmott/"> LinkedIN </a>
+            <p/>
+            <a href="https://github.com/jemmott"> Github </a>
+            <p>Email: cjemmott@gmail.com</p>
+          </div>
+        </div>
 
         <h2>Feedback</h2>
         <p>If you have any feedback please fill out this form! We'd love to hear your thoughts and want to improve the site!</p>
         {/* Add link to google form there */}
-        <a href='http://www.google.com'> 
+        <a href='https://forms.gle/aAsSdFRCyuTC93b1A'> 
           Link to Feedback
         </a>
 
