@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import {useLocation, useParams, NavLink } from 'react-router-dom';
 import {getProjectDetails, getProjectByID} from './helpers/projectDetailHelpers'
+import { Document, Page } from 'react-pdf';
 
 const ProjectDetails = () => {
 
