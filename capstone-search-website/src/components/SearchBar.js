@@ -149,7 +149,7 @@ const SearchBar = ({ onSearch }) => {
       {showPopup && (
         <div className="popup">
           <button className="popup-close" onClick={() => setShowPopup(false)}>x</button>
-          <p className="popup-text">Please enter at least one of the search term or filters.</p>
+          <p className="popup-text">Please enter at least a query or filter.</p>
         </div>
       )}
       {/* Search input field */}

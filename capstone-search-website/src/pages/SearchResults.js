@@ -118,12 +118,12 @@ const SearchResults = () => {
                   }}
                   className="proj-link">
                   <li className="result-line-title"><strong>{value.proj_title}</strong></li>
-                  <li className="result-line"><strong>ID: </strong>{key}</li>
-                  <li className="result-line"><strong>Year: </strong>{String(Number(value.year) - 1) + " - " + value.year}</li>
-                  <li className="result-line"><strong>Student(s): </strong>{value.members}</li>
-                  <li className="result-line"><strong>{value.ucsd_or_ind} Mentor(s): </strong>{value.mentors}</li>
-                  <li className="result-line"><strong>Domain: </strong>{value.domain}</li>
                 </NavLink>
+                <li className="result-line"><strong>ID: </strong>{key}</li>
+                <li className="result-line"><strong>Year: </strong>{String(Number(value.year) - 1) + " - " + value.year}</li>
+                <li className="result-line"><strong>Student(s): </strong>{value.members}</li>
+                <li className="result-line"><strong>{value.ucsd_or_ind} Mentor(s): </strong>{value.mentors}</li>
+                <li className="result-line"><strong>Domain: </strong>{value.domain}</li>
               </ul>
             </li>
         ))}

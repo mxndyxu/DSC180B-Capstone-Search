@@ -68,11 +68,11 @@ const Projects = () => {
                 >
                   {/* Project details */}
                   <li className="result-line-title"><strong>{project.project_title}</strong></li>
-                  <li className="result-line"><strong>Year: </strong>{String(Number(project.year_presented) - 1) + " - " + project.year_presented}</li>
-                  <li className="result-line"><strong>Student(s): </strong>{project.members.replaceAll(",", ", ")}</li>
-                  <li className="result-line"><strong>{project.ucsd_or_ind} Mentor(s): </strong>{project.mentors.replaceAll(",", ", ")}</li>
-                  <li className="result-line"><strong>Domain: </strong>{project.domain}</li>
                 </NavLink>
+                <li className="result-line"><strong>Year: </strong>{String(Number(project.year_presented) - 1) + " - " + project.year_presented}</li>
+                <li className="result-line"><strong>Student(s): </strong>{project.members.replaceAll(",", ", ")}</li>
+                <li className="result-line"><strong>{project.ucsd_or_ind} Mentor(s): </strong>{project.mentors.replaceAll(",", ", ")}</li>
+                <li className="result-line"><strong>Domain: </strong>{project.domain}</li>
               </ul>
             </li>
           ))}

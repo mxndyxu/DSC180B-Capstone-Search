@@ -125,28 +125,6 @@ class search_engine:
         self.index_name = index_name
 
         self.connect_to_es()
-        
-        # self.set_mappings({
-        #         "properties": {
-        #             "year_presented": {"type": "text"},
-        #             "domain": {"type": "text"},
-        #             "project_title": {"type": "text"},
-        #             "project_title_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
-        #             "industry": {"type": "text"},
-        #             "mentors": {"type": "text"},
-        #             "members": {"type": "text", "analyzer": "pattern"},
-        #             "report_text_summarization": {"type": "text"},
-        #             "readme_summarization": {"type": "text", "analyzer" : "english"},
-        #             "readme_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
-        #             "report_vector": {"type" : "dense_vector", "dims" : 768, "similarity" : "cosine"},
-        #             "github_url": {"type": "text", "index": False},
-        #             "website_url": {"type": "text", "index": False},
-        #             "report_url": {"type": "text", "index": False},
-        #             "poster_url": {"type": "text", "index": False},
-        #             "github_contributors": {"type": "text", "index": False},
-        #             "github_lang_breakdown": {"type": "text", "index": False}}
-        #         })
-
         self.set_mappings({
             "settings": {
                 "analysis": {
@@ -282,6 +260,24 @@ class search_engine:
             }
             self.es.index(index="capstones", id=row["project_id"], document=doc)
 
+    def get_index_count(self, index_name):
+        """ get_index_count method
+        Get the count of documents in the specified index.
+
+        Parameters
+        ----------
+        index_name: str
+            Name of the index to get the count for
+
+        Returns
+        -------
+        int
+            Number of documents in the index
+        
+        """
+        resp = self.es.count(index=index_name)
+        return resp['count']
+
     def make_filter_list(self, mentor = None, domain = None, year_presented = None):
         """ make_filter_list method
         Creates the filter list in a format accepted by the ElasticSearch query
@@ -360,7 +356,7 @@ class search_engine:
         filter_lst: list
             List object returned from make_filter_list method
         """
-        resp = self.es.search(index="capstones", query={
+        resp = self.es.search(index="capstones", size=self.get_index_count("capstones"), query={
             "bool": {
                 "filter": filter_lst
             },
@@ -420,7 +416,7 @@ class search_engine:
                         "query_vector": get_embeddings(query_str).detach().numpy()[0],
                         "k": 10,
                         "num_candidates": 100
-                    }
+                    },
                 ]
             }
         )
@@ -429,7 +425,7 @@ class search_engine:
         return self.create_res_dict(hits)
 
 
-    def search_query_filter(self, query_str, filter_lst, results = 10):
+    def search_query_filter(self, query_str, filter_lst, results=10):
         """search_query_filter method
 
         The search where ElasticSearch uses both a string query and a filter. 
@@ -530,14 +526,13 @@ class search_engine:
         #Only filter situation
         filter_lst = self.make_filter_list(mentor, domain, year)
 
-
         if query_string == "undefined":
             print(f'Query String UNDEFINED')
             return self.search_filter(filter_lst)
         elif len(filter_lst) == 0: # query only string
-            return self.search_query(query_string)
+            return self.search_query(query_string, results=self.get_index_count('capstones'))
         else:
-            return self.search_query_filter(query_string, filter_lst)
+            return self.search_query_filter(query_string, filter_lst, results=self.get_index_count('capstones'))
     
     def get_project(self, id):
         resp = self.es.get(index = self.index_name, id = id)
@@ -559,8 +554,6 @@ class search_engine:
         vals['poster_url'] = resp["_source"]["poster_url"]
         vals['github_contributors'] = resp["_source"]["github_contributors"]
         vals['language_breakdown'] = resp["_source"]["github_lang_breakdown"]
-
-        
 
         return vals
             

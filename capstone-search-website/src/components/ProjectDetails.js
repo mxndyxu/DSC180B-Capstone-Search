@@ -61,27 +61,27 @@ const ProjectDetails = () => {
                 <p><strong>Mentor(s): </strong>{projectDetails.mentors}</p>
                 <p><strong>UCSD or Industry Led: </strong>{projectDetails.ucsd_or_ind}</p>
             </div>
-            <h3 className="subheadings-text">Report Summary</h3>
+            <h3 className="subheadings-text">Project Summary</h3>
             <div className="proj-body">
                 <p>{projectDetails.summarized}</p>
             </div>
             <h3 className="subheadings-text">Links</h3>
             <div className="proj-body">
                 {isValidUrl(projectDetails.website_url) && (
-                    <p><a href={projectDetails.website_url}>Website</a></p>
+                    <p><a href={projectDetails.website_url} target="_blank">Website</a></p>
                 )}
                 {isValidUrl(projectDetails.report_url) && (
-                    <p><a href={projectDetails.report_url}>Report</a></p>
+                    <p><a href={projectDetails.report_url} target="_blank">Report</a></p>
                 )}
                 {isValidUrl(projectDetails.github_url) && (
-                    <p><a href={projectDetails.github_url}>GitHub Repo</a></p>
+                    <p><a href={projectDetails.github_url} target="_blank">GitHub Repo</a></p>
                 )}
                 {isValidUrl(projectDetails.poster_url) && (
-                    <p><a href={projectDetails.poster_url}>Poster</a></p>
+                    <p><a href={projectDetails.poster_url} target="_blank">Poster</a></p>
                 )}
-                <p><strong>Note: </strong>Some of these links may not work.</p>
+                <p><strong>Disclaimer: </strong>Some of these links may not work.</p>
             </div>
-            <h3 className="subheadings-text">Some More GitHub Details</h3>
+            <h3 className="subheadings-text">Additional GitHub Details</h3>
             <div className="proj-body">
                 {github_contributors_json !== null ? (
                     <div>
@@ -89,7 +89,7 @@ const ProjectDetails = () => {
                             <strong>GitHub Contributors: </strong>
                             {Object.entries(github_contributors_json).map(([name, link], index, array) => (
                                 <span key={name}>
-                                    <a href={link}>{name}</a>
+                                    <a href={link} target="_blank">{name}</a>
                                     {index !== array.length - 1 && ", "}
                                 </span>
                             ))}
@@ -115,7 +115,7 @@ const ProjectDetails = () => {
                     <p><strong>Language Breakdown: </strong>Information unavailable.</p>
                 )}
                 <p>
-                    <strong>Note: </strong>Some of these links may not work.<br />
+                    <strong>Disclaimer: </strong>Some of these links may not work.<br />
                     The language breakdown may also not be accurate.
                 </p>
                 </div>

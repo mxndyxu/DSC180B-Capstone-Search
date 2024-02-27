@@ -5,7 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow-y: auto;
-  background-color: rgb(249, 245, 236);
+  background-color: #f3eae0;
 }
 
 .content-container {
@@ -65,7 +65,7 @@ div.search-bar button.search {
   font-size: 16px;
   font-family: 'Inconsolata', monospace;
   font-weight: bold;
-  color: rgb(249, 245, 236);
+  color: #f3eae0;
   background-color: #3e68a2;
   width: 10%;
   min-width: 100px;
@@ -87,7 +87,7 @@ div.search-bar select {
   font-size: 16px;
   font-family: 'Inconsolata', monospace;
   font-weight: bold;
-  color: rgb(249, 245, 236);
+  color: #f3eae0;
   background-color: #e5bf3a;
   border: none;
   border-radius: 7px;
@@ -123,7 +123,7 @@ input[type="text"] {
   border: 2px solid rgb(68, 39, 24);
   border-radius: 7px;
   padding: 20px;
-  background-color: rgb(249, 245, 236);
+  background-color: rgb(255, 255, 255);
   width: 30%;
   z-index: 1000;
 }
@@ -132,6 +132,7 @@ input[type="text"] {
   /* padding: 10px; */
   font-family: 'Inconsolata', monospace;
   text-align: center;
+  color: rgb(68, 39, 24);
 }
 
 .popup-close {
@@ -163,14 +164,15 @@ input[type="text"] {
   height: 60vh;
   font-family: 'Inconsolata', monospace;
   color: rgb(68, 39, 24);
-  width: 90%
+  width: 90%;
 }
 
 .about-body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 90%
+  width: 90%;
+  padding-bottom: 50px;
 }
 
 h1.about-text {
@@ -226,6 +228,14 @@ ul.search-results {
   list-style-type: none;
 }
 
+.proj-link:link .result-line-title {
+  color: #2e5489;
+}
+
+.proj-link:visited .result-line-title{
+  color: rgb(68, 39, 24);
+}
+
 ul.search-results-specs {
   font-family: 'Inconsolata', monospace;
   color: rgb(68, 39, 24);
@@ -238,7 +248,6 @@ ul.search-results-specs {
 li.result-line-title {
   padding: 3px;
   font-size: 18px;
-  /* text-decoration: underline; */
 }
 
 li.result-line-title:hover {
