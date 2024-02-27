@@ -98,15 +98,15 @@ const SearchResults = () => {
 
   return (
     <div className='content-container search-results-container'>
-      <div className='spacer'></div>
-      <SearchBar className="results-search-bar"/>
-      <div className='spacer'></div>
       <h2 className="search-results-text">
         Search results for...
         </h2>
       <h2 className="search-results-subtitle">
         {searchTerm ? "Query: " + searchTerm + `${year || domain || mentor ? `, ${queryParams}` : ''}`: `${year || domain || mentor ? `\n${queryParams}` : ''}`}
       </h2>
+      <div className='spacer'></div>
+      <SearchBar className="results-search-bar"/>
+      <div className='spacer'></div>
       <ul className="search-results">
         {resultsArray.map(([key, value]) => (
             <li key={key}>
@@ -119,7 +119,6 @@ const SearchResults = () => {
                   className="proj-link">
                   <li className="result-line-title"><strong>{value.proj_title}</strong></li>
                 </NavLink>
-                <li className="result-line"><strong>ID: </strong>{key}</li>
                 <li className="result-line"><strong>Year: </strong>{String(Number(value.year) - 1) + " - " + value.year}</li>
                 <li className="result-line"><strong>Student(s): </strong>{value.members}</li>
                 <li className="result-line"><strong>{value.ucsd_or_ind} Mentor(s): </strong>{value.mentors}</li>

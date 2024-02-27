@@ -68,6 +68,10 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    document.title = "Capstonian";
+  }, []);
+
   return (
     <Router>
       <Routes>

@@ -5,8 +5,9 @@
  */
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-// import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar';
 import '../styles/App.css';
+import {es_data_json} from '../resources/es_data_json';
 
 const Projects = () => {
   // State variable to hold project data
@@ -15,15 +16,17 @@ const Projects = () => {
   // Function to fetch project data from JSON file
   const fetchData = async () => {
     try {
-      const response = await fetch('./es_data_json.json');
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
-      }
-      const es_data = await response.json();
+      const es_data = es_data_json
+      // const response = await fetch('./es_data_json.json');
+      // if (!response.ok) {
+      //   throw new Error('Failed to fetch data');
+      // }
+      // const es_data = await response.json();
       setData(es_data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
+    
   };
 
   // Fetch project data on component mount
@@ -54,7 +57,7 @@ const Projects = () => {
   return (
     <div className ="content-container">
       <h1 className="projects-text">Projects</h1>
-      {/* <SearchBar id="proj-page-search-bar"/> */}
+      <SearchBar id="proj-page-search-bar"/>
       <ul className="search-results">
         {/* Render project details */}
         {data &&
