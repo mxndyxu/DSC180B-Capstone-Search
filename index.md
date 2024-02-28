@@ -2,7 +2,14 @@
 ### By: William Hu, Mandy Xu
 
 ## Introduction
-The UC San Diego Halıcıoğlu Data Science Institute (HDSI) is a fairly recent department where students learn the foundations of data science through a complete curriculum. One aspect of this program is the senior capstone sequence that students participate in their last year in which faculty and industry mentors guide students in a quarter-long project that is then showcased to members of the data science department at the end of the quarter. However, while the annual capstone showcase is a great way to celebrate the graduating class and their hard efforts, there is no easy or accessible way to display their work past the showcase. Currently, student capstone projects are presented in a list-type format on a website that is pretty much only available for current capstone students. The absence of a search tool for these projects makes it difficult for users, particularly faculty and current students, to efficiently navigate through various projects based on their desired parameters. That is why through this project, we hope to provide a more visible gallery to showcase these projects through ease of navigation that also serves as an efficient way to discover new projects. To do so, we have implemented a search engine that takes in a string query and/or preset filters and returns relevant projects using keyword and semantic search techniques. We package our search engine with a user-friendly interface in order to deliver a full stack website that streamlines the exploration of capstone projects. With our approach, we aim to improve the navigation of capstone projects, enhancing the overall user experience!
+The UC San Diego Halıcıoğlu Data Science Institute (HDSI) is a fairly recent department where students learn the foundations of data science through a complete curriculum. One aspect of this program is the senior capstone sequence that students participate in their last year in which faculty and industry mentors guide students in a quarter-long project that is then showcased to members of the data science department at the end of the quarter. However, while the annual capstone showcase is a great way to celebrate the graduating class and their hard efforts, there is no easy or accessible way to display their work past the showcase. Currently, student capstone projects are presented in a list-type format on a website that is pretty much only available for current capstone students. 
+
+![In person capstone showcase](imgs/capstone_showcase.jpeg)
+*While the in-person capstone is great, it only lasts for one day. What we have (can be) is permanent*
+
+
+
+The absence of a search tool for these projects makes it difficult for users, particularly faculty and current students, to efficiently navigate through various projects based on their desired parameters. That is why through this project, we hope to provide a more visible gallery to showcase these projects through ease of navigation that also serves as an efficient way to discover new projects. To do so, we have implemented a search engine that takes in a string query and/or preset filters and returns relevant projects using keyword and semantic search techniques. We package our search engine with a user-friendly interface in order to deliver a full stack website that streamlines the exploration of capstone projects. With our approach, we aim to improve the navigation of capstone projects, enhancing the overall user experience!
 
 ## Data
 We sourced our data from the [official Data Science capstone website](https://dsc-capstone.org/archive/), which organizes the raw data by each capstone year. At the time of this project, there are four capstone years available spanning from 2019 to 2023. Given the relatively recent establishment of the UCSD Data Science program, there seemed to be additional components to consider. For example, the year 2020-2021 introduced a written report and the year 2022-2023 introduced the poster requirement. As a result our data scraping process could not be unified into one script. Instead, each year had to be individually processed to create a consolidated data structure. 
@@ -40,6 +47,7 @@ To evaluate our search engine, we employed normalized discounted cumulative gain
 * 1 = weak match
 * 2 = strong match
 * 3 = exact match
+  
 Using a mixture of 15 query/filter combinations, our final search engine obtained an NDCG score of 0.98.
 
 ### React.js
@@ -52,10 +60,40 @@ For every individual project, we display the same information as the search resu
 ### FastAPI
 We used FastAPI to implement our backend system for our search engine application and connect our endpoints. The backend interacts with an ElasticSearch server to handle search queries and filter results based on specified criteria. The integration of FastAPI and Elasticsearch enables seamless communication between the backend and frontend components.
 
+### MS Azure
+We used MS Azure to host our website. It's currently available on here: http://capstonian.eastus.cloudapp.azure.com:3000/
+(this may go down after we run out of credits). We spun up a virtual machine and redeployed our repository on there and opened the network connections so everyone can access it.
+
 ## Results
 Our final website has three pages (pictured below): the home page with the main search tool, an about page, and an all projects page (to browse when the user has no specific query in mind). 
 
 <!-- Insert pictures -->
+![Capstonian Home Page](imgs/Capstonian_HomePage.png)
+*Home Page*
+
+![Capstonian Project Page](imgs/Capstonian_ProjectPage.png)
+*Project Page*
+
+![Capstonian About Page](imgs/Capstonian_AboutPage.png)
+*About Page*
 
 Finally, here are some example queries with their results:
 <!-- Insert examples: query only, filters only, query + filters (a couple of these), no query + no filter -->
+
+![Capstonian SearchResults Page](imgs/Capstonian_SearchResultsPage.png)
+*SearchResults Page*
+
+![Capstonian ProjectDetails Page](imgs/Capstonian_ProjectDetailsPage.png)
+*ProjectDetails Page*
+
+### Result Evaluation
+
+Aside from our own internal tuning of the search engine, we created a feedback form and asked our friends and peers to give feedback. Specifically feedback on the website user experience and search experience.
+
+WRITE FEEDBACK AND ADD GRAPHS
+
+## Conclusion
+
+### Next Steps
+
+### Shoutouts
