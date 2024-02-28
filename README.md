@@ -15,6 +15,7 @@ The current Github Repository Structure as follows:
 
 * Backend Folder: This is the backend of the project. Current consisting of main.py and search_engine.py. 
   * main.py: This is where the backend is run with a search_engine instance that utilizes ElasticSearch and searches throught        the query. Takes the requests from the frontend and returns the search results.
+  * dummy_api.py: This is a "dummy" version of main.py that doesn't connect to the ElasticSearch and merely prints out hardcoded JSON responses to queries. It's used for FrontEnd Development.
   * search_engine.py: This is where the search_engine with ElasticSearch is made. It connects to an ElasticSearch cluster, loads in the data and returns the outputs.
 * Frontend Folder (capstone-search-website): This is the ReactJS front end of the folder. It has the public folder where the images/json files are imported from to the src folder.
   *   public Folder: Where the images/JSON files are stored and read from to the front-end.
@@ -30,6 +31,18 @@ The current Github Repository Structure as follows:
 
 ### Backend Setup
 If you want to run this project, you can run anaconda and clone the environment.yml file to get the code environment to run these files locally. 
+
+If you have issues cloning the environment.yml file, you can also make a new anaconda environment and pip install the following:
+
+* pip install pandas 
+
+* pip install torch 
+
+* pip install transformers[torch] 
+
+* pip install fastapi 
+
+* pip install uvicorn 
 
 To setup the backend, you want to navigate to the directory with the main.py (backend folder) and run the following command:
 uvicorn main:app --reload
