@@ -3,7 +3,9 @@ Mandy Xu, William Hu
 Mentor: Colin Jemmott
 
 Access our project [here](http://capstonian.eastus.cloudapp.azure.com:3000/) (search engine).
+
 Read more about our project [here](https://mxndyxu.github.io/DSC180B-Capstone-Search/) (website).
+
 <!-- Access our report [here](). -->
 
 ## Introduction
