@@ -2,8 +2,9 @@
 Mandy Xu, William Hu
 Mentor: Colin Jemmott
 
-[Website Checkpoint](https://mxndyxu.github.io/DSC180B-Capstone-Search/)
-<!-- Add link to actual search tool website -->
+Access our project [here](http://capstonian.eastus.cloudapp.azure.com:3000/) (search engine).
+Read more about our project [here](https://mxndyxu.github.io/DSC180B-Capstone-Search/) (website).
+<!-- Access our report [here](). -->
 
 ## Introduction
 Our capstone project is to create a gallery for all of the other pre-existing capstones! We want to provide a website that can show off all prior DSC capstones and allow everyone whether it be students, mentors, DSC faculty, or anyone to browse the various cool projects that the DSC students have made. In regards to our own domain of Search our website revolves around creating an intuitive and easy search experience. Our project is to create a website with ReactJS frontend and a Python and ElasticSearch Backend.
