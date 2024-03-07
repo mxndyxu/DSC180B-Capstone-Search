@@ -56,9 +56,13 @@ For every individual project, we display the same information as the search resu
 #### Result Evaluation
 Aside from our own internal tuning of the search engine, we created a feedback form and asked our peers to give feedback, specifically on the website user experience and search experience. We asked how each experience was on a scale of 1 (confusing) to 5 (intuitive and easy to use). Below are our visualized results:
 
-ADD GRAPHS
+![Search experience evaluation graph](imgs/search_experience.png)
+*Feedback on search experience*
 
-One thing to note is that we asked for feedback before certain features were completed which may account for lower ratings. However, we do acknowledge that our website has room for improvement which is discussed more in the Next Steps section.
+![User experience evaluation graph](imgs/user_experience.png)
+*Feedback on user experience*
+
+From the figures, we can see feedback on both experiences skew positive. One thing to note is that we asked for feedback before certain features were completed which may account for lower ratings. However, we do acknowledge that our website has room for improvement which is discussed more in the Next Steps section.
 
 ### FastAPI
 We used FastAPI to implement our backend system for our search engine application and connect our endpoints. The backend interacts with an ElasticSearch server to handle search queries and filter results based on specified criteria. The integration of FastAPI and Elasticsearch enables seamless communication between the backend and frontend components.
@@ -79,8 +83,7 @@ Our final website has three pages (pictured below): the home page with the main 
 ![Capstonian About Page](imgs/Capstonian_AboutPage.png)
 *About Page*
 
-Finally, here are some example queries with their results:
-<!-- Insert examples: query only, filters only, query + filters (a couple of these), no query + no filter -->
+Finally, here is an example filter of "Autonomous vehicles" with its results:
 
 ![Capstonian SearchResults Page](imgs/Capstonian_SearchResultsPage.png)
 *SearchResults Page*
