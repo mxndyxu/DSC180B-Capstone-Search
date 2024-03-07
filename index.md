@@ -7,8 +7,6 @@ The UC San Diego Halıcıoğlu Data Science Institute (HDSI) is a fairly recent 
 ![In person capstone showcase](imgs/capstone_showcase.jpeg)
 *While the in-person capstone is great, it only lasts for one day. What we have (can be) is permanent*
 
-
-
 The absence of a search tool for these projects makes it difficult for users, particularly faculty and current students, to efficiently navigate through various projects based on their desired parameters. That is why through this project, we hope to provide a more visible gallery to showcase these projects through ease of navigation that also serves as an efficient way to discover new projects. To do so, we have implemented a search engine that takes in a string query and/or preset filters and returns relevant projects using keyword and semantic search techniques. We package our search engine with a user-friendly interface in order to deliver a full stack website that streamlines the exploration of capstone projects. With our approach, we aim to improve the navigation of capstone projects, enhancing the overall user experience!
 
 ## Data
@@ -37,9 +35,7 @@ For the keyword matching portion, ElasticSearch has its own built-in [BM25 algor
 
 For the semantic search portion, we encoded the project titles, and summarizations of the READMEs and reports with [SBERT](https://www.sbert.net/) (Sentence-BERT), which is a variant of the popular [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) (Bidirectional Encoder Representations from Transformers) model, a natural language processing (NLP) model developed by Google to capture bidirectional contextual information from text. SBERT is built on BERT and is finetuned specifically for sentence embeddings. The query is then encoded into the same embedding space as the document encodings mentioned above. To evaluate which results to return to the user, we use cosine similarity which measures the similarity between two vectors (in this case, the query and the encoded documents).
 
-<!--- <Filter search> -->
-
-<!-- <Combining searches> -->
+In addition to users being able to query for results, we also provide the ability to filter the capstone year, domain, and/or mentor. This method allows for only the desired filters to be returned. For example, if the user is interested in only the capstones from 2022-2023, they can filter for that and only get those 66 projects.
 
 #### Search Evaluation
 To evaluate our search engine, we employed normalized discounted cumulative gain (NDCG) which is an evaluation metric that takes into account both the relevance of items and their positions in the list. We evaluated results based on the following criteria:
@@ -57,17 +53,23 @@ For every result deemed most relevant to the user's query, we offer a concise, a
 
 For every individual project, we display the same information as the search results page (project title, year, students, and mentors) as well as a project summary (extracted from the report using OpenAI from earlier) and URLs to each group's GitHub page, report, website, and poster (if available). In addition to this, we include the GitHub repository's README information, language breakdown of the GitHub repository and the GitHub contributors along with links to their personal profiles.
 
+#### Result Evaluation
+Aside from our own internal tuning of the search engine, we created a feedback form and asked our peers to give feedback, specifically on the website user experience and search experience. We asked how each experience was on a scale of 1 (confusing) to 5 (intuitive and easy to use). Below are our visualized results:
+
+ADD GRAPHS
+
+One thing to note is that we asked for feedback before certain features were completed which may account for lower ratings. However, we do acknowledge that our website has room for improvement which is discussed more in the Next Steps section.
+
 ### FastAPI
 We used FastAPI to implement our backend system for our search engine application and connect our endpoints. The backend interacts with an ElasticSearch server to handle search queries and filter results based on specified criteria. The integration of FastAPI and Elasticsearch enables seamless communication between the backend and frontend components.
 
 ### MS Azure
-We used MS Azure to host our website. It's currently available on here: http://capstonian.eastus.cloudapp.azure.com:3000/
+We used MS Azure to host [our website](http://capstonian.eastus.cloudapp.azure.com:3000/) 
 (this may go down after we run out of credits). We spun up a virtual machine and redeployed our repository on there and opened the network connections so everyone can access it.
 
 ## Results
 Our final website has three pages (pictured below): the home page with the main search tool, an about page, and an all projects page (to browse when the user has no specific query in mind). 
 
-<!-- Insert pictures -->
 ![Capstonian Home Page](imgs/Capstonian_HomePage.png)
 *Home Page*
 
@@ -86,14 +88,20 @@ Finally, here are some example queries with their results:
 ![Capstonian ProjectDetails Page](imgs/Capstonian_ProjectDetailsPage.png)
 *ProjectDetails Page*
 
-### Result Evaluation
-
-Aside from our own internal tuning of the search engine, we created a feedback form and asked our friends and peers to give feedback. Specifically feedback on the website user experience and search experience.
-
-WRITE FEEDBACK AND ADD GRAPHS
-
 ## Conclusion
+Our project was aimed to address the lack of an efficient and accessible way to explore previous capstone projects. The existing HTML format posed difficulties for faculty and data science students in navigating through the extensive collection of projects. Therefore, we created a search tool to be able to easily navigate and explore these projects. By developing a user-friendly search tool, we aimed to streamline the exploration process and enhance the visibility of these projects beyond the annual showcase.
 
 ### Next Steps
+There remain several avenues for future exploration and development in this area. Some of the points below include reach goals we did not have the time for as well as user feedback.
+
+* Finetune Elasticsearch further to improve on student name hits. Currently, our search engine is accurate in returning queries including one student name but not accurate in returning more than one student name (even if the student names are in the same project group). 
+* Query autocomplete: Being able to predict what the user is typing to help them narrow down their search and save time. 
+* Suggested topics to explore on the home page. This is especially useful for non-DSC majors or those unfamiliar with the HDSI senior capstones. 
+* Include images to individual project pages. Extracting report images to include on project pages and rotate through them. This helps separate the text heavy data that we obtained. 
+* Multiple filters within the same category. For example, being able to filter 2021-2022 and 2022-2023 as opposed to only 2021-2022. Currently, our implementation only supports the latter. 
+* Dynamic filtering: As the user chooses their desired filters, remove incompatible filters to avoid not being able to return certain results. For example, if the user chooses to filter the mentor "Colin Jemmott", remove the years (all years but 2020-2021) and domains (all domains but "Recommender systems") that "Colin Jemmott" did not mentor.
+* Clean up the domain filter by broadening the scope of topics. A lot of domains are similar in nature due to the evolving domain names throughout the years. For example, aggregating "graph neural networks" and "Graphs and Deep Learning". 
+* Displaying the "best" projects. During the capstone showcase typically held at the end of winter quarter (March), attendees are able to vote on their favorite projects. Being able to display this is an additional way to showcase projects and enhance project exploration. 
 
 ### Shoutouts
+We would like to thank our mentor Colin Jemmott, Suraj Rampure and the 180B staff, and our peers for the endless support!
