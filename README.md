@@ -24,8 +24,17 @@ The current Github Repository Structure as follows:
   *   public Folder: Where the images/JSON files are stored and read from to the front-end.
   *   src Folder:
     * Components Folder: Where the ReactJS components js files are stored.
-    * Pages Folder: Where the pages like About.js & SearchResults.js are stored
+      * Headers.js - The headers of the page
+      * Layout.js - Functional component that sets the layout of a component
+      * Navbar.js - The navbar at the top of the pages
+      * ProjectDetails.js - The component for the individual project details
+      * Searchbar.js  - The SearchBar component
+    * Pages Folder: Where the pages are stored
+      * About.js - The About page for the website
+      * Project.js - The Projects page for the website
+      * SearchResults.js - The SearchResults page for the website
     * Styles Folder: Where the CSS files are kept
+    * Resources Folder: Folder where the some resource js files are if they are needed to be imported.
 * Data Folder: Where all of the data for the backend is stored. There are pickle objects and csv files.
   * Legacy Folder: This is where our earlier original data files are stored. They are no longer in use and are kept as legacy.
 * Scripts Folder: This is where all of our earlier testing on Jupyter Notebooks are held. These are experimental files and are both no longer in use and very minimally commented. 
