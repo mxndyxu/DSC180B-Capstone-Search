@@ -1,3 +1,7 @@
+/**
+ * Simple about page describing our project
+ * Links to the other resources associated
+ */
 import React from 'react';
 import '../styles/App.css';
 
@@ -18,8 +22,10 @@ const About = () => (
 
         <h2>Links</h2>
         <p>Link to our repo: <a href="https://github.com/mxndyxu/DSC180B-Capstone-Search" target="_blank"> Github Repository </a></p>
-        <p>Link to our report: </p>
-        <p>Link to our poster: </p>
+        <p>Link to our report: <a href="https://drive.google.com/file/d/1L3MoPG2WqB-OqdMxluzRbCu_JIOntRWV/view?usp=sharing" target="_blank"> Report </a>
+        </p>
+        <p>Link to our poster: <a href="https://drive.google.com/file/d/15Zdv1LBDr9txFIZiudvhVxPjKzcxU5R0/view?usp=sharing" target="_blank"> Poster </a>
+        </p>
 
         <div id='about_page_people'>
 
@@ -40,7 +46,7 @@ const About = () => (
           </div>
 
           <div>
-            <h3>Colin Jemmot</h3>
+            <h3>Colin Jemmott</h3>
             <a href="https://www.linkedin.com/in/cjemmott/" target="_blank"> LinkedIN </a>
             <p/>
             <a href="https://github.com/jemmott" target="_blank"> Github </a>
